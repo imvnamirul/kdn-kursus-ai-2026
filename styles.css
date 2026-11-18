@@ -109,3 +109,65 @@ html{scroll-padding-top:90px}
     min-height: 80px;
   }
 }
+
+  text-transform: uppercase;
+}
+
+.site-header .nav-links {
+  gap: clamp(14px, 1.5vw, 28px);
+}
+
+.site-header .nav-link {
+  font-family: 'Manrope', 'Segoe UI', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.site-header .header-resource {
+  font-family: 'Manrope', 'Segoe UI', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 15px 20px;
+}
+
+/* Make menu collapse earlier on narrower screens to avoid overlaps. */
+@media (max-width: 1150px) {
+  .site-header .menu-toggle { display: block; }
+  .site-header .nav-links {
+    display: none;
+    position: absolute;
+    top: calc(100% - 1px);
+    left: 0;
+    right: 0;
+    background: white;
+    box-shadow: 0 22px 25px rgba(16,42,67,.1);
+    padding: 12px 22px 22px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+  .site-header .nav-links.open { display: flex; }
+  .site-header .nav-link { padding: 13px 5px; font-size: 17px; }
+  .site-header .nav-link.active:after { display: none; }
+  .site-header .header-actions { margin-left: auto; }
+}
+
+@media (max-width: 650px) {
+  .site-header .shell.header-row {
+    width: calc(100% - 28px);
+    min-height: 76px;
+    gap: 8px;
+  }
+  .site-header .brand-ministry { gap: 10px; }
+  .site-header .brand-crest {
+    width: 43px;
+    height: 43px;
+    flex: 0 0 43px;
+  }
+  .site-header .brand-copy-single strong {
+    font-size: clamp(14px, 3.8vw, 18px);
+    line-height: 1.2;
+    white-space: normal;
+    max-width: 235px;
+  }
+}
