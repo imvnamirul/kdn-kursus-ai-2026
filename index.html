@@ -245,7 +245,159 @@
   .hero-zenith .zenith-backdrop{background-position:74% 55%}
 }
 
-  </style>
+
+/* KDN 2026: Consolidated course facts and signature slogan. */
+.hero-zenith .hero-aside{
+  width:min(100%,448px);min-height:0;padding:33px 32px 28px;
+  transform:translateX(-20px);
+}
+.hero-zenith .glance-date-block{padding:24px 0 21px}
+.hero-zenith .glance-overline{display:block;font-family:'Inter','Manrope',sans-serif;font-size:12px;font-weight:800;letter-spacing:.17em;color:#9FDCEC}
+.hero-zenith .date-graphic{margin:14px 0 7px;gap:20px}
+.hero-zenith .date-number{font-size:114px}
+.hero-zenith .date-graphic strong{font-size:35px}
+.hero-zenith .date-graphic div span{font-size:21px}
+.hero-zenith .glance-day{display:flex;align-items:center;gap:9px;margin:7px 0 0;font-size:15px;font-weight:700;color:#DAF4FF}
+.hero-zenith .glance-calendar{color:#43E9F8;font-size:19px}
+.hero-zenith .glance-details{border-top:1px solid rgba(165,221,255,.23);padding-top:24px}
+.hero-zenith .glance-details .aside-info{margin:0;padding:0 0 19px;gap:15px;align-items:center}
+.hero-zenith .glance-details .aside-info + .aside-info{padding-top:17px;border-top:1px solid rgba(165,221,255,.12)}
+.hero-zenith .glance-details .aside-info:last-child{padding-bottom:0}
+.hero-zenith .glance-details .aside-info small{font-size:12px;letter-spacing:.13em}
+.hero-zenith .glance-details .aside-info strong{font-size:19px;line-height:1.35}
+.hero-zenith .glance-details .aside-info span:last-child:not(.aside-icon){font-size:15px}
+.hero-zenith .glance-details .aside-icon{width:38px;height:38px;font-size:20px}
+.hero-zenith .aside-foot{margin-top:24px;font-size:12px;padding-top:18px}
+.hero-zenith .hero-layout{grid-template-columns:minmax(0,1.7fr) minmax(420px,1fr);gap:clamp(22px,3.1vw,58px);padding-bottom:10px}
+.hero-zenith .slogan-shell{position:relative;z-index:3}
+.hero-zenith .hero-meta-row{min-height:78px;justify-content:center;padding:10px 0 17px;border-top:1px solid rgba(122,236,255,.2)}
+.hero-zenith .hero-slogan{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:22px;text-align:center;font-family:'Inter','Manrope',sans-serif;font-size:clamp(17px,1.5vw,24px);letter-spacing:.11em;font-weight:900;color:#EAFBFF;text-shadow:0 0 19px rgba(37,231,255,.36),0 2px 6px rgba(0,0,0,.5)}
+.hero-zenith .slogan-piece{display:inline-flex;align-items:center;gap:9px;white-space:nowrap}
+.hero-zenith .slogan-piece strong{color:#40EFFD;text-shadow:0 0 18px rgba(12,232,255,.65)}
+.hero-zenith .slogan-icon{color:#66F3FF;font-size:.8em;filter:drop-shadow(0 0 7px rgba(45,237,255,.8))}
+.hero-zenith .slogan-separator{width:2px;height:26px;background:linear-gradient(transparent,#4BEBFF,transparent);box-shadow:0 0 9px rgba(48,233,255,.44)}
+@media (min-width:1600px){
+  .hero-zenith .hero-layout{grid-template-columns:minmax(0,1.7fr) minmax(445px,1fr)}
+  .hero-zenith .hero-aside{width:min(100%,448px);transform:translateX(-24px)}
+}
+@media (max-width:1250px) and (min-width:901px){
+  .hero-zenith .hero-layout{grid-template-columns:minmax(0,1.5fr) minmax(365px,.95fr);gap:26px}
+  .hero-zenith .hero-aside{padding:27px 24px;width:100%;transform:none}
+  .hero-zenith .date-number{font-size:94px}
+  .hero-zenith .glance-details .aside-info strong{font-size:17px}
+}
+@media (max-width:900px){
+  .hero-zenith .hero-layout{grid-template-columns:1fr;gap:26px}
+  .hero-zenith .hero-aside{width:min(100%,590px);padding:30px 28px;transform:none}
+  .hero-zenith .hero-slogan{gap:15px}
+}
+@media (max-width:650px){
+  .hero-zenith .hero-aside{padding:26px 22px;width:100%}
+  .hero-zenith .glance-date-block{padding:21px 0 17px}
+  .hero-zenith .glance-overline{font-size:11px}
+  .hero-zenith .date-number{font-size:89px}
+  .hero-zenith .date-graphic strong{font-size:29px}
+  .hero-zenith .date-graphic div span{font-size:17px}
+  .hero-zenith .glance-day{font-size:13px}
+  .hero-zenith .glance-details{padding-top:20px}
+  .hero-zenith .glance-details .aside-info{padding-bottom:15px}
+  .hero-zenith .glance-details .aside-info + .aside-info{padding-top:15px}
+  .hero-zenith .glance-details .aside-info small{font-size:11px}
+  .hero-zenith .glance-details .aside-info strong{font-size:16px}
+  .hero-zenith .glance-details .aside-info span:last-child:not(.aside-icon){font-size:14px}
+  .hero-zenith .hero-meta-row{min-height:84px;padding:12px 0 18px}
+  .hero-zenith .hero-slogan{font-size:clamp(13px,3.75vw,17px);gap:9px;letter-spacing:.045em}
+  .hero-zenith .slogan-piece{gap:4px}
+  .hero-zenith .slogan-separator{height:20px;width:1px}
+  .hero-zenith .zenith-waves{bottom:60px}
+}
+@media (max-width:375px){.hero-zenith .hero-slogan{font-size:12px;gap:6px}}
+
+  
+
+/* KDN 2026 / INFOGRAPHIC CARD v1 — scoped only to the hero's course facts */
+.hero-zenith .course-infographic{
+  box-sizing:border-box;width:min(100%,480px);max-width:480px;
+  padding:28px 27px 24px;min-height:0;transform:translateX(-14px);
+  background:linear-gradient(160deg,rgba(4,28,69,.965),rgba(4,35,70,.925));
+  border:1px solid rgba(56,236,255,.76);
+  box-shadow:0 0 24px rgba(22,228,255,.22),0 22px 58px rgba(0,12,39,.42);
+}
+.hero-zenith .course-infographic .hero-aside-label{
+  display:flex;align-items:center;gap:12px;margin-bottom:16px;
+  font-family:'Inter','Manrope',sans-serif;font-weight:900;
+  font-size:18px;line-height:1.3;letter-spacing:.07em;color:#dcfbff;
+}
+.hero-zenith .course-infographic .label-line{width:24px;height:2px;flex-shrink:0}
+.hero-zenith .info-header-spark{margin-left:auto;font-size:19px;color:#55f0ff;text-shadow:0 0 14px rgba(29,233,255,.65)}
+.hero-zenith .info-date-highlight{
+  position:relative;padding:8px 0 17px;border-bottom:1px solid rgba(159,230,250,.22);
+}
+.hero-zenith .info-date-label,.hero-zenith .info-tile-label{
+  display:block;font-family:'Inter','Manrope',sans-serif;font-weight:800;
+  font-size:13px;line-height:1.35;letter-spacing:.12em;color:#9fddf1;
+}
+.hero-zenith .course-infographic .date-graphic{margin:7px 0 8px;gap:17px}
+.hero-zenith .course-infographic .date-number{font-size:112px;line-height:.9}
+.hero-zenith .course-infographic .date-graphic strong{font-size:35px;color:#47efff}
+.hero-zenith .course-infographic .date-graphic div span{font-size:21px;color:#e6f9ff}
+.hero-zenith .info-day-row{display:flex;align-items:center;gap:10px;font-size:17px;font-weight:750;line-height:1.4;color:#f1faff}
+.hero-zenith .info-line-icon{width:24px;height:24px;color:#56f0ff;flex:0 0 24px}
+.hero-zenith .info-line-icon svg{width:100%;height:100%}
+.hero-zenith .info-venue{margin-top:15px;display:flex;gap:14px;align-items:center}
+.hero-zenith .infographic-tile{
+  border:1px solid rgba(93,202,235,.27);border-radius:10px;
+  background:linear-gradient(140deg,rgba(35,82,126,.43),rgba(9,48,85,.35));
+  box-shadow:inset 0 1px 0 rgba(218,252,255,.06);
+}
+.hero-zenith .info-venue.infographic-tile{padding:16px 17px}
+.hero-zenith .info-tile-icon{flex:0 0 44px;width:44px;height:44px;border-radius:12px;display:grid;place-items:center;color:#61f0ff;background:rgba(52,212,241,.12);border:1px solid rgba(69,230,255,.2)}
+.hero-zenith .info-tile-icon svg{width:25px;height:25px}
+.hero-zenith .info-tile-copy{display:flex;flex-direction:column;gap:5px;min-width:0}
+.hero-zenith .info-tile-copy strong{display:block;font-size:20px;line-height:1.25;color:#fff;font-weight:800;letter-spacing:-.02em}
+.hero-zenith .info-tile-copy .info-venue-hall{font-size:16px;color:#d4eefa;line-height:1.25}
+.hero-zenith .info-tile-grid{display:grid;grid-template-columns:.82fr 1fr;gap:12px;margin-top:12px}
+.hero-zenith .info-stat,.hero-zenith .info-attire{padding:15px;display:flex;flex-direction:column;align-items:flex-start;min-height:158px;justify-content:flex-start;gap:8px}
+.hero-zenith .info-stat .info-tile-icon,.hero-zenith .info-attire .info-tile-icon{flex:0 0 36px;width:36px;height:36px;border-radius:10px}
+.hero-zenith .info-stat .info-tile-icon svg,.hero-zenith .info-attire .info-tile-icon svg{height:22px;width:22px}
+.hero-zenith .info-people{display:flex;align-items:baseline;gap:8px;line-height:1}
+.hero-zenith #infoParticipants{font-family:'Inter',sans-serif;font-weight:900;letter-spacing:-.065em;font-size:44px;color:#fff}
+.hero-zenith .info-people>span:last-child{font-size:13px;font-weight:800;letter-spacing:.06em;color:#86ecfa}
+.hero-zenith .info-attire strong{font-size:19px;font-weight:800;color:#fff;line-height:1.25}
+.hero-zenith .course-infographic .aside-foot{margin:16px 0 0;padding-top:13px;font-size:13px;line-height:1.45;color:#d5ebfa}
+@media(max-width:1250px) and (min-width:901px){
+  .hero-zenith .course-infographic{padding:23px 20px;transform:none;width:100%}
+  .hero-zenith .course-infographic .hero-aside-label{font-size:17px}
+  .hero-zenith .info-tile-copy strong{font-size:18px}
+  .hero-zenith .info-attire strong{font-size:17px}
+}
+@media(max-width:900px){
+  .hero-zenith .course-infographic{width:min(100%,590px);max-width:590px;transform:none;padding:25px}
+}
+@media(max-width:650px){
+  .hero-zenith .course-infographic{width:100%;padding:22px 18px}
+  .hero-zenith .course-infographic .hero-aside-label{font-size:16px;letter-spacing:.07em;margin-bottom:13px}
+  .hero-zenith .info-date-label,.hero-zenith .info-tile-label{font-size:12px}
+  .hero-zenith .course-infographic .date-number{font-size:94px}
+  .hero-zenith .course-infographic .date-graphic strong{font-size:29px}
+  .hero-zenith .course-infographic .date-graphic div span{font-size:18px}
+  .hero-zenith .info-day-row{font-size:15px}
+  .hero-zenith .info-venue.infographic-tile{padding:13px;gap:11px}
+  .hero-zenith .info-tile-copy strong{font-size:18px}
+  .hero-zenith .info-tile-copy .info-venue-hall{font-size:15px}
+  .hero-zenith .info-tile-grid{gap:9px}
+  .hero-zenith .info-stat,.hero-zenith .info-attire{padding:12px 10px;min-height:157px}
+  .hero-zenith #infoParticipants{font-size:38px}
+  .hero-zenith .info-people>span:last-child{font-size:11px}
+  .hero-zenith .info-attire strong{font-size:16px}
+  .hero-zenith .course-infographic .aside-foot{font-size:12px}
+}
+@media(max-width:350px){
+  .hero-zenith .info-tile-grid{grid-template-columns:1fr}
+  .hero-zenith .info-stat,.hero-zenith .info-attire{min-height:100px}
+}
+
+</style>
 </head>
 <body>
   <a class="skip-link" href="#main">Langkau ke kandungan</a>
@@ -262,7 +414,6 @@
       </a>
       <nav id="mainNav" class="nav-links" aria-label="Navigasi utama">
         <a href="#utama" class="nav-link active">Utama</a>
-        <a href="#tentang" class="nav-link">Maklumat</a>
         <a href="#aturcara" class="nav-link">Atur Cara</a>
         <a href="#penceramah" class="nav-link">Penceramah</a>
         <a href="#bahan" class="nav-link">Bahan Kursus</a>
@@ -283,7 +434,7 @@
       <div class="hero-grid" aria-hidden="true"></div>
       <div class="shell hero-layout">
         <div class="hero-content">
-          <div class="eyebrow-tag"><span class="eyebrow-dot"></span><span id="heroEyebrow">KEMENTERIAN DALAM NEGERI</span><span class="eyebrow-separator"></span> EXECUTIVE PROGRAMME</div>
+          <div class="eyebrow-tag"><span class="eyebrow-dot"></span><span id="heroEyebrow">KEMENTERIAN DALAM NEGERI</span><span class="eyebrow-separator"></span> PENGURUSAN TERTINGGI</div>
           <p class="hero-kicker">PORTAL MAKLUMAT KURSUS <span class="mini-accent">/</span> 2026</p>
           <h1><span id="heroTitle">Kursus Kecerdasan Buatan (AI) bagi Pengurusan Tertinggi</span></h1>
           <p class="hero-programme" id="heroProgramme">Kementerian Dalam Negeri Tahun 2026</p>
@@ -293,13 +444,37 @@
             <a class="btn btn-outline-light" href="#bahan">Lihat Bahan Kursus <span aria-hidden="true">→</span></a>
           </div>
         </div>
-        <aside class="hero-aside" aria-label="Ringkasan program">
-          <div class="hero-aside-label"><span class="label-line"></span> PROGRAMME AT A GLANCE</div>
-          <div class="date-graphic"><span class="date-number">20</span><div><strong>NOV</strong><span>2026</span></div></div>
-          <div class="aside-divider"></div>
-          <div class="aside-info"><span class="aside-icon">⌖</span><div><small>LOKASI</small><strong id="heroVenue">Zenith Hotel Putrajaya</strong><span id="heroHall">Cashmere Hall</span></div></div>
-          <div class="aside-info"><span class="aside-icon">◷</span><div><small>HARI</small><strong id="heroDate">Jumaat, 20 November 2026</strong></div></div>
-          <div class="aside-foot"><span class="status-circle"></span> Maklumat kursus & bahan pembelajaran</div>
+        <aside class="hero-aside course-infographic" aria-label="Maklumat kursus">
+          <div class="hero-aside-label"><span class="label-line"></span> MAKLUMAT KURSUS <span class="info-header-spark" aria-hidden="true">✦</span></div>
+          <div class="info-date-highlight">
+            <span class="info-date-label">TARIKH PROGRAM</span>
+            <div class="date-graphic"><span class="date-number">20</span><div><strong>NOV</strong><span>2026</span></div></div>
+            <div class="info-day-row">
+              <span class="info-line-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4M17 3v4M3 10h18"/><path d="M8 14h3M8 17h3"/></svg></span>
+              <span id="heroDate">Jumaat, 20 November 2026</span>
+            </div>
+          </div>
+          <div class="info-venue infographic-tile">
+            <span class="info-tile-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+            <span class="info-tile-copy">
+              <span class="info-tile-label">TEMPAT KURSUS</span>
+              <strong id="heroVenue">Zenith Hotel Putrajaya</strong>
+              <span id="heroHall" class="info-venue-hall">Cashmere Hall</span>
+            </span>
+          </div>
+          <div class="info-tile-grid">
+            <div class="infographic-tile info-stat" aria-label="Bilangan peserta">
+              <span class="info-tile-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="7" r="3"/><path d="M3 20v-2a6 6 0 0 1 12 0v2H3Z"/><path d="M17 4a3 3 0 0 1 0 6M17 14a5 5 0 0 1 4 5v1h-3"/></svg></span>
+              <span class="info-tile-label">PESERTA</span>
+              <strong class="info-people"><span id="infoParticipants">74</span><span>PEGAWAI</span></strong>
+            </div>
+            <div class="infographic-tile info-attire" aria-label="Pemakaian kursus">
+              <span class="info-tile-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 3-4 3-2 5 5 3v7h12v-7l5-3-2-5-4-3-5 4-5-4Z"/><path d="M9 4c1 2 5 2 6 0"/></svg></span>
+              <span class="info-tile-label">PEMAKAIAN</span>
+              <strong id="infoDress">Pakaian Pejabat</strong>
+            </div>
+          </div>
+          <div class="aside-foot"><span class="status-circle"></span> Maklumat kursus &amp; bahan pembelajaran</div>
         </aside>
       </div>
       <svg class="zenith-waves" viewBox="0 0 1600 150" preserveAspectRatio="none" aria-hidden="true">
@@ -307,17 +482,18 @@
         <path d="M0 111 C280 32 500 153 815 106 S1220 55 1600 123" stroke="#63F2FF" stroke-width="2.3" opacity=".8" fill="none"/>
         <path d="M0 139 C380 65 550 177 860 120 S1280 82 1600 140" stroke="#7D84FF" stroke-width="2" opacity=".6" fill="none"/>
       </svg>
-      <div class="shell"><div class="hero-meta-row"><span>BAHAGIAN PERANCANGAN STRATEGIK (PG)</span><span class="hero-meta-mid">KEPIMPINAN <i>•</i> INOVASI <i>•</i> TADBIR URUS AI</span><span class="hero-scroll">SCROLL TO EXPLORE <span aria-hidden="true">↓</span></span></div></div>
+      <div class="shell slogan-shell">
+        <div class="hero-meta-row" aria-label="Slogan AI KDN">
+          <div class="hero-slogan">
+            <span class="slogan-piece"><span class="slogan-icon" aria-hidden="true">✦</span> AI FOR <strong>KDN</strong></span>
+            <span class="slogan-separator" aria-hidden="true"></span>
+            <span class="slogan-piece"><strong>KDN</strong> FOR AI <span class="slogan-icon" aria-hidden="true">✦</span></span>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="quick-info" aria-label="Ringkasan maklumat kursus">
-      <div class="shell"><div class="quick-info-grid">
-        <div class="quick-item"><div class="quick-icon">◫</div><div><span>Tarikh Program</span><strong id="infoDate">20 November 2026</strong></div></div>
-        <div class="quick-item"><div class="quick-icon">⌖</div><div><span>Tempat</span><strong id="infoVenue">Zenith Hotel Putrajaya</strong></div></div>
-        <div class="quick-item"><div class="quick-icon">♧</div><div><span>Peserta</span><strong><span id="infoParticipants">74</span> Pegawai</strong></div></div>
-        <div class="quick-item"><div class="quick-icon">◇</div><div><span>Pemakaian</span><strong id="infoDress">Pakaian Pejabat</strong></div></div>
-      </div></div>
-    </section>
+
 
     <section id="noticeBand" class="notice-band" hidden aria-label="Pengumuman terkini"><div class="shell"><div class="notice-title"><span aria-hidden="true">✳</span> PENGUMUMAN URUS SETIA</div><div id="noticeList" class="notice-list"></div></div></section>
 
