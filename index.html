@@ -12,6 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="./favicon.svg">
   <link rel="stylesheet" href="./styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
@@ -125,9 +126,9 @@
   </header>
 
   <main id="main">
-    <section class="hero" id="utama">
-      <div class="hero-glow hero-glow-one" aria-hidden="true"></div>
-      <div class="hero-glow hero-glow-two" aria-hidden="true"></div>
+    <section class="hero hero-zenith" id="utama">
+      <div class="zenith-backdrop" aria-hidden="true"></div>
+      <div class="zenith-vignette" aria-hidden="true"></div>
       <div class="hero-grid" aria-hidden="true"></div>
       <div class="shell hero-layout">
         <div class="hero-content">
@@ -150,6 +151,11 @@
           <div class="aside-foot"><span class="status-circle"></span> Maklumat kursus & bahan pembelajaran</div>
         </aside>
       </div>
+      <svg class="zenith-waves" viewBox="0 0 1600 150" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 101 C280 24 470 153 800 100 S1260 46 1600 112" stroke="#06DDFD" stroke-width="13" opacity=".18" fill="none"/>
+        <path d="M0 111 C280 32 500 153 815 106 S1220 55 1600 123" stroke="#63F2FF" stroke-width="2.3" opacity=".8" fill="none"/>
+        <path d="M0 139 C380 65 550 177 860 120 S1280 82 1600 140" stroke="#7D84FF" stroke-width="2" opacity=".6" fill="none"/>
+      </svg>
       <div class="shell"><div class="hero-meta-row"><span>BAHAGIAN PERANCANGAN STRATEGIK (PG)</span><span class="hero-meta-mid">KEPIMPINAN <i>•</i> INOVASI <i>•</i> TADBIR URUS AI</span><span class="hero-scroll">SCROLL TO EXPLORE <span aria-hidden="true">↓</span></span></div></div>
     </section>
 
@@ -224,5 +230,23 @@
   </div>
   <script src="./content.js" defer></script>
   <script src="./app.js" defer></script>
+  <script>
+  /* Hero typography enhancement — works with the existing content.js and app.js. */
+  window.addEventListener('load', function () {
+    const title = document.getElementById('heroTitle');
+    if (!title || title.querySelector('.ai-highlight')) return;
+    const value = title.textContent || '';
+    const index = value.toUpperCase().indexOf('(AI)');
+    if (index === -1) return;
+    const highlight = document.createElement('span');
+    highlight.className = 'ai-highlight';
+    highlight.textContent = value.slice(index, index + 4);
+    title.replaceChildren(
+      document.createTextNode(value.slice(0, index)),
+      highlight,
+      document.createTextNode(value.slice(index + 4))
+    );
+  });
+  </script>
 </body>
 </html>
