@@ -421,7 +421,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 17px;
+  gap: 10px;
   flex-wrap: nowrap;
   width: 100%;
   margin: 12px 0 11px;
@@ -441,22 +441,25 @@
   min-width: 0;
   width: auto;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: stretch;
   justify-content: center;
   gap: 14px;
   padding: 0;
 }
-.hero-zenith .course-infographic .kdn-date-display .date-graphic-meta > strong {
+.hero-zenith .course-infographic .kdn-date-display .kdn-month-year {
   display: block;
-  font-family: 'Inter', sans-serif;
-  font-size: clamp(19px, 1.6vw, 25px);
+  width: 100%;
+  font-family: 'Inter', 'Arial Black', sans-serif;
+  font-size: clamp(28px, 2.1vw, 33px);
   font-weight: 900;
-  line-height: 1.1;
-  letter-spacing: -.01em;
+  line-height: 1.06;
+  letter-spacing: -.04em;
+  word-spacing: .08em;
   white-space: nowrap;
   color: #50edff;
 }
 .hero-zenith .course-infographic .kdn-date-display .info-day-chip {
+  align-self: flex-start;
   display: inline-flex;
   flex-direction: row;
   align-items: center;
@@ -492,13 +495,13 @@
 }
 @media (max-width: 1250px) {
   .hero-zenith .course-infographic .kdn-date-display .date-number{font-size:98px}
-  .hero-zenith .course-infographic .kdn-date-display .date-graphic-meta > strong {font-size:20px}
+  .hero-zenith .course-infographic .kdn-date-display .kdn-month-year{font-size:clamp(23px,2.35vw,30px)}
 }
 @media (max-width: 650px) {
   .hero-zenith .course-infographic .kdn-date-display{gap:12px;margin:11px 0}
   .hero-zenith .course-infographic .kdn-date-display .date-number{font-size:clamp(76px,23vw,93px)}
   .hero-zenith .course-infographic .kdn-date-display .date-graphic-meta{gap:10px}
-  .hero-zenith .course-infographic .kdn-date-display .date-graphic-meta > strong {font-size:clamp(14px,4.2vw,19px)}
+  .hero-zenith .course-infographic .kdn-date-display .kdn-month-year{font-size:clamp(18px,5.4vw,26px)}
   .hero-zenith .course-infographic .kdn-date-display .info-day-chip{padding:7px 10px}
   .hero-zenith .course-infographic .kdn-date-display .info-day-chip .day-icon{height:17px;width:17px;flex-basis:17px}
   .hero-zenith .course-infographic .kdn-date-display .info-day-chip .day-icon svg{height:17px;width:17px}
@@ -507,7 +510,7 @@
 @media (max-width:360px) {
   .hero-zenith .course-infographic .kdn-date-display{gap:9px}
   .hero-zenith .course-infographic .kdn-date-display .date-number{font-size:74px}
-  .hero-zenith .course-infographic .kdn-date-display .date-graphic-meta > strong {font-size:13px}
+  .hero-zenith .course-infographic .kdn-date-display .kdn-month-year{font-size:18px}
 }
 </style>
 </head>
@@ -560,7 +563,7 @@
           <div class="hero-aside-label"><span class="label-line"></span> MAKLUMAT KURSUS <span class="info-header-spark" aria-hidden="true">✦</span></div>
           <div class="info-date-highlight">
             <span class="info-date-label">TARIKH PROGRAM</span>
-            <div class="kdn-date-display"><span class="date-number">20</span><div class="date-graphic-meta"><strong>NOVEMBER 2026</strong><div class="info-day-chip"><span class="day-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v3M17 3v3"/><rect x="3.5" y="5.5" width="17" height="15" rx="3"/><path d="M3.5 10.5h17"/><path d="m9 14 2 2 4-4"/></svg></span><span id="heroDay" class="day-value">JUMAAT</span></div></div></div>
+            <div class="kdn-date-display"><span class="date-number">20</span><div class="date-graphic-meta"><strong class="kdn-month-year">NOVEMBER 2026</strong><div class="info-day-chip"><span class="day-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v3M17 3v3"/><rect x="3.5" y="5.5" width="17" height="15" rx="3"/><path d="M3.5 10.5h17"/><path d="m9 14 2 2 4-4"/></svg></span><span id="heroDay" class="day-value">JUMAAT</span></div></div></div>
           </div>
           <div class="info-venue infographic-tile">
             <span class="info-tile-icon icon-venue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V7.5A1.5 1.5 0 0 1 6.5 6H18a1 1 0 0 1 1 1v14"/><path d="M9 6V4.8A1.8 1.8 0 0 1 10.8 3h2.4A1.8 1.8 0 0 1 15 4.8V6"/><path d="M9 11h2M13 11h2M9 15h2M13 15h2"/><path d="M3 21h18"/></svg></span>
