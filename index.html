@@ -110,16 +110,19 @@
 }
 .hero-zenith .zenith-backdrop{
   position:absolute;inset:0;z-index:-3;pointer-events:none;
-  background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Putrajaya_Malaysia_Ministry-of-Home-Affairs-03.jpg/1365px-Putrajaya_Malaysia_Ministry-of-Home-Affairs-03.jpg');
+  /* Photo sebenar bangunan KDN — PNG tempatan di root GitHub */
+  background-image:url('./kdn-building-04.png');
   background-color:#08294d;
-  background-size:auto 116%;background-position:right center;background-repeat:no-repeat;
-  filter:saturate(1.14) contrast(1.06) brightness(.98);
+  background-size:cover;
+  background-position:center 39%;
+  background-repeat:no-repeat;
+  filter:saturate(1.10) contrast(1.04) brightness(1.08);
 }
 .hero-zenith .zenith-vignette{
   position:absolute;inset:0;z-index:-2;pointer-events:none;
   background:
-    linear-gradient(90deg,rgba(1,13,39,.95) 0%,rgba(3,20,52,.88) 28%,rgba(4,23,56,.72) 55%,rgba(4,23,55,.25) 79%,rgba(3,15,39,.10) 100%),
-    linear-gradient(180deg,rgba(5,21,51,.08) 0%,rgba(3,18,47,.1) 55%,rgba(2,12,31,.52) 100%);
+    linear-gradient(90deg,rgba(1,13,39,.87) 0%,rgba(3,20,52,.76) 27%,rgba(4,23,56,.55) 52%,rgba(4,23,55,.16) 78%,rgba(3,15,39,.09) 100%),
+    linear-gradient(180deg,rgba(5,21,51,.06) 0%,rgba(3,18,47,.06) 55%,rgba(2,12,31,.45) 100%);
 }
 .hero-zenith .hero-grid{z-index:-1;opacity:.08}
 .hero-zenith .hero-layout{
@@ -217,8 +220,8 @@
   .hero-zenith h1{font-size:clamp(47px,6.6vw,69px)}
   .hero-zenith .hero-aside{width:min(100%,590px);min-height:0;transform:none;padding:30px 28px}
   .hero-zenith .hero-meta-row{width:calc(100% - 58px)}
-  .hero-zenith .zenith-backdrop{background-position:70% center}
-  .hero-zenith .zenith-vignette{background:linear-gradient(180deg,rgba(2,15,39,.87) 0%,rgba(2,16,42,.77) 52%,rgba(2,15,40,.66) 100%)}
+  .hero-zenith .zenith-backdrop{background-position:56% 45%}
+  .hero-zenith .zenith-vignette{background:linear-gradient(180deg,rgba(2,15,39,.74) 0%,rgba(2,16,42,.69) 52%,rgba(2,15,40,.58) 100%)}
 }
 @media (max-width:650px){
   .hero.hero-zenith{min-height:0}
@@ -243,7 +246,7 @@
   .hero-zenith .hero-meta-row .hero-meta-mid{display:none}
   .hero-zenith .hero-scroll{display:none}
   .hero-zenith .zenith-waves{bottom:46px;height:70px}
-  .hero-zenith .zenith-backdrop{background-position:74% 55%}
+  .hero-zenith .zenith-backdrop{background-position:57% 45%}
 }
 
 
