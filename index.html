@@ -653,6 +653,59 @@
     .site-header .header-actions{margin-left:auto}
     .site-header .nav-links.open{display:flex}
   }
+
+/* 19 NOV 2026 — OBJEKTIF SECTION TOUCH-UP (scoped; V1 content retained) */
+.section.section-about { padding-block: clamp(64px, 5vw, 92px); }
+.section-about .section-header { margin-bottom: clamp(26px, 3vw, 39px); }
+.section-about .heading-split { display:block; }
+.section-about .heading-split > div { width: 100%; }
+.section-about h2 { max-width: 1200px; font-size: clamp(47px, 4.15vw, 73px); line-height: 1.12; }
+.section-about .about-layout { grid-template-columns: minmax(0, .95fr) minmax(0, 1.17fr); gap: clamp(22px, 3vw, 45px); align-items: stretch; }
+.section-about .about-left { display:flex; min-width:0; }
+.section-about .statement-card { width: 100%; min-height: 100%; padding: clamp(26px, 2.8vw, 42px); justify-content:space-between; gap:25px; border:1px solid rgba(85,228,255,.48); border-top:4px solid #45edfc; background:linear-gradient(155deg,rgba(5,32,70,.92),rgba(7,35,67,.83)); box-shadow:0 22px 55px rgba(0,8,35,.34), inset 0 1px 0 rgba(255,255,255,.05); }
+.section-about .focus-top { display:flex; align-items:center; gap:15px; z-index:1; }
+.section-about .statement-star { font-size:40px; line-height:1; text-shadow:0 0 21px rgba(70,239,255,.4); }
+.section-about .focus-decor-line { height:1px; width:48px; background:linear-gradient(90deg,#6cf6ff,transparent); }
+.section-about .focus-top-label { font-size:12px; font-weight:800; letter-spacing:.14em; color:#addef5; }
+.section-about .focus-statement { position:relative; z-index:1; }
+.section-about .statement-card small { font-size:15px; letter-spacing:.2em; }
+.section-about .statement-card p { max-width:590px; margin:17px 0 0; font-size:clamp(23px,1.65vw,28px); line-height:1.6; font-weight:650; }
+.section-about .focus-pillars { display:flex; gap:8px; flex-wrap:wrap; position:relative; z-index:1; padding-top:18px; border-top:1px solid rgba(154,224,248,.24); }
+.section-about .focus-pillars span { padding:9px 11px; border:1px solid rgba(65,224,255,.24); border-radius:4px; font-size:clamp(10px,.75vw,12px); font-weight:850; letter-spacing:.07em; color:#b7f5ff; background:rgba(16,85,122,.24); }
+.section-about .statement-lines { left:auto; right:-105px; top:auto; bottom:-110px; width:300px; height:300px; pointer-events:none; border:1px solid rgba(75,232,250,.13); box-shadow:0 0 0 40px rgba(76,216,244,.025),0 0 0 86px rgba(76,216,244,.018); }
+.section-about .objectives-block { padding:27px 31px 16px; border-color:rgba(123,227,252,.42); box-shadow:0 25px 58px rgba(0,9,33,.32); }
+.section-about .minor-head h3 { font-size:clamp(25px,1.85vw,31px); }
+.section-about .minor-head span { font-size:13px; }
+.section-about .objective { grid-template-columns:50px 1fr; gap:17px; padding:18px 0; min-height:92px; }
+.section-about .objective-num { display:grid; place-items:center; width:42px; height:42px; border:1px solid rgba(69,226,253,.38); border-radius:9px; background:linear-gradient(145deg,rgba(18,110,142,.3),rgba(0,39,78,.38)); color:#61efff; font-size:20px; }
+.section-about .objective p { font-size:clamp(19px,1.34vw,23px); line-height:1.55; }
+@media (min-width: 901px) and (max-width:1250px) {
+ .section-about .about-layout { grid-template-columns:minmax(0,.90fr) minmax(0,1.18fr); gap:22px; }
+ .section-about .statement-card { padding:25px; }
+ .section-about .statement-card p { font-size:21px; }
+ .section-about .objective p { font-size:19px; }
+ .section-about .objective { gap:12px; }
+}
+@media (max-width:900px) {
+ .section-about .about-layout { grid-template-columns:1fr; }
+ .section-about .about-left { display:block; }
+ .section-about .statement-card { min-height:350px; }
+ .section-about h2 { font-size:clamp(38px,6vw,55px); }
+ .section-about .statement-card p { max-width:710px; }
+}
+@media (max-width:650px) {
+ .section-about h2 { font-size:clamp(36px,9vw,46px); }
+ .section-about .statement-card { min-height:330px; padding:25px 22px; }
+ .section-about .focus-top-label { font-size:10px; }
+ .section-about .focus-decor-line { width:22px; }
+ .section-about .statement-card p { font-size:20px; line-height:1.62; }
+ .section-about .focus-pillars { gap:6px; }
+ .section-about .focus-pillars span { font-size:9px; padding:8px; }
+ .section-about .objectives-block { padding:22px 20px 11px; }
+ .section-about .objective { grid-template-columns:40px 1fr; gap:12px; }
+ .section-about .objective-num { width:36px; height:36px; font-size:16px; }
+ .section-about .objective p { font-size:17px; }
+}
   </style>
 
 </head>
@@ -752,11 +805,17 @@
 
     <section class="section section-about" id="tentang">
       <div class="shell">
-        <div class="section-header heading-split"><div><div class="section-kicker"><span class="kicker-line"></span> OBJEKTIF KURSUS <span class="section-nr">01 / 06</span></div><h2>Mempersiapkan pemimpin<br>untuk <em>era kecerdasan.</em></h2></div><p class="section-lead" id="introLead">Satu pusat rujukan untuk maklumat program, sesi perkongsian ilmu dan bahan kursus.</p></div>
+        <div class="section-header heading-split"><div><div class="section-kicker"><span class="kicker-line"></span> OBJEKTIF KURSUS <span class="section-nr">01 / 06</span></div><h2>Mempersiapkan pemimpin<br>untuk <em>era kecerdasan.</em></h2></div></div>
         <div class="about-layout">
           <div class="about-left">
-            <div class="statement-card"><span class="statement-star">✳</span><div><small>FOKUS KURSUS</small><p>AI bukan sekadar teknologi. Ia menuntut <strong>kepimpinan, pertimbangan strategik</strong> dan <strong>tanggungjawab</strong> terhadap keselamatan data.</p></div><div class="statement-lines" aria-hidden="true"></div></div>
-            <div class="organiser-block"><span>DIANJURKAN OLEH</span><strong id="organiserName">Bahagian Perancangan Strategik (PG)</strong><small>Kementerian Dalam Negeri</small></div>
+            <div class="statement-card">
+              <div class="focus-top"><span class="statement-star" aria-hidden="true">✳</span><span class="focus-decor-line" aria-hidden="true"></span><span class="focus-top-label">PERSPEKTIF KEPIMPINAN</span></div>
+              <div class="focus-statement"><small>FOKUS KURSUS</small><p>AI bukan sekadar teknologi. Ia menuntut <strong>kepimpinan, pertimbangan strategik</strong> dan <strong>tanggungjawab</strong> terhadap keselamatan data.</p></div>
+              <div class="focus-pillars" aria-label="Fokus utama: Kepimpinan, Strategi dan Tanggungjawab">
+                <span>KEPIMPINAN</span><span>STRATEGI</span><span>TANGGUNGJAWAB</span>
+              </div>
+              <div class="statement-lines" aria-hidden="true"></div>
+            </div>
           </div>
           <div class="objectives-block"><div class="minor-head"><h3>Objektif Kursus</h3><span>05 FOKUS UTAMA</span></div><div id="objectivesList" class="objectives-list"><div class="placeholder-line"></div><div class="placeholder-line"></div></div></div>
         </div>
