@@ -737,33 +737,32 @@
 .section-agenda .agenda-headrow{display:flex;justify-content:space-between;align-items:end;gap:28px}
 .section-agenda h2{color:#fff;font-family:'Inter','Arial Black',sans-serif;font-weight:900;font-size:clamp(47px,4.5vw,72px);line-height:1.08;letter-spacing:-.06em;margin:14px 0 0;text-shadow:0 4px 23px rgba(0,8,31,.5)}
 .section-agenda h2 em{color:#48edff;font-style:normal}
-.section-agenda .agenda-split{display:grid;grid-template-columns:minmax(0,1.14fr) minmax(0,.86fr);gap:22px;align-items:stretch}
+.section-agenda .agenda-split{display:grid;grid-template-columns:minmax(0,1.14fr) minmax(0,.86fr);gap:22px;align-items:start}
 .section-agenda .agenda-board{border:1px solid rgba(138,224,247,.44);border-top:4px solid #37e5f7;border-radius:15px;overflow:hidden;background:#082746;box-shadow:0 26px 58px rgba(0,9,29,.35);backdrop-filter:none;min-width:0;display:flex;flex-direction:column}
 .section-agenda .agenda-board.afternoon{border-top-color:#e3bf7c;background:#061f3f;box-shadow:0 26px 58px rgba(0,9,29,.35);backdrop-filter:none}
-.section-agenda .agenda-board-title{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 23px 16px;background:rgba(18,79,119,.24);border-bottom:1px solid rgba(134,215,246,.24)}
-.section-agenda .agenda-board-title .period{display:flex;align-items:center;gap:12px;color:#fff;font-size:clamp(24px,2.1vw,33px);font-weight:900;letter-spacing:-.045em}
+.section-agenda .agenda-board-title{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:21px 24px 19px;background:rgba(18,79,119,.24);border-bottom:1px solid rgba(134,215,246,.24)}
+.section-agenda .agenda-board-title .period{display:flex;align-items:center;gap:12px;color:#fff;font-size:clamp(27px,2.25vw,35px);font-weight:900;letter-spacing:-.045em}
 .section-agenda .agenda-board-title .period svg{width:33px;height:33px;color:#5ef1ff;flex:none}
 .section-agenda .afternoon .agenda-board-title .period svg{color:#eccc8f}
-.section-agenda .agenda-count{font-size:12px;font-weight:800;letter-spacing:.12em;color:#b2ecf5;white-space:nowrap}
+.section-agenda .agenda-count{font-size:14px;font-weight:800;letter-spacing:.12em;color:#b2ecf5;white-space:nowrap}
 .section-agenda .afternoon .agenda-count{color:#f0d59f}
-.section-agenda .agenda-items{padding:4px 22px 8px;flex:1}
-.section-agenda .agenda-entry{display:grid;grid-template-columns:116px minmax(0,1fr);gap:16px;padding:13px 0;border-bottom:1px solid rgba(166,221,242,.15);align-items:start}
+.section-agenda .agenda-items{padding:5px 24px 12px;flex:none}
+.section-agenda .agenda-entry{display:grid;grid-template-columns:124px minmax(0,1fr);gap:18px;padding:16px 0;border-bottom:1px solid rgba(166,221,242,.15);align-items:start}
 .section-agenda .agenda-entry:last-child{border-bottom:0}
-.section-agenda .afternoon .agenda-items{display:flex;flex-direction:column;justify-content:space-evenly}
-.section-agenda .afternoon .agenda-entry{width:100%;padding:24px 0}
-.section-agenda .agenda-time{display:block;font-size:15px;font-weight:850;line-height:1.42;color:#64ecfa;letter-spacing:-.01em;padding-top:2px}
+.section-agenda .afternoon .agenda-items{display:block}
+.section-agenda .afternoon .agenda-entry{width:100%;padding:19px 0}
+.section-agenda .agenda-time{display:block;font-size:18px;font-weight:850;line-height:1.42;color:#64ecfa;letter-spacing:-.01em;padding-top:2px}
 .section-agenda .afternoon .agenda-time{color:#efce93}
 .section-agenda .agenda-desc{min-width:0}
-.section-agenda .agenda-desc strong{display:block;font-size:clamp(18px,1.08vw,20px);font-weight:800;line-height:1.3;color:#fff;letter-spacing:-.012em}
-.section-agenda .agenda-desc p{font-size:clamp(15px,.96vw,17px);line-height:1.48;color:#d0e5f3;font-weight:500;margin:5px 0 0}
-.section-agenda .agenda-desc p.topic{color:#9fe7ef;font-style:italic}
+.section-agenda .agenda-desc strong{display:block;font-size:clamp(21px,1.35vw,24px);font-weight:800;line-height:1.3;color:#fff;letter-spacing:-.012em}
+.section-agenda .agenda-desc p{font-size:clamp(17px,1.10vw,19px);line-height:1.5;color:#e5f2ff;font-weight:550;margin:7px 0 0}
+.section-agenda .agenda-desc p.topic{color:#a9f5ff;font-size:clamp(17px,1.14vw,20px);font-weight:750;font-style:italic;line-height:1.42;letter-spacing:-.01em;border-left:3px solid #34e7f4;padding:7px 0 7px 12px;margin-top:10px;background:linear-gradient(90deg,rgba(31,181,211,.10),transparent 70%)}
+.section-agenda .agenda-desc p.speaker{font-size:clamp(18px,1.18vw,21px);color:#ffdfa8;font-weight:800;line-height:1.4;margin-top:9px}
+.section-agenda .afternoon .agenda-desc p.topic{border-left-color:#e9c77f;color:#e8faff}
 .section-agenda .agenda-desc p.smallmeta{font-size:13px;color:#c1d7e5}
-.section-agenda .agenda-entry.featured .agenda-desc strong{color:#8bf3ff}
-.section-agenda .afternoon .agenda-entry.featured .agenda-desc strong{color:#fae2b6}
+.section-agenda .agenda-entry.featured .agenda-desc strong{color:#8bf3ff;font-weight:900}
+.section-agenda .afternoon .agenda-entry.featured .agenda-desc strong{color:#fae2b6;font-weight:900}
 .section-agenda .agenda-entry.break .agenda-desc strong{color:#f2d69e}
-.section-agenda .agenda-bottom{padding:14px 22px;border-top:1px solid rgba(154,222,251,.18);background:rgba(4,35,64,.27);color:#b7dce9;font-size:13px;line-height:1.45}
-.section-agenda .afternoon .agenda-bottom{margin-top:auto;background:linear-gradient(125deg,rgba(69,116,146,.13),rgba(11,63,97,.26));color:#d1e2f1}
-.section-agenda .agenda-note{border:0;background:none;padding:15px 2px 0;font-size:13px;line-height:1.5;font-weight:600;color:#d6ebf4;text-shadow:0 3px 15px rgba(0,0,0,.6)}
 .section-agenda #agendaList[hidden]{display:none!important}
 
 /* Atur Cara refinement — solid panels and afternoon-appropriate sun icon */
@@ -771,26 +770,25 @@
 .section-agenda .agenda-board.afternoon { background-color:#082746; background-image:none; }
 .section-agenda .agenda-board.afternoon { background-color:#061f3f; }
 .section-agenda .afternoon .agenda-board-title {background:#0b3150;}
-.section-agenda .afternoon .agenda-bottom {background:#092d49;}
 
 @media(max-width:1240px){
  .section-agenda>.shell{width:calc(100% - 60px)}
  .section-agenda .agenda-split{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:15px}
  .section-agenda .agenda-items{padding:4px 16px 7px}
- .section-agenda .agenda-entry{grid-template-columns:100px minmax(0,1fr);gap:11px;padding:12px 0}
- .section-agenda .agenda-time{font-size:13px}
- .section-agenda .agenda-desc strong{font-size:16px}
- .section-agenda .agenda-desc p{font-size:14px}
+ .section-agenda .agenda-entry{grid-template-columns:110px minmax(0,1fr);gap:13px;padding:15px 0}
+ .section-agenda .agenda-time{font-size:16px}
+ .section-agenda .agenda-desc strong{font-size:20px}
+ .section-agenda .agenda-desc p{font-size:17px}
 }
 @media(max-width:930px){
  .section.section-agenda{min-height:0;padding:65px 0 75px}
  .section-agenda .agenda-headrow{align-items:start;flex-direction:column;gap:19px}
  .section-agenda .agenda-split{grid-template-columns:1fr;gap:18px}
- .section-agenda .agenda-entry{grid-template-columns:140px 1fr;gap:18px;padding:15px 0}
+ .section-agenda .agenda-entry{grid-template-columns:135px 1fr;gap:18px;padding:16px 0}
  .section-agenda .afternoon .agenda-entry{padding:18px 0}
- .section-agenda .agenda-time{font-size:15px}
- .section-agenda .agenda-desc strong{font-size:18px}
- .section-agenda .agenda-desc p{font-size:15px}
+ .section-agenda .agenda-time{font-size:17px}
+ .section-agenda .agenda-desc strong{font-size:21px}
+ .section-agenda .agenda-desc p{font-size:18px}
 }
 @media(max-width:540px){
  .section.section-agenda{padding:54px 0 65px}
@@ -799,13 +797,16 @@
  .section-agenda h2{font-size:clamp(39px,9.6vw,53px)}
  .section-agenda .agenda-board-title{padding:17px}
  .section-agenda .agenda-board-title .period{font-size:27px}
- .section-agenda .agenda-items{padding:2px 15px}
- .section-agenda .agenda-entry{grid-template-columns:90px minmax(0,1fr);gap:10px;padding:13px 0}
- .section-agenda .agenda-time{font-size:13px}
- .section-agenda .agenda-desc strong{font-size:16px}
- .section-agenda .agenda-desc p{font-size:13px}
- .section-agenda .agenda-bottom{padding:13px 15px}
- .section-agenda .agenda-count{font-size:10px;letter-spacing:.05em}
+ .section-agenda .agenda-items{padding:5px 16px 10px}
+ .section-agenda .agenda-entry{grid-template-columns:100px minmax(0,1fr);gap:11px;padding:15px 0}
+ .section-agenda .agenda-time{font-size:16px}
+ .section-agenda .agenda-desc strong{font-size:18px}
+ .section-agenda .agenda-desc p{font-size:16px}
+ .section-agenda .agenda-desc p.speaker{font-size:17px}
+ .section-agenda .agenda-desc p.topic{font-size:16px;padding-left:9px}
+ .section-agenda .agenda-board-title .period{font-size:29px}
+ .section-agenda .agenda-time{font-size:15px}
+ .section-agenda .agenda-count{font-size:12px;letter-spacing:.05em}
 }
 </style>
 </head>
@@ -933,17 +934,14 @@
     <div class="agenda-split" aria-label="Atur cara pagi dan petang">
       <article class="agenda-board morning" aria-labelledby="morningHeading">
         <div class="agenda-board-title"><div class="period"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg><h3 id="morningHeading">PAGI</h3></div><span class="agenda-count">07 AKTIVITI</span></div>
-        <div class="agenda-items"><div class="agenda-entry "><span class="agenda-time">8.30–9.00 pagi</span><div class="agenda-desc"><strong>Pendaftaran &amp; Sarapan</strong></div></div><div class="agenda-entry "><span class="agenda-time">9.00 pagi</span><div class="agenda-desc"><strong>Sesi Fotografi</strong></div></div><div class="agenda-entry "><span class="agenda-time">9.15 pagi</span><div class="agenda-desc"><strong>Ucapan Perasmian</strong><p>YBhg. Datuk Dr. Awang Alik bin Jeman, Ketua Setiausaha KDN</p></div></div><div class="agenda-entry featured"><span class="agenda-time">9.30–10.30 pagi</span><div class="agenda-desc"><strong>Wacana Perkongsian Ilmu 1</strong><p>Prof. Ts. Dr. Nor Badrul Anuar bin Juma’at</p><p class="topic">Pemikiran Strategik Era AI Agentik: Delegasi Bertanggungjawab dan Keselamatan Data</p></div></div><div class="agenda-entry break"><span class="agenda-time">10.30–10.45 pagi</span><div class="agenda-desc"><strong>Minum Pagi</strong></div></div><div class="agenda-entry featured"><span class="agenda-time">10.45–11.45 pagi</span><div class="agenda-desc"><strong>Wacana Perkongsian Ilmu 2</strong><p>Encik Nik Feizal Haidi bin Hanafi</p><p class="topic">Beyond Agility: Reinventing Work, Teams and Leadership in the Age of Intelligence</p></div></div><div class="agenda-entry break"><span class="agenda-time">12.00 tengah hari</span><div class="agenda-desc"><strong>Makan Tengah Hari &amp; Solat Jumaat</strong></div></div></div>
-        <div class="agenda-bottom">Pengisian pagi termasuk acara perasmian dan dua wacana perkongsian ilmu.</div>
+        <div class="agenda-items"><div class="agenda-entry "><span class="agenda-time">8.30–9.00 pagi</span><div class="agenda-desc"><strong>Pendaftaran &amp; Sarapan</strong></div></div><div class="agenda-entry "><span class="agenda-time">9.00 pagi</span><div class="agenda-desc"><strong>Sesi Fotografi</strong></div></div><div class="agenda-entry "><span class="agenda-time">9.15 pagi</span><div class="agenda-desc"><strong>Ucapan Perasmian</strong><p>YBhg. Datuk Dr. Awang Alik bin Jeman, Ketua Setiausaha KDN</p></div></div><div class="agenda-entry featured"><span class="agenda-time">9.30–10.30 pagi</span><div class="agenda-desc"><strong>Wacana Perkongsian Ilmu 1</strong><p class="speaker">Prof. Ts. Dr. Nor Badrul Anuar bin Juma’at</p><p class="topic">Pemikiran Strategik Era AI Agentik: Delegasi Bertanggungjawab dan Keselamatan Data</p></div></div><div class="agenda-entry break"><span class="agenda-time">10.30–10.45 pagi</span><div class="agenda-desc"><strong>Minum Pagi</strong></div></div><div class="agenda-entry featured"><span class="agenda-time">10.45–11.45 pagi</span><div class="agenda-desc"><strong>Wacana Perkongsian Ilmu 2</strong><p class="speaker">Encik Nik Feizal Haidi bin Hanafi</p><p class="topic">Beyond Agility: Reinventing Work, Teams and Leadership in the Age of Intelligence</p></div></div><div class="agenda-entry break"><span class="agenda-time">12.00 tengah hari</span><div class="agenda-desc"><strong>Makan Tengah Hari &amp; Solat Jumaat</strong></div></div></div>
       </article>
       <article class="agenda-board afternoon" aria-labelledby="afternoonHeading">
         <div class="agenda-board-title"><div class="period"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 19h18"/><path d="M6 17a6 6 0 0 1 12 0"/><path d="M12 3v3M4.7 8.7l2.2 2.2M19.3 8.7l-2.2 2.2M2 14h2M20 14h2"/></svg><h3 id="afternoonHeading">PETANG</h3></div><span class="agenda-count">03 AKTIVITI</span></div>
-        <div class="agenda-items"><div class="agenda-entry featured"><span class="agenda-time">2.45–3.45 petang</span><div class="agenda-desc"><strong>Wacana Perkongsian Ilmu 3</strong><p>Prof. Madya Ts. Dr. Nor Zairah binti Ab. Rahim</p><p class="topic">Activate Your Brain: Staying Ahead in the Age of Intelligence</p></div></div><div class="agenda-entry "><span class="agenda-time">3.45 petang</span><div class="agenda-desc"><strong>Demo Penggunaan AI Tools &amp; Latihan Berkumpulan</strong><p>Demonstrasi aplikasi AI dan latihan secara berkumpulan.</p></div></div><div class="agenda-entry "><span class="agenda-time">4.30 petang</span><div class="agenda-desc"><strong>Penutup</strong></div></div></div>
-        <div class="agenda-bottom">Pengisian petang merangkumi wacana, demonstrasi AI dan latihan berkumpulan sebelum penutup.</div>
+        <div class="agenda-items"><div class="agenda-entry featured"><span class="agenda-time">2.45–3.45 petang</span><div class="agenda-desc"><strong>Wacana Perkongsian Ilmu 3</strong><p class="speaker">Prof. Madya Ts. Dr. Nor Zairah binti Ab. Rahim</p><p class="topic">Activate Your Brain: Staying Ahead in the Age of Intelligence</p></div></div><div class="agenda-entry "><span class="agenda-time">3.45 petang</span><div class="agenda-desc"><strong>Demo Penggunaan AI Tools &amp; Latihan Berkumpulan</strong><p>Demonstrasi aplikasi AI dan latihan secara berkumpulan.</p></div></div><div class="agenda-entry "><span class="agenda-time">4.30 petang</span><div class="agenda-desc"><strong>Penutup</strong></div></div></div>
       </article>
     </div>
     <div id="agendaList" hidden aria-hidden="true"></div>
-    <p class="agenda-note">* Atur cara tertakluk kepada perubahan pihak urus setia.</p>
   </div>
 </section>
 
