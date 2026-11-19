@@ -35,28 +35,97 @@ html{scroll-padding-top:90px}
 @media print{.site-header,.hero-buttons,.menu-toggle,.footer-right,.speaker-open,.modal,.resource-toolbar{display:none!important}.hero{background:#fff;color:#0B2239}.hero-aside{border:1px solid #ddd}.section{padding:30px 0}body{font-size:11px}}
 
 
-.section-wacana{background:#F5F7F8}
-.section-wacana .section-header .heading-row{align-items:end}
-.section-wacana .search-box{display:none !important}
-.wacana-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:28px}
-.wacana-card{background:linear-gradient(180deg,#ffffff 0%,#fbfcfd 100%);border:1px solid #E2E8ED;border-radius:24px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 18px 34px rgba(12,34,58,.08);min-height:100%}
-.wacana-card-top{background:linear-gradient(135deg,#0c2f50 0%,#173f65 100%);padding:24px 24px 22px;color:#F3F7FB;position:relative;overflow:hidden}
-.wacana-card-top::after{content:'';position:absolute;inset:auto -40px -40px auto;width:160px;height:160px;border-radius:50%;background:radial-gradient(circle,rgba(96,229,246,.22) 0%,rgba(96,229,246,0) 72%)}
-.wacana-badge{display:inline-flex;align-items:center;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);font-size:11px;font-weight:800;letter-spacing:.12em;color:#7DEFFF;text-transform:uppercase;margin-bottom:16px}
-.wacana-card-top h3{margin:0 0 12px;font-size:23px;line-height:1.22;letter-spacing:-.03em;color:#fff}
-.wacana-speaker{margin:0 0 5px;font-size:14px;font-weight:800;color:#EAF8FF}
-.wacana-role{margin:0;font-size:12px;line-height:1.6;color:#B9D3E4}
-.wacana-card-body{padding:24px;display:flex;flex-direction:column;gap:18px;flex:1}
-.wacana-intro{margin:0;font-size:13px;line-height:1.75;color:#607382}
-.wacana-block{background:#fff;border:1px solid #E7ECF0;border-radius:18px;padding:18px 18px 16px}
-.wacana-label{display:block;font-size:11px;font-weight:900;letter-spacing:.11em;color:#A78958;text-transform:uppercase;margin-bottom:10px}
-.wacana-list{margin:0;padding-left:18px;display:grid;gap:9px}
-.wacana-list li{font-size:12px;line-height:1.72;color:#314757}
-.wacana-card-actions{padding:0 24px 24px;display:flex;gap:10px;align-items:center}
-.wacana-download{display:inline-flex;align-items:center;justify-content:center;gap:10px;width:100%;padding:14px 18px;border-radius:14px;background:#0E3152;color:#fff;text-decoration:none;font-size:13px;font-weight:800;box-shadow:0 10px 22px rgba(14,49,82,.18);transition:transform .18s ease, box-shadow .18s ease, background .18s ease}
-.wacana-download:hover{transform:translateY(-1px);background:#143E66;box-shadow:0 14px 26px rgba(14,49,82,.22)}
-.wacana-note{margin-top:20px}
-@media (max-width:1100px){.wacana-grid{grid-template-columns:1fr;}.wacana-card-top h3{font-size:21px}}
+/* === WACANA: FULL-WIDTH EXECUTIVE PANELS === */
+.section.section-wacana {
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+  background:
+    radial-gradient(ellipse at 86% 6%, rgba(22,135,193,.23), transparent 33%),
+    radial-gradient(ellipse at 6% 83%, rgba(22,167,215,.11), transparent 30%),
+    linear-gradient(122deg,#04172E 0%,#082845 51%,#061C37 100%);
+  color:#f5faff;
+  padding:clamp(72px,6vw,110px) 0 clamp(76px,6vw,120px);
+}
+.section-wacana:before {
+  content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:.34;
+  background-image:linear-gradient(90deg,transparent 99%,rgba(103,215,246,.12) 100%),
+                   linear-gradient(0deg,transparent 99%,rgba(103,215,246,.10) 100%);
+  background-size:100px 100px;
+  mask-image:linear-gradient(90deg,transparent,black 15%,transparent 100%);
+}
+.section-wacana .section-header{margin-bottom:32px}
+.section-wacana .section-kicker{color:#9cd9ef;font-size:13px;letter-spacing:.15em;font-weight:900}
+.section-wacana .section-kicker .kicker-line{background:#39e6ff}
+.section-wacana .section-nr{color:#91b1c8}
+.section-wacana .heading-row{display:block}
+.section-wacana .heading-row h2{color:#fff;font-size:clamp(45px,4.4vw,75px);line-height:1.12;margin:12px 0 0;letter-spacing:-.05em}
+.section-wacana .heading-row h2 em{color:#49e9f9;text-shadow:0 0 25px rgba(63,223,246,.25);font-style:normal}
+.section-wacana .search-box{display:none!important}
+.section-wacana .wacana-grid{display:grid;grid-template-columns:1fr;gap:26px;margin-top:34px}
+.section-wacana .wacana-card{
+  display:grid;grid-template-columns:minmax(315px,34%) minmax(0,1fr);
+  min-height:365px;overflow:hidden;position:relative;
+  border-radius:21px;border:1px solid rgba(91,195,232,.34);
+  background:#0c2946;
+  box-shadow:0 20px 52px rgba(0,8,25,.29),inset 0 1px 0 rgba(255,255,255,.07);
+}
+.section-wacana .wacana-card::before{content:'';height:4px;position:absolute;left:0;right:0;top:0;z-index:2;background:linear-gradient(90deg,#39e9ff 0%,#91e9f4 60%,#dbb678 100%)}
+.section-wacana .wacana-card-top{
+  position:relative;overflow:hidden;padding:37px 36px 34px;display:flex;flex-direction:column;align-items:flex-start;
+  background:linear-gradient(146deg,#103b5d 0%,#06233e 95%);
+  border-right:1px solid rgba(139,220,247,.19);
+}
+.section-wacana .wacana-card-top::before{content:'';position:absolute;width:260px;height:260px;right:-133px;top:-110px;border:1px solid rgba(75,215,238,.15);border-radius:50%;box-shadow:0 0 0 30px rgba(75,215,238,.025),0 0 0 70px rgba(75,215,238,.015)}
+.section-wacana .wacana-card-top::after{content:'';position:absolute;right:-80px;bottom:-75px;width:210px;height:210px;border-radius:50%;background:radial-gradient(circle,rgba(53,195,237,.15),transparent 70%);pointer-events:none}
+.section-wacana .wacana-badge{z-index:1;display:inline-flex;align-items:center;padding:9px 15px;margin-bottom:25px;color:#6df3ff;border-radius:999px;background:rgba(51,227,253,.10);border:1px solid rgba(87,234,253,.45);font-size:13px;font-weight:900;letter-spacing:.12em}
+.section-wacana .wacana-card-top h3{z-index:1;margin:0 0 20px;font-size:clamp(25px,2.0vw,34px);line-height:1.23;letter-spacing:-.035em;color:#fff;font-weight:900}
+.section-wacana .wacana-speaker{z-index:1;margin:0 0 7px;color:#f5fcff;font-size:17px;font-weight:850;line-height:1.35}
+.section-wacana .wacana-role{z-index:1;margin:0 0 26px;font-size:15px;line-height:1.6;color:#b8d8e9}
+.section-wacana .wacana-card-actions{z-index:1;margin-top:auto;padding:0;width:100%;display:flex}
+.section-wacana .wacana-download{display:flex;align-items:center;justify-content:center;gap:11px;width:100%;max-width:335px;padding:15px 18px;border-radius:10px;background:#43e3f3;color:#072740;font-weight:900;font-size:16px;text-align:center;box-shadow:0 7px 24px rgba(55,231,251,.17);text-decoration:none;transition:background .2s,transform .2s,box-shadow .2s}
+.section-wacana .wacana-download:hover{background:#a9faff;color:#05253d;transform:translateY(-2px);box-shadow:0 12px 30px rgba(55,231,251,.2)}
+.section-wacana .wacana-download:focus-visible{outline:3px solid #f5ca84;outline-offset:4px}
+.section-wacana .wacana-card-body{display:flex;flex-direction:column;gap:22px;padding:37px 40px;background:linear-gradient(128deg,rgba(14,49,80,.96),rgba(8,31,56,.99))}
+.section-wacana .wacana-intro{color:#d8eaf5;font-size:18px;line-height:1.62;margin:0;max-width:850px}
+.section-wacana .wacana-block-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;flex:1}
+.section-wacana .wacana-block{background:rgba(6,25,49,.62);border:1px solid rgba(105,181,221,.25);border-radius:15px;padding:22px 22px 20px;min-width:0}
+.section-wacana .wacana-block:last-child{border-color:rgba(219,184,120,.28)}
+.section-wacana .wacana-label{display:block;color:#70edfb;font-size:15px;letter-spacing:.07em;text-transform:uppercase;font-weight:900;line-height:1.45;margin-bottom:15px}
+.section-wacana .wacana-block:last-child .wacana-label{color:#f0c886}
+.section-wacana .wacana-list{margin:0;padding-left:21px;display:grid;gap:12px}
+.section-wacana .wacana-list li{color:#e6eff6;font-size:16px;line-height:1.63;font-weight:500;padding-left:2px}
+.section-wacana .wacana-list li::marker{color:#4deaff}
+.section-wacana .wacana-block:last-child li::marker{color:#f0c886}
+.section-wacana .resource-unavailable{color:#dfeff4;font-size:15px}
+@media(max-width:1150px){
+  .section-wacana .wacana-card{grid-template-columns:minmax(265px,34%) minmax(0,1fr)}
+  .section-wacana .wacana-card-top{padding:30px 28px}
+  .section-wacana .wacana-card-body{padding:30px 28px}
+  .section-wacana .wacana-block-grid{gap:14px}
+  .section-wacana .wacana-block{padding:18px}
+  .section-wacana .wacana-list li{font-size:16px}
+}
+@media(max-width:940px){
+  .section-wacana .wacana-card{grid-template-columns:1fr}
+  .section-wacana .wacana-card-top{border-right:none;border-bottom:1px solid rgba(139,220,247,.19);padding:30px}
+  .section-wacana .wacana-card-actions{margin-top:18px}
+  .section-wacana .wacana-card-top h3{font-size:27px}
+  .section-wacana .wacana-card-body{padding:28px 30px}
+}
+@media(max-width:640px){
+  .section-wacana .heading-row h2{font-size:44px}
+  .section-wacana .wacana-grid{gap:18px}
+  .section-wacana .wacana-card{border-radius:14px}
+  .section-wacana .wacana-card-top{padding:26px 22px}
+  .section-wacana .wacana-card-body{padding:24px 22px}
+  .section-wacana .wacana-card-top h3{font-size:24px}
+  .section-wacana .wacana-block-grid{grid-template-columns:1fr;gap:15px}
+  .section-wacana .wacana-intro{font-size:16px}
+  .section-wacana .wacana-list li{font-size:15px}
+  .section-wacana .wacana-speaker{font-size:16px}
+  .section-wacana .wacana-download{max-width:none}
+}
 
 </style>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -1485,12 +1554,11 @@ html{scroll-padding-top:90px}
     
     <section class="section section-materials section-wacana" id="bahan">
       <div class="shell">
-        <div class="section-header"><div class="section-kicker"><span class="kicker-line"></span> WACANA KURSUS <span class="section-nr">05 / 06</span></div><div class="heading-row"><h2>Tiga <em>Wacana.</em></h2><p>Ringkasan kandungan utama, jangkaan hasil pembelajaran peserta dan pautan muat turun slaid bagi setiap sesi perkongsian ilmu.</p></div></div>
+        <div class="section-header"><div class="section-kicker"><span class="kicker-line"></span> WACANA KURSUS <span class="section-nr">05 / 06</span></div><div class="heading-row"><h2>Tiga <em>Wacana.</em></h2></div></div>
         <div id="resourceFilters" hidden aria-hidden="true"></div>
         <label class="search-box visually-hidden" aria-hidden="true"><span aria-hidden="true">⌕</span><span class="visually-hidden">Cari wacana</span><input id="resourceSearch" type="search" placeholder="Cari wacana..." autocomplete="off"></label>
         <div id="resourceList" class="wacana-grid"><div class="loading-row">Memuatkan wacana...</div></div>
-        <div class="resource-note wacana-note"><div class="note-icon">i</div><p><strong>Nota rujukan peserta.</strong> Semua slaid disediakan dalam format PDF untuk rujukan selepas sesi. Klik butang <em>Muat Turun Slaid PDF</em> pada setiap kad untuk mendapatkan bahan pembentangan.</p></div>
-      </div>
+</div>
     </section>
 
 
@@ -1940,9 +2008,23 @@ window.PORTAL_DATA = {
     if(!root) return;
     const list=order(state.data.materials).filter(item=>(state.filter==='Semua'||txt(item.category||'Lain-lain')===state.filter)&&[item.title,item.description,item.category,item.speaker].join(' ').toLocaleLowerCase().includes(state.search.toLocaleLowerCase()));
     const listMarkup=(values)=>arr(values).map(value=>`<li>${html(value)}</li>`).join('');
-    root.innerHTML=list.length?list.map((material,index)=>`<article class="wacana-card"><div class="wacana-card-top"><span class="wacana-badge">Wacana ${String(index+1).padStart(2,'0')}</span><h3>${html(material.title)}</h3><p class="wacana-speaker">${html(material.speaker||'')}</p><p class="wacana-role">${html(material.role||'')}</p></div><div class="wacana-card-body"><p class="wacana-intro">${html(material.description||'')}</p><div class="wacana-block"><span class="wacana-label">Ringkasan Kandungan</span><ul class="wacana-list">${listMarkup(material.summary)}</ul></div><div class="wacana-block"><span class="wacana-label">Selepas Pembentangan Ini, Peserta Dijangka Dapat</span><ul class="wacana-list">${listMarkup(material.expectations)}</ul></div></div><div class="wacana-card-actions">${validUrl(material.url)||/^\.\//.test(txt(material.url).trim())?`<a class="wacana-download" href="${html(material.url)}" download target="_blank" rel="noopener noreferrer">Muat Turun Slaid PDF <span aria-hidden="true">↗</span></a>`:'<span class="resource-unavailable"><i></i> Belum tersedia</span>'}</div></article>`).join(''):'<div class="no-results">Tiada wacana ditemui untuk carian ini.</div>';
+    root.innerHTML=list.length?list.map((material,index)=>`<article class="wacana-card">
+      <div class="wacana-card-top">
+        <span class="wacana-badge">WACANA ${String(index+1).padStart(2,'0')}</span>
+        <h3>${html(material.title)}</h3>
+        <p class="wacana-speaker">${html(material.speaker||'')}</p>
+        <p class="wacana-role">${html(material.role||'')}</p>
+        <div class="wacana-card-actions">${validUrl(material.url)||/^\.\//.test(txt(material.url).trim())?`<a class="wacana-download" href="${html(material.url)}" download aria-label="Muat turun slaid Wacana ${index+1} dalam PDF">↓ &nbsp; Muat Turun Slaid PDF</a>`:'<span class="resource-unavailable"><i></i> Belum tersedia</span>'}</div>
+      </div>
+      <div class="wacana-card-body">
+        <p class="wacana-intro">${html(material.description||'')}</p>
+        <div class="wacana-block-grid">
+          <div class="wacana-block"><span class="wacana-label">Ringkasan Kandungan</span><ul class="wacana-list">${listMarkup(material.summary)}</ul></div>
+          <div class="wacana-block"><span class="wacana-label">Hasil Pembelajaran Peserta</span><ul class="wacana-list">${listMarkup(material.expectations)}</ul></div>
+        </div>
+      </div>
+    </article>`).join(''):'<div class="no-results">Tiada wacana ditemui untuk carian ini.</div>';
   }
-
 
   function renderFaqs(faqs) {
     const list=order(faqs);
