@@ -1395,6 +1395,124 @@ html{scroll-padding-top:90px}
 .kdn-contact-foot{font-size:10px}.kdn-contact-lead{margin-bottom:28px}.section-hubungi h2{font-size:clamp(43px,10vw,59px)}}
 
   </style>
+
+  <style id="kdn-waktu-solat-2026">
+  /* Waktu solat 20 Nov 2026, WLY01 — only Zohor & Asar from user-supplied reference. */
+  .section-prayer{
+    position:relative;isolation:isolate;overflow:hidden;
+    background:linear-gradient(118deg,#071c36 0%,#08294b 46%,#103d62 100%);
+    padding:clamp(70px,6vw,105px) 0 clamp(78px,6.3vw,112px);
+    color:#fff;scroll-margin-top:94px;
+  }
+  .section-prayer::before{
+    content:"";position:absolute;inset:0;z-index:-2;pointer-events:none;
+    background:
+      radial-gradient(ellipse at 15% 8%,rgba(56,222,244,.16),transparent 42%),
+      radial-gradient(ellipse at 88% 87%,rgba(218,180,108,.14),transparent 37%),
+      repeating-linear-gradient(125deg,transparent 0 125px,rgba(169,217,235,.035) 126px,transparent 127px);
+  }
+  .section-prayer::after{
+    content:"";position:absolute;inset:auto -10% -160px auto;width:580px;height:580px;
+    border-radius:50%;pointer-events:none;z-index:-1;
+    border:1px solid rgba(214,177,111,.08);box-shadow:0 0 0 60px rgba(214,177,111,.014),0 0 0 120px rgba(214,177,111,.01);
+  }
+  .prayer-heading{
+    display:flex;align-items:center;justify-content:space-between;gap:28px;margin:0 0 34px;
+  }
+  .section-prayer .section-kicker{color:#a6eaf7;font-size:clamp(12px,.74vw,15px);letter-spacing:.14em}
+  .section-prayer .section-nr{color:#a9becd}
+  .section-prayer h2{margin:16px 0 0;font-size:clamp(49px,4.6vw,78px);line-height:1.08;color:#fff;letter-spacing:-.06em}
+  .section-prayer h2 em{font-style:normal;color:#f4d18b;filter:drop-shadow(0 0 18px rgba(235,182,88,.16))}
+  .prayer-zone{
+    display:flex;align-items:center;gap:13px;padding:14px 19px;
+    border-radius:999px;border:1px solid rgba(226,192,127,.42);
+    background:rgba(8,31,57,.74);box-shadow:inset 0 1px rgba(255,255,255,.05);
+    color:#eed9a4;font-size:clamp(12px,.75vw,15px);font-weight:800;letter-spacing:.055em;
+    max-width:100%;
+  }
+  .prayer-zone svg{color:#f1cd84;flex:0 0 22px;width:22px;height:22px}
+  .prayer-datebar{
+    display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:0 0 22px;
+  }
+  .prayer-date-item{
+    display:flex;align-items:center;gap:17px;min-width:0;
+    padding:18px 24px;border-radius:17px;
+    background:linear-gradient(110deg,rgba(15,57,91,.9),rgba(13,47,78,.90));
+    border:1px solid rgba(115,207,236,.22);
+  }
+  .prayer-date-icon{
+    width:57px;height:57px;border-radius:15px;display:grid;place-items:center;flex:0 0 57px;
+    background:rgba(244,198,116,.10);border:1px solid rgba(242,202,132,.26);color:#ffda8c;
+  }
+  .prayer-date-icon svg{width:27px;height:27px}
+  .prayer-date-label{display:block;color:#a2d6e8;font-size:clamp(11px,.75vw,14px);font-weight:850;letter-spacing:.12em;line-height:1.25;margin-bottom:8px}
+  .prayer-date-text{display:block;color:#fff;font-size:clamp(19px,1.45vw,27px);line-height:1.3;font-weight:900;letter-spacing:-.025em}
+  .prayer-times{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;align-items:stretch}
+  .prayer-time-card{
+    position:relative;isolation:isolate;overflow:hidden;
+    display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:20px;
+    min-height:290px;padding:34px clamp(28px,2.7vw,48px);
+    border-radius:24px;background:linear-gradient(145deg,#123e64,#0c2c4d 79%);
+    border:1px solid rgba(230,190,117,.52);
+    box-shadow:0 22px 48px rgba(2,12,32,.20),inset 0 1px rgba(255,255,255,.07);
+  }
+  .prayer-time-card::before{
+    content:"";position:absolute;inset:0 0 auto;height:5px;
+    background:linear-gradient(90deg,#d4a755,#ffe4aa,#d8ac65);
+  }
+  .prayer-time-card::after{
+    content:"";position:absolute;top:-75px;right:-75px;width:260px;height:260px;border-radius:50%;z-index:-1;
+    background:radial-gradient(circle,rgba(220,171,92,.11),transparent 68%);
+  }
+  .prayer-card-left{min-width:0}
+  .prayer-icon-box{
+    width:68px;height:68px;display:grid;place-items:center;
+    color:#f9d392;background:rgba(230,188,105,.09);border:1px solid rgba(231,189,107,.28);
+    border-radius:20px;margin-bottom:20px;
+  }
+  .prayer-icon-box svg{width:40px;height:40px}
+  .prayer-time-card h3{font-size:clamp(35px,2.65vw,51px);line-height:1.1;color:#fff;margin:0;font-weight:900;letter-spacing:-.055em}
+  .prayer-time-label{display:block;color:#a0ddef;font-size:clamp(11px,.73vw,14px);font-weight:900;letter-spacing:.15em;margin-bottom:7px}
+  .prayer-clock{display:flex;align-items:flex-end;gap:10px;flex-wrap:nowrap;justify-content:flex-end;white-space:nowrap}
+  .prayer-clock strong{font-family:'Manrope',var(--font),sans-serif;font-size:clamp(59px,5.5vw,98px);line-height:1;font-weight:900;color:#fce1a4;letter-spacing:-.075em;font-variant-numeric:tabular-nums}
+  .prayer-clock span{display:block;color:#d5eff8;font-weight:850;font-size:clamp(16px,1vw,20px);padding-bottom:10px;letter-spacing:.035em;text-transform:uppercase}
+  .prayer-bottom-rule{margin-top:24px;height:1px;background:linear-gradient(90deg,transparent,rgba(224,190,125,.48),transparent)}
+  .prayer-bottom-caption{display:flex;justify-content:center;align-items:center;gap:10px;color:#afcada;text-align:center;font-size:clamp(12px,.75vw,14px);font-weight:700;letter-spacing:.04em;margin:17px 0 0}
+  .prayer-bottom-caption svg{width:15px;height:15px;color:#e9c37d}
+  @media(max-width:1100px){
+    .prayer-heading{flex-direction:column;align-items:flex-start;gap:19px}
+    .prayer-time-card{grid-template-columns:1fr;gap:23px;min-height:unset}
+    .prayer-clock{justify-content:flex-start}
+    .prayer-clock strong{font-size:clamp(64px,8vw,100px)}
+  }
+  @media(max-width:720px){
+    .section-prayer{padding:64px 0 80px}
+    .prayer-datebar,.prayer-times{grid-template-columns:1fr;gap:15px}
+    .prayer-date-item{padding:16px 18px}
+    .prayer-date-text{font-size:22px}
+    .prayer-time-card{padding:27px 25px;gap:14px}
+    .prayer-time-card h3{font-size:39px}
+    .prayer-icon-box{width:60px;height:60px;margin-bottom:13px}
+    .prayer-icon-box svg{width:36px;height:36px}
+    .prayer-clock strong{font-size:clamp(70px,15vw,100px)}
+    .prayer-clock span{padding-bottom:9px}
+    .prayer-zone{border-radius:18px;line-height:1.6}
+  }
+  /* Ensure additional menu item fits on mid-sized desktops. */
+  @media(min-width:1501px) and (max-width:1760px){
+    .site-header .nav-links{gap:clamp(12px,1.05vw,20px)}
+    .site-header .nav-link{font-size:clamp(13px,.87vw,16px)!important}
+    .site-header .brand-copy strong{font-size:17px!important}
+    .site-header .header-resource{font-size:13px!important;padding-inline:15px}
+  }
+  @media(min-width:1251px) and (max-width:1500px){
+    .site-header .menu-toggle{display:block}
+    .site-header .nav-links{display:none}
+    .site-header .nav-links.open{display:flex}
+    .site-header .header-actions{margin-left:auto}
+  }
+  </style>
+
 </head>
 <body>
   <a class="skip-link" href="#main">Langkau ke kandungan</a>
@@ -1416,6 +1534,7 @@ html{scroll-padding-top:90px}
         <a href="#lokasi" class="nav-link">Lokasi</a>
         <a href="#penceramah" class="nav-link">Penceramah</a>
         <a href="#bahan" class="nav-link">Wacana</a>
+        <a href="#waktusolat" class="nav-link">Waktu Solat</a>
         <a href="#hubungi" class="nav-link">Hubungi Kami</a>
       </nav>
       <div class="header-actions">
@@ -1493,7 +1612,7 @@ html{scroll-padding-top:90px}
 
     <section class="section section-about" id="tentang">
       <div class="shell">
-        <div class="section-header heading-split"><div><div class="section-kicker"><span class="kicker-line"></span> OBJEKTIF KURSUS <span class="section-nr">01 / 06</span></div><h2>Mempersiapkan pemimpin<br>untuk <em>era kecerdasan.</em></h2></div></div>
+        <div class="section-header heading-split"><div><div class="section-kicker"><span class="kicker-line"></span> OBJEKTIF KURSUS <span class="section-nr">01 / 07</span></div><h2>Mempersiapkan pemimpin<br>untuk <em>era kecerdasan.</em></h2></div></div>
         <div class="about-layout">
           <div class="about-left">
             <div class="statement-card">
@@ -1513,7 +1632,7 @@ html{scroll-padding-top:90px}
     <section class="section section-agenda" id="aturcara" aria-labelledby="agendaHeading">
   <div class="shell">
     <div class="section-header">
-      <div class="section-kicker"><span class="kicker-line"></span> PERJALANAN PROGRAM <span class="section-nr">02 / 06</span></div>
+      <div class="section-kicker"><span class="kicker-line"></span> PERJALANAN PROGRAM <span class="section-nr">02 / 07</span></div>
       <div class="agenda-headrow">
         <h2 id="agendaHeading">Atur Cara <em>Kursus.</em></h2>
       </div>
@@ -1535,7 +1654,7 @@ html{scroll-padding-top:90px}
     <section class="section section-location" id="lokasi">
  <div class="shell">
    <div class="kdn-location-head">
-     <div class="section-kicker"><span class="kicker-line"></span> LOKASI &amp; KEMUDAHAN <span class="section-nr">03 / 06</span></div>
+     <div class="section-kicker"><span class="kicker-line"></span> LOKASI &amp; KEMUDAHAN <span class="section-nr">03 / 07</span></div>
      <h2>Maklumat <em>Lokasi Kursus.</em></h2>
      <div class="kdn-location-topline">
        <div class="kdn-location-venue"><span class="kdn-location-dot" aria-hidden="true"></span><strong id="locationHotel">Zenith Hotel Putrajaya</strong><span class="kdn-location-separator"></span><span id="locationHall">Cashmere Hall</span></div>
@@ -1600,7 +1719,7 @@ html{scroll-padding-top:90px}
 
     <section class="section section-speakers" id="penceramah">
       <div class="shell">
-        <div class="section-header"><div class="section-kicker"><span class="kicker-line"></span> PANEL PENCERAMAH <span class="section-nr">04 / 06</span></div><div class="heading-row"><h2>Panel <em>Penceramah.</em></h2></div></div>
+        <div class="section-header"><div class="section-kicker"><span class="kicker-line"></span> PANEL PENCERAMAH <span class="section-nr">04 / 07</span></div><div class="heading-row"><h2>Panel <em>Penceramah.</em></h2></div></div>
         <div id="speakersGrid" class="speakers-grid"><div class="loading-row">Memuatkan panel penceramah...</div></div>
       </div>
     </section>
@@ -1608,7 +1727,7 @@ html{scroll-padding-top:90px}
     
     <section class="section section-materials section-wacana" id="bahan">
       <div class="shell">
-        <div class="section-header"><div class="section-kicker"><span class="kicker-line"></span> WACANA KURSUS <span class="section-nr">05 / 06</span></div><div class="heading-row"><h2>Tiga <em>Wacana.</em></h2></div></div>
+        <div class="section-header"><div class="section-kicker"><span class="kicker-line"></span> WACANA KURSUS <span class="section-nr">05 / 07</span></div><div class="heading-row"><h2>Tiga <em>Wacana.</em></h2></div></div>
         <div id="resourceFilters" hidden aria-hidden="true"></div>
         <label class="search-box visually-hidden" aria-hidden="true"><span aria-hidden="true">⌕</span><span class="visually-hidden">Cari wacana</span><input id="resourceSearch" type="search" placeholder="Cari wacana..." autocomplete="off"></label>
         <div id="resourceList" class="wacana-grid"><div class="loading-row">Memuatkan wacana...</div></div>
@@ -1619,10 +1738,55 @@ html{scroll-padding-top:90px}
     
 
     
+
+    <!-- SECTION: WAKTU SOLAT | 20 Nov 2026 | only Zohor and Asar -->
+    <section class="section section-prayer" id="waktusolat" aria-labelledby="prayerTitle">
+      <div class="shell">
+        <div class="prayer-heading">
+          <div>
+            <div class="section-kicker"><span class="kicker-line"></span> PANDUAN IBADAH <span class="section-nr">06 / 07</span></div>
+            <h2 id="prayerTitle">Waktu <em>Solat.</em></h2>
+          </div>
+          <div class="prayer-zone">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-5.6 7-12A7 7 0 1 0 5 10c0 6.4 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <span>ZON WLY01&nbsp; · &nbsp;KUALA LUMPUR &amp; PUTRAJAYA</span>
+          </div>
+        </div>
+        <div class="prayer-datebar">
+          <div class="prayer-date-item">
+            <span class="prayer-date-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4M17 3v4M3 10h18M8 14h3M8 17h3M14 14h3"/></svg></span>
+            <div><span class="prayer-date-label">TARIKH MASIHI</span><strong class="prayer-date-text">20 NOVEMBER 2026</strong></div>
+          </div>
+          <div class="prayer-date-item">
+            <span class="prayer-date-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M12 7v5l3 2M3 12h1"/></svg></span>
+            <div><span class="prayer-date-label">HARI</span><strong class="prayer-date-text">JUMAAT</strong></div>
+          </div>
+        </div>
+        <div class="prayer-times" aria-label="Waktu solat Zohor dan Asar pada 20 November 2026">
+          <article class="prayer-time-card prayer-card-zohor">
+            <div class="prayer-card-left">
+              <div class="prayer-icon-box" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="20" r="8"/><path d="M24 3v5M24 32v5M7 20h5M36 20h5M11.5 7.5l3.7 3.7M32.8 28.8l3.7 3.7M36.5 7.5l-3.7 3.7M15.2 28.8l-3.7 3.7M7 43h34"/></svg></div>
+              <span class="prayer-time-label">WAKTU SOLAT</span><h3>ZOHOR</h3>
+            </div>
+            <div class="prayer-clock"><strong>1:02</strong><span>petang</span></div>
+          </article>
+          <article class="prayer-time-card prayer-card-asar">
+            <div class="prayer-card-left">
+              <div class="prayer-icon-box" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 35h36M11 35a13 13 0 0 1 26 0"/><path d="M24 6v5M9 17l4 4M39 17l-4 4M4 28l6 2M44 28l-6 2"/><path d="M3 42h42"/></svg></div>
+              <span class="prayer-time-label">WAKTU SOLAT</span><h3>ASAR</h3>
+            </div>
+            <div class="prayer-clock"><strong>4:24</strong><span>petang</span></div>
+          </article>
+        </div>
+        <div class="prayer-bottom-rule"></div>
+        <p class="prayer-bottom-caption">Rujukan waktu solat bagi kursus pada 20 November 2026 di Putrajaya</p>
+      </div>
+    </section>
+
     <section class="section section-hubungi" id="hubungi" aria-labelledby="hubungiTitle">
       <div class="shell">
         <div class="section-header kdn-contact-heading">
-          <div class="section-kicker"><span class="kicker-line"></span> URUS SETIA KURSUS <span class="section-nr">06 / 06</span></div>
+          <div class="section-kicker"><span class="kicker-line"></span> URUS SETIA KURSUS <span class="section-nr">07 / 07</span></div>
           <div class="heading-row"><h2 id="hubungiTitle">Hubungi <em>Kami.</em></h2></div>
         </div>
         <p class="kdn-contact-lead">Sebarang pertanyaan berkaitan kursus boleh diajukan terus kepada urus setia Bahagian Perancangan Strategik (PG), Kementerian Dalam Negeri.</p>
@@ -2169,7 +2333,7 @@ window.PORTAL_DATA = {
     const resourceSearch=$('#resourceSearch');
     if(resourceSearch){resourceSearch.addEventListener('input',event=>{state.search=event.target.value;renderResources();});}
     if('IntersectionObserver' in window){
-      const sectionIds=['utama','tentang','aturcara','lokasi','penceramah','bahan','hubungi'];
+      const sectionIds=['utama','tentang','aturcara','lokasi','penceramah','bahan','waktusolat','hubungi'];
       const observer=new IntersectionObserver(entries=>{
         entries.forEach(entry=>{if(entry.isIntersecting){$$('.nav-link').forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+entry.target.id));}});
       },{rootMargin:'-27% 0px -58% 0px',threshold:0});
