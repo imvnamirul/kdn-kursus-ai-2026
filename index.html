@@ -1889,6 +1889,34 @@ html{scroll-padding-top:90px}
  #speakerModal .modal-meta .modal-affiliation{font-size:15px;line-height:1.5;}
 }
 </style>
+<style id="kdn-pdf-preview-2026">
+/* Companion button: existing cyan wacana-download design remains unchanged. */
+#bahan .wacana-card-actions{display:flex;gap:10px;align-items:stretch;flex-wrap:nowrap;min-width:0}
+#bahan .wacana-card-actions .wacana-download{flex:1 1 auto;width:auto;min-width:0;max-width:none;white-space:normal;line-height:1.33;padding:13px 10px;font-size:clamp(13px,1.0vw,16px)}
+#bahan .wacana-card-actions .wacana-view{flex:0 0 111px;min-height:54px;display:inline-flex;align-items:center;justify-content:center;gap:6px;border-radius:10px;border:1px solid rgba(83,232,252,.65);background:rgba(12,55,91,.72);color:#b9f8ff;font-family:inherit;font-size:14px;font-weight:850;line-height:1.2;cursor:pointer;transition:background .2s,transform .2s,border-color .2s,box-shadow .2s}
+#bahan .wacana-card-actions .wacana-view:hover{background:#124a70;border-color:#74efff;color:#fff;box-shadow:0 8px 24px rgba(40,208,234,.16);transform:translateY(-2px)}
+#bahan .wacana-card-actions .wacana-view:focus-visible{outline:3px solid #f5ca84;outline-offset:3px}
+@media(max-width:420px){#bahan .wacana-card-actions .wacana-view{flex-basis:103px;font-size:13px}#bahan .wacana-card-actions .wacana-download{font-size:13px!important;padding:12px 8px}}
+/* Native <dialog> provides focus trapping and ESC to close. */
+#kdnPdfDialog{position:fixed;inset:0;margin:auto;padding:0;border:1px solid rgba(95,239,252,.55);border-radius:17px;background:#071e37;color:#fff;box-shadow:0 35px 110px rgba(0,0,0,.66);width:min(1200px,96vw);max-width:96vw;height:min(900px,92dvh);max-height:92dvh;overflow:hidden}
+#kdnPdfDialog::backdrop{background:rgba(2,12,28,.86);backdrop-filter:blur(7px)}
+#kdnPdfDialog .kdn-pdf-panel{height:100%;min-height:0;display:flex;flex-direction:column}
+#kdnPdfDialog .kdn-pdf-header{display:flex;align-items:center;gap:18px;justify-content:space-between;padding:17px 22px;background:linear-gradient(110deg,#103b60,#092641);border-bottom:2px solid #40e9fc}
+#kdnPdfDialog .kdn-pdf-label{display:block;color:#6df1ff;font-size:11px;letter-spacing:.16em;font-weight:900;margin-bottom:5px}
+#kdnPdfDialog .kdn-pdf-title{display:block;font-size:clamp(15px,1.4vw,19px);font-weight:850;line-height:1.35;color:#fff;max-width:950px}
+#kdnPdfDialog .kdn-pdf-close{flex:0 0 45px;width:45px;height:45px;border-radius:12px;border:1px solid rgba(182,221,244,.34);background:#153e60;color:#fff;font-size:29px;line-height:1;cursor:pointer}
+#kdnPdfDialog .kdn-pdf-close:hover{background:#20537b}
+#kdnPdfDialog .kdn-pdf-close:focus-visible,#kdnPdfDialog a:focus-visible{outline:3px solid #f3c878;outline-offset:2px}
+#kdnPdfDialog .kdn-pdf-body{flex:1;min-height:0;background:#e7edf1;position:relative}
+#kdnPdfDialog .kdn-pdf-body iframe{display:block;width:100%;height:100%;border:0;background:#e7edf1}
+#kdnPdfDialog .kdn-pdf-footer{display:flex;align-items:center;justify-content:flex-end;gap:10px;padding:12px 20px;background:#09243f;border-top:1px solid rgba(137,222,241,.25)}
+#kdnPdfDialog .kdn-pdf-hint{color:#b8d3e4;font-size:12px;line-height:1.4;margin-right:auto}
+#kdnPdfDialog .kdn-pdf-link{display:inline-flex;justify-content:center;align-items:center;gap:6px;min-height:42px;border-radius:9px;text-decoration:none;padding:10px 15px;font-size:13px;font-weight:850;background:#134668;color:#fff;border:1px solid rgba(99,218,244,.45)}
+#kdnPdfDialog .kdn-pdf-download-link{background:#43e3f3;border-color:#43e3f3;color:#072740}
+#kdnPdfDialog .kdn-pdf-link:hover{filter:brightness(1.13)}
+@media(max-width:600px){#kdnPdfDialog{height:96dvh;max-height:96dvh;width:100vw;max-width:100vw;border-radius:0}#kdnPdfDialog .kdn-pdf-header{padding:12px 14px;gap:9px}#kdnPdfDialog .kdn-pdf-close{flex-basis:40px;width:40px;height:40px}#kdnPdfDialog .kdn-pdf-footer{padding:10px 12px;gap:7px}#kdnPdfDialog .kdn-pdf-hint{display:none}#kdnPdfDialog .kdn-pdf-link{font-size:12px;padding:9px 10px;flex:1}}
+@media(prefers-reduced-motion:reduce){#bahan .wacana-card-actions .wacana-view{transition:none}}
+</style>
 </head>
 <body>
   <a class="skip-link" href="#main">Langkau ke kandungan</a>
@@ -2231,6 +2259,23 @@ html{scroll-padding-top:90px}
     <div class="modal-backdrop" data-close="true"></div>
     <div class="modal-panel" tabindex="-1"><button class="modal-close" type="button" id="modalClose" aria-label="Tutup profil penceramah">×</button><div id="modalBody"></div></div>
   </div>
+
+  <!-- In-portal PDF preview: Wacana 1–3, with download/new-tab fallbacks. -->
+  <dialog id="kdnPdfDialog" aria-labelledby="kdnPdfTitle">
+    <div class="kdn-pdf-panel">
+      <div class="kdn-pdf-header">
+        <div><span class="kdn-pdf-label">PRATONTON SLAID WACANA</span><strong class="kdn-pdf-title" id="kdnPdfTitle">Lihat Slaid</strong></div>
+        <button class="kdn-pdf-close" id="kdnPdfClose" type="button" aria-label="Tutup paparan slaid">&times;</button>
+      </div>
+      <div class="kdn-pdf-body"><iframe id="kdnPdfFrame" title="Pratonton slaid PDF" loading="lazy"></iframe></div>
+      <div class="kdn-pdf-footer">
+        <span class="kdn-pdf-hint">Jika PDF tidak muncul pada peranti anda, buka di tab baharu.</span>
+        <a id="kdnPdfExternal" class="kdn-pdf-link" href="#" target="_blank" rel="noopener noreferrer">↗ Buka Tab Baru</a>
+        <a id="kdnPdfDownload" class="kdn-pdf-link kdn-pdf-download-link" href="#" download>↓ Muat Turun PDF</a>
+      </div>
+    </div>
+  </dialog>
+
   <!-- Agenda rasmi daripada tentatif bergambar: ditetapkan dalam HTML supaya hanya index.html perlu diubah. -->
   <script id="kdn-agenda-override">
   document.addEventListener('DOMContentLoaded', function () {
@@ -2656,7 +2701,7 @@ window.PORTAL_DATA = {
         <h3>${html(material.title)}</h3>
         <p class="wacana-speaker">${html(material.speaker||'')}</p>
         <p class="wacana-role">${html(speakerAffiliation('s'+String(material.id||'').replace(/^w/,''),material.role||''))}</p>
-        <div class="wacana-card-actions">${validUrl(material.url)||/^\.\//.test(txt(material.url).trim())?`<a class="wacana-download" href="${html(material.url)}" download aria-label="Muat turun slaid Wacana ${index+1} dalam PDF">↓ &nbsp; Muat Turun Slaid PDF</a>`:'<span class="resource-unavailable"><i></i> Belum tersedia</span>'}</div>
+        <div class="wacana-card-actions">${validUrl(material.url)||/^\.\//.test(txt(material.url).trim())?`<a class="wacana-download" href="${html(material.url)}" download aria-label="Muat turun slaid Wacana ${index+1} dalam PDF">↓ &nbsp; Muat Turun Slaid PDF</a><button type="button" class="wacana-view" data-pdf-url="${html(material.url)}" data-pdf-title="Wacana ${index+1}: ${html(material.title)}" aria-label="Lihat slaid Wacana ${index+1} tanpa muat turun"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.8-7 10-7 10 7 10 7-3.8 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg><span>Lihat Slaid</span></button>`:'<span class="resource-unavailable"><i></i> Belum tersedia</span>'}</div>
       </div>
       <div class="wacana-card-body">
         <p class="wacana-intro">${html(material.description||'')}</p>
@@ -2735,6 +2780,41 @@ window.PORTAL_DATA = {
         if(focusable.length){const first=focusable[0],last=focusable[focusable.length-1];if(event.shiftKey&&document.activeElement===first){event.preventDefault();last.focus();}else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus();}}
       }
     });
+
+    // Wacana slide previews: use the browser's built-in PDF viewer without downloading.
+    const pdfDialog=$('#kdnPdfDialog');
+    const pdfFrame=$('#kdnPdfFrame');
+    const pdfExternal=$('#kdnPdfExternal');
+    const pdfDownload=$('#kdnPdfDownload');
+    let pdfLastTrigger=null;
+    const resourceList=$('#resourceList');
+    if(resourceList && pdfDialog) {
+      resourceList.addEventListener('click', event=>{
+        const view=event.target.closest('button[data-pdf-url]');
+        if(!view)return;
+        // PDF files are local assets in the same GitHub Pages folder.
+        const url=txt(view.dataset.pdfUrl).trim();
+        if(!/^\.\/[A-Za-z0-9_.-]+\.pdf$/i.test(url))return;
+        pdfLastTrigger=view;
+        $('#kdnPdfTitle').textContent=txt(view.dataset.pdfTitle)||'Slaid Wacana';
+        pdfExternal.href=url;
+        pdfDownload.href=url;
+        if(typeof pdfDialog.showModal==='function') {
+          pdfDialog.showModal();
+          pdfFrame.src=url+'#toolbar=1&navpanes=0';
+          $('#kdnPdfClose').focus();
+        } else {
+          window.open(url,'_blank','noopener,noreferrer');
+        }
+      });
+      $('#kdnPdfClose').addEventListener('click',()=>pdfDialog.close());
+      pdfDialog.addEventListener('click',event=>{if(event.target===pdfDialog)pdfDialog.close();});
+      pdfDialog.addEventListener('close',()=>{
+        pdfFrame.removeAttribute('src'); // releases large PDFs when closed
+        if(pdfLastTrigger?.isConnected)pdfLastTrigger.focus();
+      });
+    }
+
     const resourceFilters=$('#resourceFilters');
     if(resourceFilters){resourceFilters.addEventListener('click',event=>{
       const button=event.target.closest('[data-filter]');if(!button)return;
