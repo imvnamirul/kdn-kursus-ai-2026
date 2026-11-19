@@ -2043,6 +2043,90 @@ html{scroll-padding-top:90px}
 }
 </style>
 
+
+<style id="kdn-distinct-section-backdrops-and-footer">
+/* Distinct real-photo backdrops; existing photos reused without duplicate data. */
+#bahan.section-wacana {
+  background-color:#071a32;
+  background-image:
+    linear-gradient(100deg,rgba(4,20,42,.92) 0%,rgba(4,24,46,.83) 52%,rgba(5,20,41,.81) 100%),
+    var(--kdn-wacana-photo, linear-gradient(140deg,#062444,#113c5d));
+  background-size:cover,cover;
+  background-position:center,center 43%;
+  background-repeat:no-repeat;
+}
+/* Cashmere Hall: different composition from the speaker section. */
+#bahan.section-wacana::before {
+  opacity:.22;
+}
+/* Masjid Putra silhouette is given more room to show through. */
+#waktusolat.section-prayer::before {
+  background-image:
+    linear-gradient(105deg,rgba(3,18,35,.89) 0%,rgba(5,24,44,.79) 48%,rgba(7,30,54,.57) 100%),
+    var(--mosque-photo,linear-gradient(#08253f,#08253f));
+  background-position:center,center 33%;
+  background-size:cover,cover;
+}
+/* The ministry's real building, distinguishable from hotel and mosque backdrops. */
+#hubungi.section-hubungi {
+  background:#071d35;
+}
+#hubungi.section-hubungi::before {
+  background-image:
+    linear-gradient(90deg,rgba(3,19,40,.95),rgba(5,28,51,.81) 47%,rgba(6,30,53,.71)),
+    var(--kdn-contact-photo,linear-gradient(130deg,#092d52,#09223d));
+  background-position:center,center 38%;
+  background-size:cover,cover;
+  background-repeat:no-repeat;
+  opacity:1;
+}
+#hubungi .kdn-contact-card,#hubungi .kdn-contact-office-card {
+  backdrop-filter:blur(4px);
+  -webkit-backdrop-filter:blur(4px);
+  box-shadow:0 24px 65px rgba(0,9,29,.43);
+}
+/* Rebuild the footer as one prominent CTA — no small text or logo. */
+footer.kdn-clean-footer{
+  background:linear-gradient(100deg,#04182e,#082a49 52%,#04182e);
+  border-top:1px solid rgba(54,227,251,.22);
+  padding:38px 0 45px;
+}
+footer.kdn-clean-footer .kdn-clean-footer-inner{
+  display:flex;justify-content:center;align-items:center;
+}
+footer.kdn-clean-footer .kdn-backtotop{
+  display:inline-flex;align-items:center;justify-content:center;
+  gap:17px;min-height:68px;min-width:min(100%,360px);
+  padding:18px 34px;border-radius:14px;
+  text-decoration:none;font-size:clamp(19px,1.35vw,23px);
+  font-weight:900;letter-spacing:.055em;
+  color:#05243d;background:#3fe2f3;border:1px solid #81f8ff;
+  box-shadow:0 0 28px rgba(46,215,248,.31),0 13px 26px rgba(0,6,18,.28);
+  transition:transform .18s,filter .18s,box-shadow .18s;
+}
+footer.kdn-clean-footer .kdn-backtotop:hover{
+  transform:translateY(-3px);filter:brightness(1.1);
+  box-shadow:0 0 38px rgba(46,215,248,.48),0 14px 28px rgba(0,6,18,.28);
+}
+footer.kdn-clean-footer .kdn-backtotop:focus-visible{
+  outline:3px solid #fff;outline-offset:5px;
+}
+footer.kdn-clean-footer .kdn-backtotop-arrow{
+  width:36px;height:36px;display:grid;place-items:center;
+  background:rgba(2,28,50,.12);border-radius:10px;font-size:27px;line-height:1;
+}
+@media(max-width:660px){
+  #bahan.section-wacana{background-position:center,55% center}
+  #waktusolat.section-prayer::before{background-position:center,60% 30%}
+  #hubungi.section-hubungi::before{background-position:center,54% center}
+  footer.kdn-clean-footer{padding:26px 16px 32px}
+  footer.kdn-clean-footer .kdn-backtotop{width:100%;min-width:0;min-height:64px;font-size:19px;padding:13px 20px}
+}
+@media(prefers-reduced-motion:reduce){
+ footer.kdn-clean-footer .kdn-backtotop{transition:none}
+}
+</style>
+
 </head>
 <body>
   <a class="skip-link" href="#main">Langkau ke kandungan</a>
@@ -2430,12 +2514,15 @@ html{scroll-padding-top:90px}
     </section>
   </main>
 
-  <footer class="footer"><div class="shell footer-row"><div class="footer-brand"><div class="footer-brandmark">✳</div><div><strong>KDN · AI 2026</strong><span>Kursus Kumpulan Pengurusan Tertinggi</span></div></div><div class="footer-right"><span id="updatedText">Dikemas kini: 17 November 2026</span><a href="#utama">Kembali ke atas ↑</a></div></div><div class="shell" style="padding:0 0 20px;color:#B7C7D4;font-size:11px;line-height:1.65">
-    Foto latar bangunan KDN (dipotong dan dilapisi warna):
-    <a href="https://commons.wikimedia.org/wiki/File:Putrajaya_Malaysia_Ministry-of-Home-Affairs-03.jpg" target="_blank" rel="noopener noreferrer" style="color:#E7D3AA;text-decoration:underline">Photo by CEphoto, Uwe Aranas</a>
-    / <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer" style="color:#E7D3AA;text-decoration:underline">CC BY-SA 3.0</a>.
-    Foto latar yang diubah suai dikongsi tertakluk kepada lesen yang sama.
-  </div></footer>
+  <!-- Attribution: KDN photo by CEphoto, Uwe Aranas / CC BY-SA 3.0. Source: https://commons.wikimedia.org/wiki/File:Putrajaya_Malaysia_Ministry-of-Home-Affairs-03.jpg -->
+  <footer class="footer kdn-clean-footer" aria-label="Navigasi ke atas">
+    <div class="shell kdn-clean-footer-inner">
+      <a href="#utama" class="kdn-backtotop" aria-label="Kembali ke atas halaman">
+        <span class="kdn-backtotop-text">KEMBALI KE ATAS</span>
+        <span class="kdn-backtotop-arrow" aria-hidden="true">↑</span>
+      </a>
+    </div>
+  </footer>
 
   <div id="toast" role="status" aria-live="polite" class="toast" hidden></div>
   <div id="speakerModal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalName" hidden>
@@ -3183,5 +3270,27 @@ window.PORTAL_DATA = {
   }
 })();
 </script>
+
+<script id="kdn-photo-backdrop-reuse">
+/* The user's existing venue and ministry photos are reused instead of embedded again. */
+(function(){
+ function bindPhotos(){
+   const venue=document.querySelector('#lokasi .kdn-venue-cashmere img');
+   const wacana=document.getElementById('bahan');
+   if(venue && wacana && venue.getAttribute('src')) {
+     wacana.style.setProperty('--kdn-wacana-photo','url("'+venue.getAttribute('src')+'")');
+   }
+   const hero=document.querySelector('#utama .zenith-backdrop');
+   const contact=document.getElementById('hubungi');
+   if(hero && contact){
+     const bg=getComputedStyle(hero).backgroundImage;
+     if(bg && bg !=='none') contact.style.setProperty('--kdn-contact-photo',bg);
+   }
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',bindPhotos,{once:true});
+ else bindPhotos();
+})();
+</script>
+
 </body>
 </html>
