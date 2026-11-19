@@ -1820,6 +1820,59 @@ html{scroll-padding-top:90px}
   #aturcara .agenda-board-title .period{font-size:28px;}
 }
 </style>
+<style id="kdn-speaker-cards-clean-20261119">
+/* Speaker cards: name -> highlighted organisation, no top org label or chips. */
+#penceramah .speaker-card .speaker-info{padding-top:26px;}
+#penceramah .speaker-card .speaker-info h3{
+  margin:0 0 13px;min-height:0;color:#fff;
+  font-size:clamp(21px,1.55vw,26px);line-height:1.32;font-weight:850;
+}
+#penceramah .speaker-card .speaker-affiliation{
+  margin:0;padding:10px 12px 10px 15px;
+  border-left:3px solid #52e8f8;
+  border-radius:0 9px 9px 0;
+  background:linear-gradient(90deg,rgba(25,153,193,.18),rgba(25,153,193,.025));
+  color:#c6f5ff;font-size:clamp(15px,.95vw,17px);
+  font-weight:750;line-height:1.52;letter-spacing:0;
+}
+#penceramah .speaker-card .speaker-rule{margin:20px 0 17px;}
+#penceramah .speaker-card .speaker-topic{
+  color:#f7fbff !important;font-size:clamp(15px,.98vw,17px);
+  line-height:1.72;font-weight:760;
+}
+@media(max-width:760px){
+  #penceramah .speaker-card .speaker-affiliation{font-size:16px;padding:12px 14px;}
+  #penceramah .speaker-card .speaker-topic{font-size:15px;}
+}
+</style>
+
+<style id="kdn-agenda-speaker-profile-buttons-20261119">
+/* Accessible quick access to the same speaker profile modal from Atur Cara. */
+#aturcara .agenda-speaker-link{
+  appearance:none;-webkit-appearance:none;
+  display:inline-flex;align-items:center;gap:.35em;flex-wrap:wrap;
+  margin:0;padding:1px 0 2px;
+  border:0;border-bottom:1px dashed rgba(255,223,168,.72);
+  border-radius:0;background:none;
+  color:inherit;font:inherit;font-size:inherit;font-weight:inherit;line-height:inherit;
+  text-align:left;cursor:pointer;
+  transition:color .18s ease,border-color .18s ease;
+}
+#aturcara .agenda-speaker-link::after{
+  content:'↗';display:inline-block;font-size:.8em;
+  color:#6ce9ff;transition:transform .18s ease;
+}
+#aturcara .agenda-speaker-link:hover{
+  color:#aaf5ff;border-bottom-color:#6ce9ff;
+}
+#aturcara .agenda-speaker-link:hover::after{transform:translate(2px,-2px)}
+#aturcara .agenda-speaker-link:focus-visible{
+  outline:3px solid #64ecfa;outline-offset:4px;border-radius:3px;
+}
+@media (prefers-reduced-motion:reduce){
+  #aturcara .agenda-speaker-link,#aturcara .agenda-speaker-link::after{transition:none}
+}
+</style>
 </head>
 <body>
   <a class="skip-link" href="#main">Langkau ke kandungan</a>
@@ -1938,17 +1991,17 @@ html{scroll-padding-top:90px}
           <div class="agenda-entry"><span class="agenda-time">8.30–9.00 pagi</span><div class="agenda-desc"><strong>Pendaftaran &amp; Sarapan</strong></div></div>
           <div class="agenda-entry"><span class="agenda-time">9.00 pagi</span><div class="agenda-desc"><strong>Sesi Fotografi</strong></div></div>
           <div class="agenda-entry"><span class="agenda-time">9.15 pagi</span><div class="agenda-desc"><strong>Ucapan Perasmian</strong><p class="speaker">YBhg. Datuk Dr. Awang Alik bin Jeman</p><p class="org">Ketua Setiausaha Kementerian Dalam Negeri</p></div></div>
-          <div class="agenda-entry featured"><span class="agenda-time">9.30–10.30 pagi</span><div class="agenda-desc"><strong>Wacana 1</strong><p class="speaker">Prof. Ts. Dr. Nor Badrul Anuar bin Juma’at</p><p class="org">Universiti Malaya</p><p class="topic">Pemikiran Strategik Era AI Agentik: Delegasi Bertanggungjawab dan Keselamatan Data</p></div></div>
+          <div class="agenda-entry featured"><span class="agenda-time">9.30–10.30 pagi</span><div class="agenda-desc"><strong>Wacana 1</strong><p class="speaker"><button type="button" class="agenda-speaker-link" data-agenda-speaker="s1" aria-label="Lihat profil dan topik Prof. Ts. Dr. Nor Badrul Anuar bin Juma’at">Prof. Ts. Dr. Nor Badrul Anuar bin Juma’at</button></p><p class="org">Universiti Malaya</p><p class="topic">Pemikiran Strategik Era AI Agentik: Delegasi Bertanggungjawab dan Keselamatan Data</p></div></div>
           <div class="agenda-entry break"><span class="agenda-time">10.30–10.45 pagi</span><div class="agenda-desc"><strong>Minum Pagi</strong></div></div>
-          <div class="agenda-entry featured"><span class="agenda-time">10.45–11.45 pagi</span><div class="agenda-desc"><strong>Wacana 2</strong><p class="speaker">Encik Nik Feizal Haidi bin Hanafi</p><p class="org">VUCA Warrior Sdn. Bhd.</p><p class="topic">Beyond Agility: Reinventing Work, Teams and Leadership in the Age of Intelligence</p></div></div>
+          <div class="agenda-entry featured"><span class="agenda-time">10.45–11.45 pagi</span><div class="agenda-desc"><strong>Wacana 2</strong><p class="speaker"><button type="button" class="agenda-speaker-link" data-agenda-speaker="s2" aria-label="Lihat profil dan topik Encik Nik Feizal Haidi bin Hanafi">Encik Nik Feizal Haidi bin Hanafi</button></p><p class="org">VUCA Warrior Sdn. Bhd.</p><p class="topic">Beyond Agility: Reinventing Work, Teams and Leadership in the Age of Intelligence</p></div></div>
           <div class="agenda-entry break"><span class="agenda-time">12.00 tengah hari</span><div class="agenda-desc"><strong>Makan Tengah Hari &amp; Solat Jumaat</strong></div></div>
         </div>
       </article>
       <article class="agenda-board afternoon" aria-labelledby="afternoonHeading">
         <div class="agenda-board-title"><div class="period"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 19h18"/><path d="M6 17a6 6 0 0 1 12 0"/><path d="M12 3v3M4.7 8.7l2.2 2.2M19.3 8.7l-2.2 2.2M2 14h2M20 14h2"/></svg><h3 id="afternoonHeading">SESI PETANG</h3></div></div>
         <div class="agenda-items">
-          <div class="agenda-entry featured"><span class="agenda-time">2.45–3.45 petang</span><div class="agenda-desc"><strong>Wacana 3</strong><p class="speaker">Prof. Madya Ts. Dr. Nor Zairah binti Ab. Rahim</p><p class="org">Universiti Teknologi Malaysia (UTM)</p><p class="topic">Activate Your Brain: Staying Ahead in the Age of Intelligence</p></div></div>
-          <div class="agenda-entry featured"><span class="agenda-time">3.45 petang</span><div class="agenda-desc"><strong>Wacana 4</strong><p class="speaker">Ts. Khairul Amri bin Yunus</p><p class="org">Kometsoft</p><p class="topic">Realisasi AI KDN dan Pandangan Masa Hadapan</p></div></div>
+          <div class="agenda-entry featured"><span class="agenda-time">2.45–3.45 petang</span><div class="agenda-desc"><strong>Wacana 3</strong><p class="speaker"><button type="button" class="agenda-speaker-link" data-agenda-speaker="s3" aria-label="Lihat profil dan topik Prof. Madya Ts. Dr. Nor Zairah binti Ab. Rahim">Prof. Madya Ts. Dr. Nor Zairah binti Ab. Rahim</button></p><p class="org">Universiti Teknologi Malaysia (UTM)</p><p class="topic">Activate Your Brain: Staying Ahead in the Age of Intelligence</p></div></div>
+          <div class="agenda-entry featured"><span class="agenda-time">3.45 petang</span><div class="agenda-desc"><strong>Wacana 4</strong><p class="speaker"><button type="button" class="agenda-speaker-link" data-agenda-speaker="s4" aria-label="Lihat profil dan topik Ts. Khairul Amri bin Yunus">Ts. Khairul Amri bin Yunus</button></p><p class="org">Kometsoft</p><p class="topic">Realisasi AI KDN dan Pandangan Masa Hadapan</p></div></div>
           <div class="agenda-entry"><span class="agenda-time">4.30 petang</span><div class="agenda-desc"><strong>Bersurai</strong></div></div>
         </div>
       </article>
@@ -2026,7 +2079,7 @@ html{scroll-padding-top:90px}
 
     <section class="section section-speakers" id="penceramah">
       <div class="shell">
-        <div class="section-header"><div class="section-kicker"><span class="kicker-line"></span> PANEL PENCERAMAH <span class="section-nr">04 / 07</span></div><div class="heading-row"><h2>Panel <em>Penceramah.</em></h2></div></div>
+        <div class="section-header"><div class="section-kicker"><span class="kicker-line"></span> PENCERAMAH <span class="section-nr">04 / 07</span></div><div class="heading-row"><h2><em>Penceramah.</em></h2></div></div>
         <div id="speakersGrid" class="speakers-grid"><div class="loading-row">Memuatkan panel penceramah...</div></div>
       </div>
     </section>
@@ -2321,7 +2374,7 @@ window.PORTAL_DATA = {
     },
     {
       "id": "s2",
-      "name": "Nik Feizal Haidi bin Hanafi",
+      "name": "Encik Nik Feizal Haidi bin Hanafi",
       "role": "Co-Founder & Chief Executive Director",
       "organisation": "VUCA Warrior Sdn. Bhd.",
       "session": "Wacana Perkongsian Ilmu 2",
@@ -2381,7 +2434,7 @@ window.PORTAL_DATA = {
       "id": "a5",
       "time": "",
       "title": "Wacana Perkongsian Ilmu 2",
-      "description": "Beyond Agility — Nik Feizal Haidi bin Hanafi.",
+      "description": "Beyond Agility — Encik Nik Feizal Haidi bin Hanafi.",
       "place": "Cashmere Hall",
       "sort": "5"
     },
@@ -2435,7 +2488,7 @@ window.PORTAL_DATA = {
       "id": "w2",
       "category": "Wacana",
       "title": "Beyond Agility: Reinventing Work, Teams and Leadership in the Age of Intelligence",
-      "speaker": "Nik Feizal Haidi bin Hanafi",
+      "speaker": "Encik Nik Feizal Haidi bin Hanafi",
       "role": "Co-Founder & Chief Executive Director, VUCA Warrior Sdn. Bhd.",
       "description": "Membincangkan bagaimana pemimpin menghadapi kerumitan era AI dengan pertimbangan yang tepat, sambil mereka semula kerja, kerjasama pasukan dan gaya kepimpinan.",
       "summary": [
@@ -2556,10 +2609,15 @@ window.PORTAL_DATA = {
   }
   function renderSpeakers(speakers) {
     const root=$('#speakersGrid'),list=order(speakers);
-    root.innerHTML=list.length?list.map((speaker,index)=>`<article class="speaker-card"><div class="speaker-visual"><span class="speaker-session-tag">WACANA ${String(index+1).padStart(2,'0')}</span>${speakerVisual(speaker,'speaker-initial')}</div><div class="speaker-info"><div class="speaker-org">${html(speaker.organisation)}</div><h3>${html(speaker.name)}</h3><p class="speaker-role">${html(speaker.role)}</p>${speaker.id==='s1'?'<div class="speaker-credentials"><span>Profesor UM</span><span>Pengarah CSNET</span><span>Bekas CIO UM</span></div>':speaker.id==='s2'?'<div class="speaker-credentials"><span>CEO VUCA Warrior</span><span>Bekas Oracle</span><span>Bekas Microsoft</span></div>':speaker.id==='s3'?'<div class="speaker-credentials"><span>Profesor Madya UTM</span><span>IEEE CertifAIEd</span><span>Etika AI</span></div>':''}<div class="speaker-rule"></div><p class="speaker-topic">${html(speaker.title)}</p></div><button type="button" class="speaker-open" data-speaker="${html(speaker.id)}" aria-label="Lihat profil ${html(speaker.name)}"><span>Lihat Profil & Topik</span><span aria-hidden="true">↗</span></button></article>`).join(''):'<div class="loading-row">Maklumat penceramah akan dikemas kini.</div>';
+    const affiliation={
+      s1:'Pengarah CSNET, Universiti Malaya (UM)',
+      s2:'Co-Founder & Chief Executive Director, Vuca Warrior SDN BHD',
+      s3:'Fakulti Kecerdasan Buatan, Universiti Teknologi Malaysia (UTM)'
+    };
+    root.innerHTML=list.length?list.map((speaker,index)=>`<article class="speaker-card"><div class="speaker-visual"><span class="speaker-session-tag">WACANA ${String(index+1).padStart(2,'0')}</span>${speakerVisual(speaker,'speaker-initial')}</div><div class="speaker-info"><h3>${html(speaker.name)}</h3><p class="speaker-affiliation">${html(affiliation[speaker.id]||speaker.organisation||'')}</p><div class="speaker-rule"></div><p class="speaker-topic">${html(speaker.title)}</p></div><button type="button" class="speaker-open" data-speaker="${html(speaker.id)}" aria-label="Lihat profil ${html(speaker.name)}"><span>Lihat Profil & Topik</span><span aria-hidden="true">↗</span></button></article>`).join(''):'<div class="loading-row">Maklumat penceramah akan dikemas kini.</div>';
   }
 
-  
+
   function renderResourceFilters(materials) {
     const root=$('#resourceFilters');
     if(!root) return;
@@ -2610,13 +2668,23 @@ window.PORTAL_DATA = {
     if(state.data.cmsWarning)showToast(state.data.cmsWarning);
   }
 
+  // Wacana 4 is listed in Atur Cara but full biography/photo have not yet been supplied.
+  // Give it a minimal accurate modal instead of inventing profile details or adding a fourth panel card.
+  const agendaOnlySpeakers={
+    s4:{id:'s4',name:'Ts. Khairul Amri bin Yunus',role:'',organisation:'Kometsoft',
+      session:'Wacana 4',title:'Realisasi AI KDN dan Pandangan Masa Hadapan',
+      bio:'',abstract:'',imageUrl:''}
+  };
   function openSpeaker(id) {
-    const speaker=arr(state.data?.speakers).find(s=>txt(s.id)===txt(id));
+    const speaker=arr(state.data?.speakers).find(s=>txt(s.id)===txt(id))||agendaOnlySpeakers[id];
     if(!speaker)return;
     const modal=$('#speakerModal');
     modal.dataset.speakerId=speaker.id;
     state.lastFocus=document.activeElement;
-    $('#modalBody').innerHTML=`<div class="modal-cover"><div class="modal-avatar">${speakerVisual(speaker,'modal-initial')}</div><div class="modal-meta"><span class="modal-tag">${html(speaker.session)}</span><h3 id="modalName">${html(speaker.name)}</h3><p>${html(speaker.role)}<br><strong>${html(speaker.organisation)}</strong></p></div></div><div class="modal-content"><h4>TAJUK PERKONGSIAN</h4><p class="modal-topic">${html(speaker.title)}</p><h4>FOKUS WACANA</h4><p class="modal-copy">${html(speaker.abstract||'Maklumat sesi akan dikemas kini.')}</p><h4>PROFIL PENCERAMAH</h4><p class="modal-copy">${html(speaker.bio||'Profil akan dikemas kini.')}</p></div>`;
+    const details=speaker.id==='s4'
+      ? '<p class="modal-copy">Profil terperinci penceramah akan dikemas kini oleh urus setia.</p>'
+      : `<h4>FOKUS WACANA</h4><p class="modal-copy">${html(speaker.abstract||'Maklumat sesi akan dikemas kini.')}</p><h4>PROFIL PENCERAMAH</h4><p class="modal-copy">${html(speaker.bio||'Profil akan dikemas kini.')}</p>`;
+    $('#modalBody').innerHTML=`<div class="modal-cover"><div class="modal-avatar">${speakerVisual(speaker,'modal-initial')}</div><div class="modal-meta"><span class="modal-tag">${html(speaker.session)}</span><h3 id="modalName">${html(speaker.name)}</h3><p>${speaker.role?html(speaker.role)+'<br>':''}<strong>${html(speaker.organisation)}</strong></p></div></div><div class="modal-content"><h4>TAJUK PERKONGSIAN</h4><p class="modal-topic">${html(speaker.title)}</p>${details}</div>`;
     modal.hidden=false;modal.setAttribute('aria-hidden','false');document.body.classList.add('modal-open');$('#modalClose').focus();
   }
   function closeSpeaker() {
@@ -2633,6 +2701,11 @@ window.PORTAL_DATA = {
       $('#mainNav').classList.remove('open');$('#menuToggle').setAttribute('aria-expanded','false');
     }));
     $('#speakersGrid').addEventListener('click',event=>{const button=event.target.closest('[data-speaker]');if(button)openSpeaker(button.dataset.speaker);});
+    // Click/keyboard activation from the timetable uses the same popup.
+    $('#aturcara').addEventListener('click',event=>{
+      const button=event.target.closest('[data-agenda-speaker]');
+      if(button)openSpeaker(button.dataset.agendaSpeaker);
+    });
     $('#modalClose').addEventListener('click',closeSpeaker);
     $('#speakerModal').addEventListener('click',event=>{if(event.target.matches('[data-close]'))closeSpeaker();});
     document.addEventListener('keydown',event=>{
