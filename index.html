@@ -1434,8 +1434,14 @@ html{scroll-padding-top:90px}
 .kdn-contact-value:hover{color:#68EFFE;text-decoration:underline;text-underline-offset:4px}
 .kdn-contact-value:focus-visible{outline:3px solid #E3C78C;outline-offset:4px;border-radius:2px}
 .kdn-contact-email{font-size:clamp(14px,.92vw,17px);font-weight:700;color:#BDEAF7}
-.kdn-contact-foot{margin-top:32px;display:flex;gap:13px;justify-content:center;align-items:center;text-align:center;color:#9DC6D7;font-size:11px;line-height:1.7;letter-spacing:.12em;font-weight:800}
-.kdn-contact-foot>span{color:#E0B973;font-size:14px}
+.kdn-contact-office{margin-top:34px;display:flex;justify-content:center}
+.kdn-contact-office-card{width:min(100%,720px);padding:28px 30px 30px;border-radius:22px;background:linear-gradient(180deg,rgba(15,57,92,.96),rgba(6,32,59,.97));border:1px solid rgba(97,206,235,.28);box-shadow:0 26px 56px rgba(0,8,28,.26);text-align:center;position:relative;overflow:hidden}
+.kdn-contact-office-card::before{content:"";position:absolute;inset:0 auto auto 0;width:100%;height:4px;background:linear-gradient(90deg,#34E4F6,#78E4F7 62%,#D9B26B)}
+.kdn-contact-office-title{margin:0 0 14px;color:#FFFFFF;font-size:clamp(28px,1.78vw,35px);line-height:1.2;font-weight:900;letter-spacing:.02em;text-transform:uppercase}
+.kdn-contact-office-lines{display:grid;gap:4px;margin:0 0 18px;color:#E6F5FB;font-size:clamp(17px,1.05vw,19px);line-height:1.48;font-weight:700;letter-spacing:.02em}
+.kdn-contact-office-meta{display:grid;gap:6px;padding-top:18px;border-top:1px solid rgba(163,219,236,.2);color:#8FEFFF;font-size:clamp(16px,1.01vw,18px);line-height:1.5;font-weight:800;letter-spacing:.05em;text-transform:uppercase}
+.kdn-contact-office-meta strong{color:#FFFFFF;font-weight:900}
+
 @media(max-width:1120px){.kdn-contact-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.kdn-contact-card h3{min-height:auto}}
 @media(max-width:720px){.section-hubungi{padding:66px 0 88px}.kdn-contact-grid{grid-template-columns:1fr;gap:15px}.kdn-contact-card{min-height:unset;padding:25px 23px}.kdn-contact-card h3{font-size:24px}.kdn-contact-value{font-size:21px}.kdn-contact-email{font-size:17px}
 .kdn-contact-detail:last-child{display:grid;grid-template-columns:44px minmax(0,1fr);column-gap:14px;row-gap:7px;align-items:center}
@@ -1443,7 +1449,7 @@ html{scroll-padding-top:90px}
 .kdn-contact-detail:last-child .kdn-contact-icon{grid-column:1;grid-row:1}
 .kdn-contact-detail:last-child .kdn-contact-label{grid-column:2;grid-row:1;margin:0}
 .kdn-contact-detail:last-child .kdn-contact-email{grid-column:1/-1;grid-row:2;line-height:1.5}
-.kdn-contact-foot{font-size:10px}.kdn-contact-lead{margin-bottom:28px}.section-hubungi h2{font-size:clamp(43px,10vw,59px)}}
+.kdn-contact-office-card{padding:24px 21px 25px}.kdn-contact-office-title{font-size:clamp(24px,7.1vw,31px)}.kdn-contact-office-lines{font-size:16px}.kdn-contact-office-meta{font-size:15px}.kdn-contact-lead{margin-bottom:28px}.section-hubungi h2{font-size:clamp(43px,10vw,59px)}}
 
   </style>
 
@@ -2404,7 +2410,22 @@ html{scroll-padding-top:90px}
             </div>
           </article>
         </div>
-        <div class="kdn-contact-foot"><span aria-hidden="true">✦</span> KURSUS KECERDASAN BUATAN (AI) BAGI KUMPULAN PENGURUSAN TERTINGGI KDN 2026 <span aria-hidden="true">✦</span></div>
+        <div class="kdn-contact-office">
+          <div class="kdn-contact-office-card">
+            <h3 class="kdn-contact-office-title">Bahagian Perancangan Strategik (PG)<br>Kementerian Dalam Negeri</h3>
+            <div class="kdn-contact-office-lines">
+              <div>Aras 7 &amp; 8, Setia Perkasa 2</div>
+              <div>Kompleks Setia Perkasa</div>
+              <div>Pusat Pentadbiran Kerajaan Persekutuan</div>
+              <div>62546 Putrajaya</div>
+            </div>
+            <div class="kdn-contact-office-meta">
+              <div><strong>Tel:</strong> 03 8886 3299</div>
+              <div><strong>Faks:</strong> 03 8889 1713</div>
+              <div><strong>E-mel:</strong> BAHAGIAN_PG@MOHA.GOV.MY</div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </main>
