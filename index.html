@@ -1917,6 +1917,126 @@ html{scroll-padding-top:90px}
 @media(max-width:600px){#kdnPdfDialog{height:96dvh;max-height:96dvh;width:100vw;max-width:100vw;border-radius:0}#kdnPdfDialog .kdn-pdf-header{padding:12px 14px;gap:9px}#kdnPdfDialog .kdn-pdf-close{flex-basis:40px;width:40px;height:40px}#kdnPdfDialog .kdn-pdf-footer{padding:10px 12px;gap:7px}#kdnPdfDialog .kdn-pdf-hint{display:none}#kdnPdfDialog .kdn-pdf-link{font-size:12px;padding:9px 10px;flex:1}}
 @media(prefers-reduced-motion:reduce){#bahan .wacana-card-actions .wacana-view{transition:none}}
 </style>
+
+<style id="kdn-prayer-cyan-complete-override">
+/* 20 November 2026 — all seven times from organiser-provided schedule. Real Masjid Putra photograph, not AI-generated. */
+#waktusolat.section-prayer{
+  position:relative;isolation:isolate;overflow:hidden;
+  padding:clamp(64px,5.4vw,88px) 0 clamp(66px,5vw,90px);
+  background:#061c34;color:white;
+}
+#waktusolat.section-prayer::before{
+  content:"";position:absolute;inset:0;z-index:-2;pointer-events:none;
+  background-image:linear-gradient(90deg,rgba(4,21,39,.94) 0%,rgba(5,26,47,.86) 45%,rgba(6,29,52,.64) 78%,rgba(6,26,45,.77) 100%),var(--mosque-photo,linear-gradient(#08253f,#08253f));
+  background-repeat:no-repeat;background-size:cover,cover;background-position:center,center 35%;
+}
+#waktusolat.section-prayer::after{
+  content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;border:0;border-radius:0;
+  background:radial-gradient(ellipse at 8% 13%,rgba(22,154,210,.20),transparent 43%),
+  radial-gradient(ellipse at 92% 74%,rgba(48,218,250,.10),transparent 53%);
+  box-shadow:none;width:auto;height:auto;
+}
+#waktusolat .shell{position:relative;z-index:1;}
+#waktusolat .prayer-heading{display:flex;align-items:end;justify-content:space-between;gap:24px;margin:0 0 28px}
+#waktusolat .section-kicker{color:#8deefe;font-size:clamp(12px,.85vw,15px);letter-spacing:.16em}
+#waktusolat .section-kicker .kicker-line{background:#36e9fc}
+#waktusolat .section-nr{color:#abd2e3}
+#waktusolat h2{font-size:clamp(52px,5vw,83px);color:#fff;margin:14px 0 0;line-height:1.09;letter-spacing:-.05em}
+#waktusolat h2 em{color:#39e4f6;font-style:normal;filter:none;text-shadow:0 0 24px rgba(48,227,253,.35)}
+#waktusolat .prayer-zone{
+  border:1px solid rgba(77,219,244,.67);border-radius:999px;background:rgba(7,32,58,.88);
+  color:#b9f3ff;font-size:clamp(12px,.87vw,15px);font-weight:850;padding:13px 18px;
+  box-shadow:0 0 19px rgba(39,208,241,.10);letter-spacing:.04em;
+}
+#waktusolat .prayer-zone svg{color:#45e4f6}
+#waktusolat .prayer-datebar{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-bottom:20px}
+#waktusolat .prayer-date-item{
+  padding:17px 21px;border:1px solid rgba(69,221,250,.3);border-radius:15px;
+  background:rgba(6,34,60,.88);box-shadow:inset 0 1px rgba(255,255,255,.06);
+  display:flex;align-items:center;gap:14px;
+}
+#waktusolat .prayer-date-icon{
+  display:grid;place-items:center;flex:0 0 52px;width:52px;height:52px;border-radius:13px;
+  background:rgba(50,210,239,.12);border:1px solid rgba(64,221,249,.40);color:#63eaff;
+}
+#waktusolat .prayer-date-icon svg{width:27px;height:27px}
+#waktusolat .prayer-date-label{font-size:12px;color:#91dced;letter-spacing:.09em;margin-bottom:6px}
+#waktusolat .prayer-date-text{font-size:clamp(19px,1.45vw,27px);color:#fff;line-height:1.28}
+#waktusolat .prayer-times{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:17px;align-items:stretch}
+#waktusolat .prayer-time-card{
+  min-width:0;grid-column:span 3;min-height:215px;padding:22px 23px 23px;
+  display:flex;flex-direction:column;justify-content:space-between;gap:15px;
+  border:1px solid rgba(57,207,240,.54);border-radius:18px;
+  background:linear-gradient(147deg,rgba(17,67,101,.96),rgba(5,28,51,.97));
+  box-shadow:0 15px 38px rgba(0,8,22,.26),0 0 24px rgba(41,221,247,.07);
+}
+#waktusolat .prayer-time-card:nth-child(n+5){grid-column:span 4}
+#waktusolat .prayer-time-card::before{
+  content:"";height:4px;inset:0 0 auto 0;background:linear-gradient(90deg,#23dcf1,#75f8ff,#147bb4);
+  box-shadow:0 0 17px rgba(42,227,248,.55)
+}
+#waktusolat .prayer-time-card::after{
+  content:"";position:absolute;top:-68px;right:-73px;width:240px;height:240px;border-radius:50%;
+  background:radial-gradient(circle,rgba(32,215,246,.13),transparent 68%);z-index:-1
+}
+#waktusolat .prayer-toprow{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+#waktusolat .prayer-order{color:#8ec8dd;font-size:11px;font-weight:850;letter-spacing:.08em;padding-top:5px}
+#waktusolat .prayer-icon-box{
+  width:54px;height:54px;min-width:54px;margin:0;display:grid;place-items:center;
+  border:1px solid rgba(57,228,247,.55);border-radius:14px;
+  color:#61ecfa;background:rgba(26,191,232,.13);box-shadow:0 0 17px rgba(26,201,240,.12)
+}
+#waktusolat .prayer-icon-box svg{width:33px;height:33px}
+#waktusolat .prayer-time-card h3{color:#fff;font-size:clamp(24px,1.95vw,31px);line-height:1.07;font-weight:900;letter-spacing:-.045em;margin:1px 0 0}
+#waktusolat .prayer-clock{display:flex;flex-wrap:nowrap;align-items:baseline;justify-content:flex-start;gap:8px;white-space:nowrap}
+#waktusolat .prayer-clock strong{font-size:clamp(38px,3.2vw,55px);font-weight:900;line-height:1;color:#58edff;letter-spacing:-.065em;text-shadow:0 0 18px rgba(69,220,251,.18);font-variant-numeric:tabular-nums}
+#waktusolat .prayer-clock span{font-size:clamp(11px,.88vw,15px);font-weight:850;color:#d2faff;padding-bottom:0;letter-spacing:.025em;text-transform:uppercase}
+#waktusolat .prayer-bottom-rule{margin:25px 0 0;background:linear-gradient(90deg,transparent,rgba(66,223,248,.38),transparent)}
+#waktusolat .prayer-bottom-caption{color:#c5e9f5;margin:17px 0 0;font-size:clamp(13px,.88vw,15px);letter-spacing:.02em}
+@media(max-width:1099px){
+  #waktusolat .prayer-time-card{grid-column:span 6;min-height:206px}
+  #waktusolat .prayer-time-card:nth-child(n+5){grid-column:span 6}
+  #waktusolat .prayer-time-card:last-child{grid-column:span 12;min-height:176px}
+  #waktusolat .prayer-heading{align-items:flex-start;flex-direction:column}
+  #waktusolat .prayer-clock strong{font-size:clamp(42px,5.5vw,60px)}
+  #waktusolat.section-prayer::before{background-size:cover,cover;background-position:center,center 35%}
+}
+@media(max-width:640px){
+  #waktusolat.section-prayer{padding:52px 0 65px}
+  #waktusolat.section-prayer::before{
+    background-image:linear-gradient(180deg,rgba(5,24,45,.72) 0%,rgba(6,24,44,.87) 37%,rgba(4,19,37,.93) 100%),var(--mosque-photo,linear-gradient(#08253f,#08253f));
+    background-size:cover,cover;background-position:center,center top;
+  }
+  #waktusolat .prayer-heading{gap:18px;margin-bottom:20px}
+  #waktusolat h2{font-size:clamp(45px,12vw,62px)}
+  #waktusolat .prayer-zone{font-size:11px;border-radius:14px;padding:11px 13px;line-height:1.5}
+  #waktusolat .prayer-datebar{grid-template-columns:1fr 1fr;gap:10px;margin-bottom:15px}
+  #waktusolat .prayer-date-item{padding:12px;gap:9px;align-items:center}
+  #waktusolat .prayer-date-icon{width:36px;height:36px;flex-basis:36px;border-radius:10px}
+  #waktusolat .prayer-date-icon svg{width:20px;height:20px}
+  #waktusolat .prayer-date-label{font-size:9px;letter-spacing:.025em;margin-bottom:4px}
+  #waktusolat .prayer-date-text{font-size:clamp(13px,3.3vw,16px)}
+  #waktusolat .prayer-times{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+  #waktusolat .prayer-time-card,#waktusolat .prayer-time-card:nth-child(n+5){
+    grid-column:auto;min-height:171px;padding:16px 14px 15px;gap:11px;border-radius:14px
+  }
+  #waktusolat .prayer-time-card:last-child{grid-column:span 2;min-height:145px}
+  #waktusolat .prayer-icon-box{height:39px;width:39px;min-width:39px;border-radius:10px}
+  #waktusolat .prayer-icon-box svg{width:25px;height:25px}
+  #waktusolat .prayer-order{font-size:9px;letter-spacing:0}
+  #waktusolat .prayer-time-card h3{font-size:clamp(18px,5.2vw,25px)}
+  #waktusolat .prayer-clock{gap:5px}
+  #waktusolat .prayer-clock strong{font-size:clamp(33px,9.1vw,46px)!important}
+  #waktusolat .prayer-clock span{font-size:clamp(9px,2.7vw,12px);letter-spacing:0}
+  #waktusolat .prayer-bottom-caption{font-size:12px;line-height:1.55}
+}
+@media(max-width:350px){
+  #waktusolat .prayer-clock strong{font-size:31px!important}
+  #waktusolat .prayer-date-text{font-size:12px}
+  #waktusolat .prayer-clock span{font-size:9px}
+}
+</style>
+
 </head>
 <body>
   <a class="skip-link" href="#main">Langkau ke kandungan</a>
@@ -2143,49 +2263,91 @@ html{scroll-padding-top:90px}
 
     
 
-    <!-- SECTION: WAKTU SOLAT | 20 Nov 2026 | only Zohor and Asar -->
-    <section class="section section-prayer" id="waktusolat" aria-labelledby="prayerTitle">
-      <div class="shell">
-        <div class="prayer-heading">
-          <div>
-            <div class="section-kicker"><span class="kicker-line"></span> PANDUAN IBADAH <span class="section-nr">06 / 07</span></div>
-            <h2 id="prayerTitle">Waktu <em>Solat.</em></h2>
-          </div>
-          <div class="prayer-zone">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-5.6 7-12A7 7 0 1 0 5 10c0 6.4 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg>
-            <span>ZON WLY01&nbsp; · &nbsp;KUALA LUMPUR &amp; PUTRAJAYA</span>
-          </div>
-        </div>
-        <div class="prayer-datebar">
-          <div class="prayer-date-item">
-            <span class="prayer-date-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4M17 3v4M3 10h18M8 14h3M8 17h3M14 14h3"/></svg></span>
-            <div><span class="prayer-date-label">TARIKH MASIHI</span><strong class="prayer-date-text">20 NOVEMBER 2026</strong></div>
-          </div>
-          <div class="prayer-date-item">
-            <span class="prayer-date-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M12 7v5l3 2M3 12h1"/></svg></span>
-            <div><span class="prayer-date-label">HARI</span><strong class="prayer-date-text">JUMAAT</strong></div>
-          </div>
-        </div>
-        <div class="prayer-times" aria-label="Waktu solat Zohor dan Asar pada 20 November 2026">
-          <article class="prayer-time-card prayer-card-zohor">
-            <div class="prayer-card-left">
-              <div class="prayer-icon-box" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="20" r="8"/><path d="M24 3v5M24 32v5M7 20h5M36 20h5M11.5 7.5l3.7 3.7M32.8 28.8l3.7 3.7M36.5 7.5l-3.7 3.7M15.2 28.8l-3.7 3.7M7 43h34"/></svg></div>
-              <span class="prayer-time-label">WAKTU SOLAT</span><h3>ZOHOR</h3>
-            </div>
-            <div class="prayer-clock"><strong>1:02</strong><span>petang</span></div>
-          </article>
-          <article class="prayer-time-card prayer-card-asar">
-            <div class="prayer-card-left">
-              <div class="prayer-icon-box" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 35h36M11 35a13 13 0 0 1 26 0"/><path d="M24 6v5M9 17l4 4M39 17l-4 4M4 28l6 2M44 28l-6 2"/><path d="M3 42h42"/></svg></div>
-              <span class="prayer-time-label">WAKTU SOLAT</span><h3>ASAR</h3>
-            </div>
-            <div class="prayer-clock"><strong>4:24</strong><span>petang</span></div>
-          </article>
-        </div>
-        <div class="prayer-bottom-rule"></div>
-        <p class="prayer-bottom-caption">Rujukan waktu solat bagi kursus pada 20 November 2026 di Putrajaya</p>
+    <!-- SECTION: WAKTU SOLAT | 20 Nov 2026 | Imsak hingga Isyak; times from supplied poster -->
+<section class="section section-prayer" id="waktusolat" aria-labelledby="prayerTitle">
+  <div class="shell">
+    <div class="prayer-heading">
+      <div>
+        <div class="section-kicker"><span class="kicker-line"></span> PANDUAN IBADAH <span class="section-nr">06 / 07</span></div>
+        <h2 id="prayerTitle">Waktu <em>Solat.</em></h2>
       </div>
-    </section>
+      <div class="prayer-zone">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-5.6 7-12A7 7 0 1 0 5 10c0 6.4 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        <span>ZON WLY01 · KUALA LUMPUR &amp; PUTRAJAYA</span>
+      </div>
+    </div>
+    <div class="prayer-datebar">
+      <div class="prayer-date-item">
+        <span class="prayer-date-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4M17 3v4M3 10h18M8 14h3M8 17h3M14 14h3"/></svg></span>
+        <div><span class="prayer-date-label">TARIKH MASIHI</span><strong class="prayer-date-text">20 NOVEMBER 2026</strong></div>
+      </div>
+      <div class="prayer-date-item">
+        <span class="prayer-date-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M12 7v5l3 2M3 12h1"/></svg></span>
+        <div><span class="prayer-date-label">HARI</span><strong class="prayer-date-text">JUMAAT</strong></div>
+      </div>
+    </div>
+    <div class="prayer-times" aria-label="Waktu Imsak hingga Isyak, 20 November 2026, zon WLY01">
+      <article class="prayer-time-card prayer-card-imsak" aria-label="Imsak, 5:39 pagi">
+  <div class="prayer-toprow">
+    <span class="prayer-icon-box"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M30 12a17 17 0 1 0 7 29 18 18 0 0 1-7-29Z"/><path d="m40 9 1.7 4.3L46 15l-4.3 1.7L40 21l-1.7-4.3L34 15l4.3-1.7L40 9Z"/></svg></span>
+    <span class="prayer-order">01 / 07</span>
+  </div>
+  <h3>IMSAK</h3>
+  <div class="prayer-clock"><strong>5:39</strong><span>PAGI</span></div>
+</article>
+      <article class="prayer-time-card prayer-card-subuh" aria-label="Subuh, 5:49 pagi">
+  <div class="prayer-toprow">
+    <span class="prayer-icon-box"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 35h34M12 41h24M12 35a12 12 0 0 1 24 0"/><path d="M24 6v8M8 16l6 6M40 16l-6 6M3 29l8 2M45 29l-8 2"/></svg></span>
+    <span class="prayer-order">02 / 07</span>
+  </div>
+  <h3>SUBUH</h3>
+  <div class="prayer-clock"><strong>5:49</strong><span>PAGI</span></div>
+</article>
+      <article class="prayer-time-card prayer-card-syuruk" aria-label="Syuruk, 6:59 pagi">
+  <div class="prayer-toprow">
+    <span class="prayer-icon-box"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 34h38M9 41h30M14 34a10 10 0 0 1 20 0"/><path d="M24 4v9M8 14l6 6M40 14l-6 6M2 27l8 2M46 27l-8 2"/></svg></span>
+    <span class="prayer-order">03 / 07</span>
+  </div>
+  <h3>SYURUK</h3>
+  <div class="prayer-clock"><strong>6:59</strong><span>PAGI</span></div>
+</article>
+      <article class="prayer-time-card prayer-card-zohor" aria-label="Zohor, 1:02 petang">
+  <div class="prayer-toprow">
+    <span class="prayer-icon-box"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="24" r="9"/><path d="M24 3v7M24 38v7M3 24h7M38 24h7M9 9l5 5M34 34l5 5M39 9l-5 5M14 34l-5 5"/></svg></span>
+    <span class="prayer-order">04 / 07</span>
+  </div>
+  <h3>ZOHOR</h3>
+  <div class="prayer-clock"><strong>1:02</strong><span>PETANG</span></div>
+</article>
+      <article class="prayer-time-card prayer-card-asar" aria-label="Asar, 4:24 petang">
+  <div class="prayer-toprow">
+    <span class="prayer-icon-box"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 37h38M9 37a14 14 0 0 1 21-12"/><path d="M32 34h8a6 6 0 0 0 0-12 8 8 0 0 0-15-2 7 7 0 0 0-4 13h11"/><path d="M16 9l3 6M4 22l7 2M33 4l-2 7"/></svg></span>
+    <span class="prayer-order">05 / 07</span>
+  </div>
+  <h3>ASAR</h3>
+  <div class="prayer-clock"><strong>4:24</strong><span>PETANG</span></div>
+</article>
+      <article class="prayer-time-card prayer-card-maghrib" aria-label="Maghrib, 6:59 petang">
+  <div class="prayer-toprow">
+    <span class="prayer-icon-box"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 34h38M9 41h30M13 34a11 11 0 0 1 22 0"/><path d="M24 5v9M6 17l7 5M42 17l-7 5M3 28l7 2M45 28l-7 2"/></svg></span>
+    <span class="prayer-order">06 / 07</span>
+  </div>
+  <h3>MAGHRIB</h3>
+  <div class="prayer-clock"><strong>6:59</strong><span>PETANG</span></div>
+</article>
+      <article class="prayer-time-card prayer-card-isyak" aria-label="Isyak, 8:12 malam">
+  <div class="prayer-toprow">
+    <span class="prayer-icon-box"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M29 6a19 19 0 1 0 13 31A19 19 0 0 1 29 6Z"/><path d="m39 6 2 5 5 2-5 2-2 5-2-5-5-2 5-2 2-5Z"/></svg></span>
+    <span class="prayer-order">07 / 07</span>
+  </div>
+  <h3>ISYAK</h3>
+  <div class="prayer-clock"><strong>8:12</strong><span>MALAM</span></div>
+</article>
+    </div>
+    <div class="prayer-bottom-rule"></div>
+    <p class="prayer-bottom-caption">Waktu solat pada Jumaat, 20 November 2026 · WLY01 · Putrajaya</p>
+  </div>
+</section>
 
     <section class="section section-hubungi" id="hubungi" aria-labelledby="hubungiTitle">
       <div class="shell">
@@ -2991,5 +3153,14 @@ window.PORTAL_DATA = {
     else initialize();
   })();
   </script>
+<script id="kdn-prayer-photo-reuse">/* Reuse existing Masjid Putra image without duplicating base64 bytes. */
+(function(){
+  const mosque=document.querySelector('#lokasi .kdn-masjid-putra img');
+  const prayer=document.getElementById('waktusolat');
+  if(mosque && prayer && mosque.src.startsWith('data:image/')){
+    prayer.style.setProperty('--mosque-photo', 'url("'+mosque.src+'")');
+  }
+})();
+</script>
 </body>
 </html>
