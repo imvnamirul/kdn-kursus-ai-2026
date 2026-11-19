@@ -737,11 +737,9 @@
 .section-agenda .agenda-headrow{display:flex;justify-content:space-between;align-items:end;gap:28px}
 .section-agenda h2{color:#fff;font-family:'Inter','Arial Black',sans-serif;font-weight:900;font-size:clamp(47px,4.5vw,72px);line-height:1.08;letter-spacing:-.06em;margin:14px 0 0;text-shadow:0 4px 23px rgba(0,8,31,.5)}
 .section-agenda h2 em{color:#48edff;font-style:normal}
-.section-agenda .agenda-daytag{flex:none;align-self:end;display:flex;align-items:center;gap:10px;color:#e7faff;border:1px solid rgba(106,236,253,.4);background:rgba(4,37,72,.6);border-radius:99px;padding:12px 19px;font-size:15px;font-weight:800;letter-spacing:.04em;backdrop-filter:blur(9px)}
-.section-agenda .agenda-daytag svg{width:19px;height:19px;color:#5ef1ff;flex:none}
 .section-agenda .agenda-split{display:grid;grid-template-columns:minmax(0,1.14fr) minmax(0,.86fr);gap:22px;align-items:stretch}
-.section-agenda .agenda-board{border:1px solid rgba(138,224,247,.44);border-top:4px solid #37e5f7;border-radius:15px;overflow:hidden;background:linear-gradient(152deg,rgba(4,34,68,.94),rgba(5,23,50,.92));box-shadow:0 26px 58px rgba(0,9,29,.35);backdrop-filter:blur(12px);min-width:0;display:flex;flex-direction:column}
-.section-agenda .agenda-board.afternoon{border-top-color:#e3bf7c;background:linear-gradient(180deg,rgba(5,28,62,.96) 0%,rgba(5,28,61,.89) 50%,rgba(5,23,50,.70) 100%),var(--ballroom-photo);background-size:cover;background-position:center center}
+.section-agenda .agenda-board{border:1px solid rgba(138,224,247,.44);border-top:4px solid #37e5f7;border-radius:15px;overflow:hidden;background:#082746;box-shadow:0 26px 58px rgba(0,9,29,.35);backdrop-filter:none;min-width:0;display:flex;flex-direction:column}
+.section-agenda .agenda-board.afternoon{border-top-color:#e3bf7c;background:#061f3f;box-shadow:0 26px 58px rgba(0,9,29,.35);backdrop-filter:none}
 .section-agenda .agenda-board-title{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 23px 16px;background:rgba(18,79,119,.24);border-bottom:1px solid rgba(134,215,246,.24)}
 .section-agenda .agenda-board-title .period{display:flex;align-items:center;gap:12px;color:#fff;font-size:clamp(24px,2.1vw,33px);font-weight:900;letter-spacing:-.045em}
 .section-agenda .agenda-board-title .period svg{width:33px;height:33px;color:#5ef1ff;flex:none}
@@ -766,9 +764,15 @@
 .section-agenda .agenda-bottom{padding:14px 22px;border-top:1px solid rgba(154,222,251,.18);background:rgba(4,35,64,.27);color:#b7dce9;font-size:13px;line-height:1.45}
 .section-agenda .afternoon .agenda-bottom{margin-top:auto;background:linear-gradient(125deg,rgba(69,116,146,.13),rgba(11,63,97,.26));color:#d1e2f1}
 .section-agenda .agenda-note{border:0;background:none;padding:15px 2px 0;font-size:13px;line-height:1.5;font-weight:600;color:#d6ebf4;text-shadow:0 3px 15px rgba(0,0,0,.6)}
-.section-agenda .photo-credit{display:inline-block;color:#d0dfe9;text-decoration:underline;text-decoration-color:rgba(191,226,242,.5);text-underline-offset:3px;margin-left:6px}
-.section-agenda .photo-credit:hover{color:#fff}
 .section-agenda #agendaList[hidden]{display:none!important}
+
+/* Atur Cara refinement — solid panels and afternoon-appropriate sun icon */
+.section-agenda .agenda-board.morning,
+.section-agenda .agenda-board.afternoon { background-color:#082746; background-image:none; }
+.section-agenda .agenda-board.afternoon { background-color:#061f3f; }
+.section-agenda .afternoon .agenda-board-title {background:#0b3150;}
+.section-agenda .afternoon .agenda-bottom {background:#092d49;}
+
 @media(max-width:1240px){
  .section-agenda>.shell{width:calc(100% - 60px)}
  .section-agenda .agenda-split{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:15px}
@@ -781,7 +785,6 @@
 @media(max-width:930px){
  .section.section-agenda{min-height:0;padding:65px 0 75px}
  .section-agenda .agenda-headrow{align-items:start;flex-direction:column;gap:19px}
- .section-agenda .agenda-daytag{align-self:start}
  .section-agenda .agenda-split{grid-template-columns:1fr;gap:18px}
  .section-agenda .agenda-entry{grid-template-columns:140px 1fr;gap:18px;padding:15px 0}
  .section-agenda .afternoon .agenda-entry{padding:18px 0}
@@ -794,7 +797,6 @@
  .section-agenda>.shell{width:calc(100% - 32px)}
  .section-agenda .section-kicker{font-size:11px;letter-spacing:.11em}
  .section-agenda h2{font-size:clamp(39px,9.6vw,53px)}
- .section-agenda .agenda-daytag{font-size:12px;padding:9px 12px}
  .section-agenda .agenda-board-title{padding:17px}
  .section-agenda .agenda-board-title .period{font-size:27px}
  .section-agenda .agenda-items{padding:2px 15px}
@@ -926,23 +928,22 @@
       <div class="section-kicker"><span class="kicker-line"></span> PERJALANAN PROGRAM <span class="section-nr">02 / 06</span></div>
       <div class="agenda-headrow">
         <h2 id="agendaHeading">Atur Cara <em>Kursus.</em></h2>
-        <div class="agenda-daytag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4m10-4v4M3 10h18"/></svg><span>JUMAAT · 20 NOVEMBER 2026</span></div>
       </div>
     </div>
     <div class="agenda-split" aria-label="Atur cara pagi dan petang">
       <article class="agenda-board morning" aria-labelledby="morningHeading">
         <div class="agenda-board-title"><div class="period"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg><h3 id="morningHeading">PAGI</h3></div><span class="agenda-count">07 AKTIVITI</span></div>
-        <div class="agenda-items"><div class="agenda-entry "><span class="agenda-time">8.30–9.00 pagi</span><div class="agenda-desc"><strong>Pendaftaran &amp; Sarapan</strong></div></div><div class="agenda-entry "><span class="agenda-time">9.00 pagi</span><div class="agenda-desc"><strong>Sesi Fotografi</strong></div></div><div class="agenda-entry "><span class="agenda-time">9.15 pagi</span><div class="agenda-desc"><strong>Ucapan Perasmian</strong><p>YBhg. Datuk Dr. Awang Alik bin Jeman, Ketua Setiausaha KDN</p></div></div><div class="agenda-entry featured"><span class="agenda-time">9.30–10.30 pagi</span><div class="agenda-desc"><strong>Sesi Perkongsian Ilmu 1</strong><p>Prof. Ts. Dr. Nor Badrul Anuar bin Juma’at</p><p class="topic">Pemikiran Strategik Era AI Agentik: Delegasi Bertanggungjawab dan Keselamatan Data</p></div></div><div class="agenda-entry break"><span class="agenda-time">10.30–10.45 pagi</span><div class="agenda-desc"><strong>Minum Pagi</strong></div></div><div class="agenda-entry featured"><span class="agenda-time">10.45–11.45 pagi</span><div class="agenda-desc"><strong>Sesi Perkongsian Ilmu 2</strong><p>Encik Nik Feizal Haidi bin Hanafi</p><p class="topic">Beyond Agility: Reinventing Work, Teams and Leadership in the Age of Intelligence</p></div></div><div class="agenda-entry break"><span class="agenda-time">12.00 tengah hari</span><div class="agenda-desc"><strong>Makan Tengah Hari &amp; Solat Jumaat</strong></div></div></div>
-        <div class="agenda-bottom">Pengisian pagi termasuk sesi perasmian dan dua sesi perkongsian ilmu.</div>
+        <div class="agenda-items"><div class="agenda-entry "><span class="agenda-time">8.30–9.00 pagi</span><div class="agenda-desc"><strong>Pendaftaran &amp; Sarapan</strong></div></div><div class="agenda-entry "><span class="agenda-time">9.00 pagi</span><div class="agenda-desc"><strong>Sesi Fotografi</strong></div></div><div class="agenda-entry "><span class="agenda-time">9.15 pagi</span><div class="agenda-desc"><strong>Ucapan Perasmian</strong><p>YBhg. Datuk Dr. Awang Alik bin Jeman, Ketua Setiausaha KDN</p></div></div><div class="agenda-entry featured"><span class="agenda-time">9.30–10.30 pagi</span><div class="agenda-desc"><strong>Wacana Perkongsian Ilmu 1</strong><p>Prof. Ts. Dr. Nor Badrul Anuar bin Juma’at</p><p class="topic">Pemikiran Strategik Era AI Agentik: Delegasi Bertanggungjawab dan Keselamatan Data</p></div></div><div class="agenda-entry break"><span class="agenda-time">10.30–10.45 pagi</span><div class="agenda-desc"><strong>Minum Pagi</strong></div></div><div class="agenda-entry featured"><span class="agenda-time">10.45–11.45 pagi</span><div class="agenda-desc"><strong>Wacana Perkongsian Ilmu 2</strong><p>Encik Nik Feizal Haidi bin Hanafi</p><p class="topic">Beyond Agility: Reinventing Work, Teams and Leadership in the Age of Intelligence</p></div></div><div class="agenda-entry break"><span class="agenda-time">12.00 tengah hari</span><div class="agenda-desc"><strong>Makan Tengah Hari &amp; Solat Jumaat</strong></div></div></div>
+        <div class="agenda-bottom">Pengisian pagi termasuk acara perasmian dan dua wacana perkongsian ilmu.</div>
       </article>
       <article class="agenda-board afternoon" aria-labelledby="afternoonHeading">
-        <div class="agenda-board-title"><div class="period"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 15A8.5 8.5 0 0 1 9 4a8.5 8.5 0 1 0 11 11Z"/></svg><h3 id="afternoonHeading">PETANG</h3></div><span class="agenda-count">03 AKTIVITI</span></div>
-        <div class="agenda-items"><div class="agenda-entry featured"><span class="agenda-time">2.45–3.45 petang</span><div class="agenda-desc"><strong>Sesi Perkongsian Ilmu 3</strong><p>Prof. Madya Ts. Dr. Nor Zairah binti Ab. Rahim</p><p class="topic">Activate Your Brain: Staying Ahead in the Age of Intelligence</p></div></div><div class="agenda-entry "><span class="agenda-time">3.45 petang</span><div class="agenda-desc"><strong>Demo Penggunaan AI Tools &amp; Latihan Berkumpulan</strong><p>Demonstrasi aplikasi AI dan latihan secara berkumpulan.</p></div></div><div class="agenda-entry "><span class="agenda-time">4.30 petang</span><div class="agenda-desc"><strong>Penutup</strong></div></div></div>
-        <div class="agenda-bottom">Sesi petang merangkumi perkongsian ilmu, demonstrasi AI dan latihan berkumpulan sebelum penutup.</div>
+        <div class="agenda-board-title"><div class="period"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 19h18"/><path d="M6 17a6 6 0 0 1 12 0"/><path d="M12 3v3M4.7 8.7l2.2 2.2M19.3 8.7l-2.2 2.2M2 14h2M20 14h2"/></svg><h3 id="afternoonHeading">PETANG</h3></div><span class="agenda-count">03 AKTIVITI</span></div>
+        <div class="agenda-items"><div class="agenda-entry featured"><span class="agenda-time">2.45–3.45 petang</span><div class="agenda-desc"><strong>Wacana Perkongsian Ilmu 3</strong><p>Prof. Madya Ts. Dr. Nor Zairah binti Ab. Rahim</p><p class="topic">Activate Your Brain: Staying Ahead in the Age of Intelligence</p></div></div><div class="agenda-entry "><span class="agenda-time">3.45 petang</span><div class="agenda-desc"><strong>Demo Penggunaan AI Tools &amp; Latihan Berkumpulan</strong><p>Demonstrasi aplikasi AI dan latihan secara berkumpulan.</p></div></div><div class="agenda-entry "><span class="agenda-time">4.30 petang</span><div class="agenda-desc"><strong>Penutup</strong></div></div></div>
+        <div class="agenda-bottom">Pengisian petang merangkumi wacana, demonstrasi AI dan latihan berkumpulan sebelum penutup.</div>
       </article>
     </div>
     <div id="agendaList" hidden aria-hidden="true"></div>
-    <p class="agenda-note">* Atur cara tertakluk kepada perubahan pihak urus setia. <a class="photo-credit" href="https://tourism.ppj.gov.my/destination/detail/1" target="_blank" rel="noopener noreferrer">Foto latar: Perbadanan Putrajaya / Zenith Hotel Putrajaya</a></p>
+    <p class="agenda-note">* Atur cara tertakluk kepada perubahan pihak urus setia.</p>
   </div>
 </section>
 
@@ -1019,7 +1020,7 @@
             "id": "a4",
             "sort": 4,
             "time": "9.30 – 10.30 pagi",
-            "title": "Sesi Perkongsian Ilmu 1",
+            "title": "Wacana Perkongsian Ilmu 1",
             "description": "Prof. Ts. Dr. Nor Badrul Anuar bin Juma’at (Universiti Malaya, Pengarah CSNET). Tajuk: Pemikiran Strategik Era AI Agentik: Delegasi Bertanggungjawab dan Keselamatan Data. Sesi dua hala bersama Q&A."
       },
       {
@@ -1033,7 +1034,7 @@
             "id": "a6",
             "sort": 6,
             "time": "10.45 – 11.45 pagi",
-            "title": "Sesi Perkongsian Ilmu 2",
+            "title": "Wacana Perkongsian Ilmu 2",
             "description": "Encik Nik Feizal Haidi bin Hanafi (Ketua Pegawai Eksekutif, VUCA Warrior Sdn. Bhd.). Tajuk: Beyond Agility: Reinventing Work, Teams and Leadership in the Age of Intelligence. Sesi dua hala bersama Q&A."
       },
       {
@@ -1047,7 +1048,7 @@
             "id": "a8",
             "sort": 8,
             "time": "2.45 – 3.45 petang",
-            "title": "Sesi Perkongsian Ilmu 3",
+            "title": "Wacana Perkongsian Ilmu 3",
             "description": "Prof. Madya Ts. Dr. Nor Zairah binti Ab. Rahim (Fakulti Kecerdasan Buatan, Universiti Teknologi Malaysia). Tajuk: Activate Your Brain: Staying Ahead in the Age of Intelligence. Sesi dua hala bersama Q&A."
       },
       {
@@ -1065,7 +1066,19 @@
             "description": "Penutup program."
       }
 ];
+      // Seragamkan istilah Wacana untuk 3 perkongsian ilmu tanpa mengubah fail JS lain.
+      (window.PORTAL_DATA.speakers || []).forEach(function(person){
+        if (typeof person.session === 'string') person.session = person.session.replace(/^Sesi Perkongsian Ilmu/i, 'Wacana Perkongsian Ilmu');
+      });
+      (window.PORTAL_DATA.materials || []).forEach(function(item){
+        if (typeof item.title === 'string') item.title = item.title.replace(/Bahan Sesi Perkongsian Ilmu/ig, 'Bahan Wacana Perkongsian Ilmu');
+      });
     }
+  });
+  window.addEventListener('load', function(){
+    document.querySelectorAll('.speaker-session-tag').forEach(function(tag){
+      tag.textContent = tag.textContent.replace(/^SESI\b/, 'WACANA');
+    });
   });
   </script>
   <script src="./content.js" defer></script>
