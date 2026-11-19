@@ -1341,6 +1341,60 @@ html{scroll-padding-top:90px}
 
 </style>
 
+  <style id="kdn-hubungi-style">
+
+/* === HUBUNGI KAMI: approved Wacana version + new executive contact section === */
+.section-hubungi {
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  padding:clamp(86px,7vw,128px) 0 clamp(90px,7vw,128px);
+  background:linear-gradient(133deg,#071b34 0%,#0a2d4e 47%,#133e60 100%);
+  color:#fff;
+}
+.section-hubungi::before {
+  content:"";
+  position:absolute;z-index:-1;inset:0;
+  pointer-events:none;
+  background:radial-gradient(circle at 10% 18%, rgba(54,225,244,.15), transparent 33%),
+             radial-gradient(circle at 90% 90%, rgba(218,173,91,.14), transparent 30%),
+             repeating-linear-gradient(120deg, transparent 0,transparent 95px, rgba(125,215,232,.03) 96px,transparent 97px);
+}
+.section-hubungi .kdn-contact-heading {margin-bottom:14px}
+.section-hubungi .section-kicker {color:#9DECF5;font-size:clamp(13px,.8vw,16px);letter-spacing:.14em}
+.section-hubungi .section-nr{color:#99B4C7}
+.section-hubungi h2 {color:#fff;font-size:clamp(49px,4.3vw,75px);line-height:1.13;letter-spacing:-.055em;margin:0}
+.section-hubungi h2 em {color:#43E6F6;font-style:normal;filter:drop-shadow(0 0 12px rgba(59,227,247,.25))}
+.kdn-contact-lead {max-width:790px;margin:6px 0 38px;color:#D2E6F0;font-size:clamp(17px,1.04vw,20px);line-height:1.75}
+.kdn-contact-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;align-items:stretch}
+.kdn-contact-card{display:flex;flex-direction:column;min-height:360px;padding:28px 26px 27px;border-radius:20px;background:#0D3557;border:1px solid rgba(103,197,231,.34);box-shadow:0 22px 47px rgba(0,11,30,.22);position:relative;overflow:hidden}
+.kdn-contact-card::before{content:"";position:absolute;inset:0 auto auto 0;width:100%;height:4px;background:linear-gradient(90deg,#34E4F6,#78E4F7 62%,#D9B26B)}
+.kdn-contact-card-top{display:flex;align-items:center;gap:13px;margin-bottom:23px}
+.kdn-contact-number{display:grid;place-items:center;width:44px;height:44px;border:1px solid rgba(99,229,248,.5);border-radius:13px;color:#78F0FF;background:rgba(74,227,247,.08);font-size:17px;font-weight:900;letter-spacing:.02em;flex-shrink:0}
+.kdn-contact-unit{color:#D9B976;font-size:11px;letter-spacing:.15em;font-weight:900}
+.kdn-contact-card h3{color:#fff;margin:0;font-size:clamp(21px,1.35vw,26px);line-height:1.36;font-weight:800;min-height:3em;letter-spacing:-.025em;overflow-wrap:break-word}
+.kdn-contact-divider{height:1px;background:rgba(169,218,236,.24);margin:17px 0 21px}
+.kdn-contact-ways{display:grid;gap:22px;margin-top:auto}
+.kdn-contact-detail{display:flex;gap:14px;align-items:flex-start;min-width:0}
+.kdn-contact-icon{display:grid;place-items:center;width:44px;height:44px;border-radius:12px;background:rgba(73,218,239,.12);color:#54E7F7;border:1px solid rgba(76,212,236,.24);flex:0 0 44px}
+.kdn-contact-detail>div{min-width:0;padding-top:2px}
+.kdn-contact-label{display:block;font-size:11px;letter-spacing:.12em;font-weight:900;color:#A6C8D8;margin-bottom:7px}
+.kdn-contact-value{display:block;color:#fff;font-size:clamp(18px,1.19vw,22px);font-weight:800;line-height:1.45;text-decoration:none;overflow-wrap:anywhere;transition:color .2s ease}
+.kdn-contact-value:hover{color:#68EFFE;text-decoration:underline;text-underline-offset:4px}
+.kdn-contact-value:focus-visible{outline:3px solid #E3C78C;outline-offset:4px;border-radius:2px}
+.kdn-contact-email{font-size:clamp(14px,.92vw,17px);font-weight:700;color:#BDEAF7}
+.kdn-contact-foot{margin-top:32px;display:flex;gap:13px;justify-content:center;align-items:center;text-align:center;color:#9DC6D7;font-size:11px;line-height:1.7;letter-spacing:.12em;font-weight:800}
+.kdn-contact-foot>span{color:#E0B973;font-size:14px}
+@media(max-width:1120px){.kdn-contact-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.kdn-contact-card h3{min-height:auto}}
+@media(max-width:720px){.section-hubungi{padding:66px 0 88px}.kdn-contact-grid{grid-template-columns:1fr;gap:15px}.kdn-contact-card{min-height:unset;padding:25px 23px}.kdn-contact-card h3{font-size:24px}.kdn-contact-value{font-size:21px}.kdn-contact-email{font-size:17px}
+.kdn-contact-detail:last-child{display:grid;grid-template-columns:44px minmax(0,1fr);column-gap:14px;row-gap:7px;align-items:center}
+.kdn-contact-detail:last-child>div{display:contents}
+.kdn-contact-detail:last-child .kdn-contact-icon{grid-column:1;grid-row:1}
+.kdn-contact-detail:last-child .kdn-contact-label{grid-column:2;grid-row:1;margin:0}
+.kdn-contact-detail:last-child .kdn-contact-email{grid-column:1/-1;grid-row:2;line-height:1.5}
+.kdn-contact-foot{font-size:10px}.kdn-contact-lead{margin-bottom:28px}.section-hubungi h2{font-size:clamp(43px,10vw,59px)}}
+
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Langkau ke kandungan</a>
@@ -1362,7 +1416,7 @@ html{scroll-padding-top:90px}
         <a href="#lokasi" class="nav-link">Lokasi</a>
         <a href="#penceramah" class="nav-link">Penceramah</a>
         <a href="#bahan" class="nav-link">Wacana</a>
-        
+        <a href="#hubungi" class="nav-link">Hubungi Kami</a>
       </nav>
       <div class="header-actions">
         <a href="#bahan" class="btn btn-dark btn-sm header-resource"><span class="i-arrow-down" aria-hidden="true">↓</span> Akses Wacana</a>
@@ -1564,8 +1618,64 @@ html{scroll-padding-top:90px}
 
     
 
-    <section class="section section-faq" id="faq">
-      <div class="shell faq-layout"><div><div class="section-kicker"><span class="kicker-line"></span> BANTUAN <span class="section-nr">06 / 06</span></div><h2>Soalan <em>lazim.</em></h2><p class="faq-intro">Perkara yang sering ditanya sebelum dan semasa kursus. Untuk pertanyaan khusus, hubungi urus setia.</p><div class="contact-label">URUS SETIA PROGRAM</div><p class="contact-text" id="contactText">Bahagian Perancangan Strategik (PG), KDN.</p></div><div id="faqList" class="faq-list"><div class="loading-row">Memuatkan soalan lazim...</div></div></div>
+    
+    <section class="section section-hubungi" id="hubungi" aria-labelledby="hubungiTitle">
+      <div class="shell">
+        <div class="section-header kdn-contact-heading">
+          <div class="section-kicker"><span class="kicker-line"></span> URUS SETIA KURSUS <span class="section-nr">06 / 06</span></div>
+          <div class="heading-row"><h2 id="hubungiTitle">Hubungi <em>Kami.</em></h2></div>
+        </div>
+        <p class="kdn-contact-lead">Sebarang pertanyaan berkaitan kursus boleh diajukan terus kepada urus setia Bahagian Perancangan Strategik (PG), Kementerian Dalam Negeri.</p>
+        <div class="kdn-contact-grid">
+
+          <article class="kdn-contact-card">
+            <div class="kdn-contact-card-top"><span class="kdn-contact-number">01</span><span class="kdn-contact-unit">URUS SETIA KURSUS</span></div>
+            <h3>Cik Siti Hanizah Binti Tupani</h3>
+            <div class="kdn-contact-divider"></div>
+            <div class="kdn-contact-ways">
+              <div class="kdn-contact-detail">
+                <span class="kdn-contact-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.2 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.71 2.79a2 2 0 0 1-.45 2.11L8.1 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.89.35 1.83.59 2.79.71A2 2 0 0 1 22 16.9z"/></svg></span>
+                <div><span class="kdn-contact-label">NO. TELEFON</span><a class="kdn-contact-value" href="tel:0196353700">019-6353 700</a></div>
+              </div>
+              <div class="kdn-contact-detail">
+                <span class="kdn-contact-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m2 7 10 7 10-7"/></svg></span>
+                <div><span class="kdn-contact-label">EMEL</span><a class="kdn-contact-value kdn-contact-email" href="mailto:sitihanizah@moha.gov.my">sitihanizah@moha.gov.my</a></div>
+              </div>
+            </div>
+          </article>
+          <article class="kdn-contact-card">
+            <div class="kdn-contact-card-top"><span class="kdn-contact-number">02</span><span class="kdn-contact-unit">URUS SETIA KURSUS</span></div>
+            <h3>Cik Haziqah Nazurah Binti Priyant</h3>
+            <div class="kdn-contact-divider"></div>
+            <div class="kdn-contact-ways">
+              <div class="kdn-contact-detail">
+                <span class="kdn-contact-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.2 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.71 2.79a2 2 0 0 1-.45 2.11L8.1 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.89.35 1.83.59 2.79.71A2 2 0 0 1 22 16.9z"/></svg></span>
+                <div><span class="kdn-contact-label">NO. TELEFON</span><a class="kdn-contact-value" href="tel:0163889206">016-388 9206</a></div>
+              </div>
+              <div class="kdn-contact-detail">
+                <span class="kdn-contact-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m2 7 10 7 10-7"/></svg></span>
+                <div><span class="kdn-contact-label">EMEL</span><a class="kdn-contact-value kdn-contact-email" href="mailto:haziqahnazurah@moha.gov.my">haziqahnazurah@moha.gov.my</a></div>
+              </div>
+            </div>
+          </article>
+          <article class="kdn-contact-card">
+            <div class="kdn-contact-card-top"><span class="kdn-contact-number">03</span><span class="kdn-contact-unit">URUS SETIA KURSUS</span></div>
+            <h3>Encik Amirul Iman Bin Md Nizam</h3>
+            <div class="kdn-contact-divider"></div>
+            <div class="kdn-contact-ways">
+              <div class="kdn-contact-detail">
+                <span class="kdn-contact-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.2 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.71 2.79a2 2 0 0 1-.45 2.11L8.1 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.89.35 1.83.59 2.79.71A2 2 0 0 1 22 16.9z"/></svg></span>
+                <div><span class="kdn-contact-label">NO. TELEFON</span><a class="kdn-contact-value" href="tel:01139132036">011-39132036</a></div>
+              </div>
+              <div class="kdn-contact-detail">
+                <span class="kdn-contact-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m2 7 10 7 10-7"/></svg></span>
+                <div><span class="kdn-contact-label">EMEL</span><a class="kdn-contact-value kdn-contact-email" href="mailto:amiruliman@moha.gov.my">amiruliman@moha.gov.my</a></div>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="kdn-contact-foot"><span aria-hidden="true">✦</span> KURSUS KECERDASAN BUATAN (AI) BAGI PENGURUSAN TERTINGGI KDN 2026 <span aria-hidden="true">✦</span></div>
+      </div>
     </section>
   </main>
 
@@ -1891,33 +2001,7 @@ window.PORTAL_DATA = {
     "sort": "3"
   }
 ],
-  "notices": [],
-  "faqs": [
-    {
-      "id": "f1",
-      "question": "Di manakah kursus berlangsung?",
-      "answer": "Kursus berlangsung di Cashmere Hall, Zenith Hotel Putrajaya pada Jumaat, 20 November 2026.",
-      "sort": "1"
-    },
-    {
-      "id": "f2",
-      "question": "Apakah kod pemakaian kursus?",
-      "answer": "Pakaian pejabat.",
-      "sort": "2"
-    },
-    {
-      "id": "f3",
-      "question": "Bagaimanakah saya boleh mendapatkan slaid wacana?",
-      "answer": "Buka bahagian Wacana dan klik butang \"Muat Turun Slaid PDF\" pada sesi yang ingin dirujuk.",
-      "sort": "3"
-    },
-    {
-      "id": "f4",
-      "question": "Bagaimana jika pautan muat turun tidak dapat dibuka?",
-      "answer": "Muat turun disediakan terus dalam portal. Jika fail tidak terbuka, cuba muat semula halaman atau hubungi urus setia program untuk bantuan lanjut.",
-      "sort": "4"
-    }
-  ]
+  "notices": []
 };
 
 </script>
@@ -2026,11 +2110,6 @@ window.PORTAL_DATA = {
     </article>`).join(''):'<div class="no-results">Tiada wacana ditemui untuk carian ini.</div>';
   }
 
-  function renderFaqs(faqs) {
-    const list=order(faqs);
-    $('#faqList').innerHTML=list.length?list.map(item=>`<details class="faq-item"><summary>${html(item.question)}</summary><p>${html(item.answer)}</p></details>`).join(''):'<div class="loading-row">Soalan lazim akan dikemas kini.</div>';
-  }
-
   function renderNotices(notices) {
     const list=order(notices);
     const section=$('#noticeBand');
@@ -2047,7 +2126,6 @@ window.PORTAL_DATA = {
     renderSpeakers(state.data.speakers);
     renderResourceFilters(state.data.materials);
     renderResources();
-    renderFaqs(state.data.faqs);
     renderNotices(state.data.notices);
     if(state.data.cmsWarning)showToast(state.data.cmsWarning);
   }
@@ -2091,7 +2169,7 @@ window.PORTAL_DATA = {
     const resourceSearch=$('#resourceSearch');
     if(resourceSearch){resourceSearch.addEventListener('input',event=>{state.search=event.target.value;renderResources();});}
     if('IntersectionObserver' in window){
-      const sectionIds=['utama','tentang','aturcara','lokasi','penceramah','bahan'];
+      const sectionIds=['utama','tentang','aturcara','lokasi','penceramah','bahan','hubungi'];
       const observer=new IntersectionObserver(entries=>{
         entries.forEach(entry=>{if(entry.isIntersecting){$$('.nav-link').forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+entry.target.id));}});
       },{rootMargin:'-27% 0px -58% 0px',threshold:0});
