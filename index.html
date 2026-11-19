@@ -1570,6 +1570,27 @@ html{scroll-padding-top:90px}
   filter:drop-shadow(0 11px 24px rgba(0,8,27,.28));
 }
 </style>
+
+  <!-- Scroll reveal in both directions; content remains readable without JavaScript. -->
+  <style id="kdn-scroll-reveal-css">
+  @media (prefers-reduced-motion: no-preference) {
+    html.kdn-scroll-enabled .kdn-reveal:not(.kdn-reveal-visible) {
+      opacity: 0;
+      transform: translate3d(0, var(--kdn-reveal-offset, 25px), 0);
+    }
+    /* Apply transition on entering only: leaving the viewport resets silently. */
+    html.kdn-scroll-enabled .kdn-reveal.kdn-reveal-visible {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+      transition: opacity 650ms cubic-bezier(.22, 1, .36, 1),
+                  transform 650ms cubic-bezier(.22, 1, .36, 1);
+      transition-delay: var(--kdn-reveal-delay, 0ms);
+    }
+  }
+  @media (prefers-reduced-motion: reduce), print {
+    .kdn-reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+  }
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Langkau ke kandungan</a>
@@ -2480,5 +2501,85 @@ window.PORTAL_DATA = {
 })();
 </script>
 
+
+  <script id="kdn-scroll-reveal-js">
+  (() => {
+    'use strict';
+    // Progressive enhancement: text remains visible if animations are unavailable.
+    const motionAllowed = window.matchMedia &&
+      window.matchMedia('(prefers-reduced-motion: no-preference)').matches;
+    if (!motionAllowed || !('IntersectionObserver' in window)) return;
+
+    const selectors = [
+      '#tentang .section-header', '#tentang .statement-card', '#tentang .objectives-block',
+      '#aturcara .section-header', '#aturcara .agenda-board',
+      '#lokasi .section-header', '#lokasi .kdn-venue-card',
+      '#penceramah .section-header', '#penceramah .speaker-card',
+      '#bahan .section-header', '#bahan .wacana-card',
+      '#waktusolat .prayer-heading', '#waktusolat .prayer-datebar', '#waktusolat .prayer-time-card',
+      '#hubungi .section-header', '#hubungi .kdn-contact-lead', '#hubungi .kdn-contact-card'
+    ];
+    let revealObserver;
+    let resetObserver;
+
+    function registerElements() {
+      document.querySelectorAll(selectors.join(',')).forEach((element) => {
+        if (element.classList.contains('kdn-reveal')) return;
+        element.classList.add('kdn-reveal');
+
+        // Stagger cards in the same row, without delaying text excessively.
+        const siblings = Array.from(element.parentElement?.children || [])
+          .filter((node) => node.matches && node.matches(
+            '.speaker-card, .kdn-venue-card, .kdn-contact-card, .prayer-time-card, .agenda-board, .wacana-card'));
+        const index = siblings.indexOf(element);
+        if (index >= 0) {
+          element.style.setProperty('--kdn-reveal-delay', `${Math.min(index, 3) * 75}ms`);
+        }
+
+        const bounds = element.getBoundingClientRect();
+        const startsAbove = bounds.bottom < 0;
+        element.style.setProperty('--kdn-reveal-offset', startsAbove ? '-25px' : '25px');
+        // Do not fade out content already in view, including hash-link destinations.
+        if (bounds.top < window.innerHeight * 0.87 && bounds.bottom > 0) {
+          element.classList.add('kdn-reveal-visible');
+        }
+        revealObserver.observe(element);
+        resetObserver.observe(element);
+      });
+    }
+
+    function initialize() {
+      // Trigger on entry from either the top or bottom of the viewport.
+      revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(({ target, isIntersecting }) => {
+          if (isIntersecting) target.classList.add('kdn-reveal-visible');
+        });
+      }, { threshold: 0.01, rootMargin: '-5px 0px -28px 0px' });
+
+      // Reset only when fully outside a 45px safety buffer. This prevents
+      // jitter/flicker when scrolling slowly near a section boundary.
+      resetObserver = new IntersectionObserver((entries) => {
+        entries.forEach(({ target, isIntersecting, boundingClientRect }) => {
+          if (isIntersecting) return;
+          const fromAbove = boundingClientRect.bottom < 0;
+          target.style.setProperty('--kdn-reveal-offset', fromAbove ? '-25px' : '25px');
+          target.classList.remove('kdn-reveal-visible');
+        });
+      }, { threshold: 0, rootMargin: '45px 0px 45px 0px' });
+
+      registerElements();
+      document.documentElement.classList.add('kdn-scroll-enabled');
+
+      // Newly-rendered cards also receive scroll animation.
+      ['speakersGrid', 'resourceList', 'objectivesList'].forEach((id) => {
+        const container = document.getElementById(id);
+        if (!container || !('MutationObserver' in window)) return;
+        new MutationObserver(registerElements).observe(container, { childList: true });
+      });
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initialize, { once: true });
+    else initialize();
+  })();
+  </script>
 </body>
 </html>
