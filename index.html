@@ -1717,6 +1717,97 @@ html{scroll-padding-top:90px}
 @media print{.site-header .menu-toggle{display:none!important}}
 </style>
 
+
+<style id="kdn-nov19-agenda-consistency">
+/* 19 Nov 2026: Morning and afternoon have one uniform executive navy/cyan/gold treatment. */
+.section-agenda .agenda-board.morning,
+.section-agenda .agenda-board.afternoon{
+  background:#082746;
+  border-color:rgba(138,224,247,.44);
+  border-top:4px solid #37e5f7;
+}
+.section-agenda .morning .agenda-board-title,
+.section-agenda .afternoon .agenda-board-title{background:rgba(18,79,119,.24)}
+.section-agenda .morning .agenda-board-title .period svg,
+.section-agenda .afternoon .agenda-board-title .period svg{color:#5ef1ff}
+.section-agenda .morning .agenda-time,
+.section-agenda .afternoon .agenda-time{color:#64ecfa}
+.section-agenda .morning .agenda-entry.featured .agenda-desc strong,
+.section-agenda .afternoon .agenda-entry.featured .agenda-desc strong{color:#8bf3ff}
+.section-agenda .morning .agenda-desc p.topic,
+.section-agenda .afternoon .agenda-desc p.topic{
+  border-left-color:#34e7f4;
+  color:#a9f5ff;
+  background:linear-gradient(90deg,rgba(31,181,211,.10),transparent 70%);
+}
+.section-agenda .agenda-board-title .period h3{
+  font-size:inherit; margin:0; color:#fff;
+}
+.section-agenda .agenda-desc p.org{
+  color:#b7d6e8;font-size:clamp(14px,1vw,16px);
+  line-height:1.45;font-weight:620;margin-top:3px;
+}
+@media(max-width:540px){
+ .section-agenda .agenda-desc p.org{font-size:14px;line-height:1.5}
+ .section-agenda .agenda-board-title .period{font-size:26px}
+}
+</style>
+
+<style id="kdn-aturcara-font-clearance-nov19">
+/* Requested refinement: make agenda information readable at a glance without changing colors or layout elsewhere. */
+#aturcara .agenda-desc strong{
+  font-size:clamp(22px,1.65vw,26px);
+  line-height:1.32;
+}
+#aturcara .agenda-time{
+  font-size:clamp(17px,1.30vw,20px);
+  line-height:1.45;
+  white-space:nowrap;
+}
+#aturcara .agenda-desc p.speaker{
+  font-size:clamp(19px,1.40vw,22px);
+  line-height:1.42;
+  font-weight:800;
+  margin-top:10px;
+}
+#aturcara .agenda-desc p.org{
+  font-size:clamp(17px,1.20vw,19px);
+  line-height:1.48;
+  font-weight:680;
+  margin-top:5px;
+  color:#c3dfed;
+}
+#aturcara .agenda-desc p.topic{
+  font-size:clamp(18px,1.25vw,21px);
+  line-height:1.47;
+}
+#aturcara .agenda-entry{row-gap:12px;}
+@media(max-width:1250px){
+  #aturcara .agenda-entry{grid-template-columns:160px minmax(0,1fr);gap:12px;}
+  #aturcara .agenda-desc strong{font-size:21px;}
+  #aturcara .agenda-desc p.speaker{font-size:19px;}
+  #aturcara .agenda-desc p.org{font-size:17px;}
+  #aturcara .agenda-desc p.topic{font-size:18px;}
+  #aturcara .agenda-time{font-size:17px;}
+}
+@media(max-width:930px){
+  #aturcara .agenda-entry{grid-template-columns:178px minmax(0,1fr);}
+  #aturcara .agenda-desc strong{font-size:23px;}
+  #aturcara .agenda-desc p.speaker{font-size:21px;}
+  #aturcara .agenda-desc p.org{font-size:18px;}
+  #aturcara .agenda-desc p.topic{font-size:19px;}
+  #aturcara .agenda-time{font-size:18px;}
+}
+@media(max-width:650px){
+  #aturcara .agenda-entry{grid-template-columns:minmax(0,1fr);gap:4px;padding:19px 0;}
+  #aturcara .agenda-time{font-size:17px;}
+  #aturcara .agenda-desc strong{font-size:22px;}
+  #aturcara .agenda-desc p.speaker{font-size:19px;}
+  #aturcara .agenda-desc p.org{font-size:17px;}
+  #aturcara .agenda-desc p.topic{font-size:17px;}
+  #aturcara .agenda-board-title .period{font-size:28px;}
+}
+</style>
 </head>
 <body>
   <a class="skip-link" href="#main">Langkau ke kandungan</a>
@@ -1768,13 +1859,13 @@ html{scroll-padding-top:90px}
         <aside class="hero-aside course-infographic" aria-label="Maklumat kursus">
           <div class="hero-aside-label"><span class="label-line"></span> MAKLUMAT KURSUS <span class="info-header-spark" aria-hidden="true">✦</span></div>
           <div class="info-date-highlight">
-            <span class="info-date-label">TARIKH PROGRAM</span>
+            
             <div class="kdn-date-display"><span class="date-number">20</span><div class="date-graphic-meta"><strong class="kdn-month-year">NOVEMBER 2026</strong><div class="info-day-chip"><span class="day-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v3M17 3v3"/><rect x="3.5" y="5.5" width="17" height="15" rx="3"/><path d="M3.5 10.5h17"/><path d="m9 14 2 2 4-4"/></svg></span><span id="heroDay" class="day-value">JUMAAT</span></div></div></div>
           </div>
           <div class="info-venue infographic-tile">
             <span class="info-tile-icon icon-venue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V7.5A1.5 1.5 0 0 1 6.5 6H18a1 1 0 0 1 1 1v14"/><path d="M9 6V4.8A1.8 1.8 0 0 1 10.8 3h2.4A1.8 1.8 0 0 1 15 4.8V6"/><path d="M9 11h2M13 11h2M9 15h2M13 15h2"/><path d="M3 21h18"/></svg></span>
             <span class="info-tile-copy">
-              <span class="info-tile-label">TEMPAT KURSUS</span>
+              
               <strong id="heroVenue">Zenith Hotel Putrajaya</strong>
               <span id="heroHall" class="info-venue-hall">Cashmere Hall · Level 1</span>
             </span>
@@ -1815,7 +1906,7 @@ html{scroll-padding-top:90px}
               <div class="statement-lines" aria-hidden="true"></div>
             </div>
           </div>
-          <div class="objectives-block"><div class="minor-head"><h3>Objektif Kursus</h3><span>05 FOKUS UTAMA</span></div><div id="objectivesList" class="objectives-list"><div class="placeholder-line"></div><div class="placeholder-line"></div></div></div>
+          <div class="objectives-block"><div class="minor-head"><h3>Objektif Kursus</h3></div><div id="objectivesList" class="objectives-list"><div class="placeholder-line"></div><div class="placeholder-line"></div></div></div>
         </div>
       </div>
     </section>
@@ -1825,17 +1916,29 @@ html{scroll-padding-top:90px}
     <div class="section-header">
       <div class="section-kicker"><span class="kicker-line"></span> PERJALANAN PROGRAM <span class="section-nr">02 / 07</span></div>
       <div class="agenda-headrow">
-        <h2 id="agendaHeading">Atur Cara <em>Kursus.</em></h2>
+        <h2 id="agendaHeading">Atur <em>Cara.</em></h2>
       </div>
     </div>
     <div class="agenda-split" aria-label="Atur cara pagi dan petang">
       <article class="agenda-board morning" aria-labelledby="morningHeading">
-        <div class="agenda-board-title"><div class="period"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg><h3 id="morningHeading">PAGI</h3></div><span class="agenda-count">07 AKTIVITI</span></div>
-        <div class="agenda-items"><div class="agenda-entry "><span class="agenda-time">8.30–9.00 pagi</span><div class="agenda-desc"><strong>Pendaftaran &amp; Sarapan</strong></div></div><div class="agenda-entry "><span class="agenda-time">9.00 pagi</span><div class="agenda-desc"><strong>Sesi Fotografi</strong></div></div><div class="agenda-entry "><span class="agenda-time">9.15 pagi</span><div class="agenda-desc"><strong>Ucapan Perasmian</strong><p>YBhg. Datuk Dr. Awang Alik bin Jeman, Ketua Setiausaha KDN</p></div></div><div class="agenda-entry featured"><span class="agenda-time">9.30–10.30 pagi</span><div class="agenda-desc"><strong>Wacana Perkongsian Ilmu 1</strong><p class="speaker">Prof. Ts. Dr. Nor Badrul Anuar bin Juma’at</p><p class="topic">Pemikiran Strategik Era AI Agentik: Delegasi Bertanggungjawab dan Keselamatan Data</p></div></div><div class="agenda-entry break"><span class="agenda-time">10.30–10.45 pagi</span><div class="agenda-desc"><strong>Minum Pagi</strong></div></div><div class="agenda-entry featured"><span class="agenda-time">10.45–11.45 pagi</span><div class="agenda-desc"><strong>Wacana Perkongsian Ilmu 2</strong><p class="speaker">Encik Nik Feizal Haidi bin Hanafi</p><p class="topic">Beyond Agility: Reinventing Work, Teams and Leadership in the Age of Intelligence</p></div></div><div class="agenda-entry break"><span class="agenda-time">12.00 tengah hari</span><div class="agenda-desc"><strong>Makan Tengah Hari &amp; Solat Jumaat</strong></div></div></div>
+        <div class="agenda-board-title"><div class="period"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg><h3 id="morningHeading">SESI PAGI</h3></div></div>
+        <div class="agenda-items">
+          <div class="agenda-entry"><span class="agenda-time">8.30–9.00 pagi</span><div class="agenda-desc"><strong>Pendaftaran &amp; Sarapan</strong></div></div>
+          <div class="agenda-entry"><span class="agenda-time">9.00 pagi</span><div class="agenda-desc"><strong>Sesi Fotografi</strong></div></div>
+          <div class="agenda-entry"><span class="agenda-time">9.15 pagi</span><div class="agenda-desc"><strong>Ucapan Perasmian</strong><p class="speaker">YBhg. Datuk Dr. Awang Alik bin Jeman</p><p class="org">Ketua Setiausaha Kementerian Dalam Negeri</p></div></div>
+          <div class="agenda-entry featured"><span class="agenda-time">9.30–10.30 pagi</span><div class="agenda-desc"><strong>Wacana 1</strong><p class="speaker">Prof. Ts. Dr. Nor Badrul Anuar bin Juma’at</p><p class="org">Universiti Malaya</p><p class="topic">Pemikiran Strategik Era AI Agentik: Delegasi Bertanggungjawab dan Keselamatan Data</p></div></div>
+          <div class="agenda-entry break"><span class="agenda-time">10.30–10.45 pagi</span><div class="agenda-desc"><strong>Minum Pagi</strong></div></div>
+          <div class="agenda-entry featured"><span class="agenda-time">10.45–11.45 pagi</span><div class="agenda-desc"><strong>Wacana 2</strong><p class="speaker">Encik Nik Feizal Haidi bin Hanafi</p><p class="org">VUCA Warrior Sdn. Bhd.</p><p class="topic">Beyond Agility: Reinventing Work, Teams and Leadership in the Age of Intelligence</p></div></div>
+          <div class="agenda-entry break"><span class="agenda-time">12.00 tengah hari</span><div class="agenda-desc"><strong>Makan Tengah Hari &amp; Solat Jumaat</strong></div></div>
+        </div>
       </article>
       <article class="agenda-board afternoon" aria-labelledby="afternoonHeading">
-        <div class="agenda-board-title"><div class="period"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 19h18"/><path d="M6 17a6 6 0 0 1 12 0"/><path d="M12 3v3M4.7 8.7l2.2 2.2M19.3 8.7l-2.2 2.2M2 14h2M20 14h2"/></svg><h3 id="afternoonHeading">PETANG</h3></div><span class="agenda-count">03 AKTIVITI</span></div>
-        <div class="agenda-items"><div class="agenda-entry featured"><span class="agenda-time">2.45–3.45 petang</span><div class="agenda-desc"><strong>Wacana Perkongsian Ilmu 3</strong><p class="speaker">Prof. Madya Ts. Dr. Nor Zairah binti Ab. Rahim</p><p class="topic">Activate Your Brain: Staying Ahead in the Age of Intelligence</p></div></div><div class="agenda-entry "><span class="agenda-time">3.45 petang</span><div class="agenda-desc"><strong>Demo Penggunaan AI Tools &amp; Latihan Berkumpulan</strong><p>Demonstrasi aplikasi AI dan latihan secara berkumpulan.</p></div></div><div class="agenda-entry "><span class="agenda-time">4.30 petang</span><div class="agenda-desc"><strong>Penutup</strong></div></div></div>
+        <div class="agenda-board-title"><div class="period"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 19h18"/><path d="M6 17a6 6 0 0 1 12 0"/><path d="M12 3v3M4.7 8.7l2.2 2.2M19.3 8.7l-2.2 2.2M2 14h2M20 14h2"/></svg><h3 id="afternoonHeading">SESI PETANG</h3></div></div>
+        <div class="agenda-items">
+          <div class="agenda-entry featured"><span class="agenda-time">2.45–3.45 petang</span><div class="agenda-desc"><strong>Wacana 3</strong><p class="speaker">Prof. Madya Ts. Dr. Nor Zairah binti Ab. Rahim</p><p class="org">Universiti Teknologi Malaysia (UTM)</p><p class="topic">Activate Your Brain: Staying Ahead in the Age of Intelligence</p></div></div>
+          <div class="agenda-entry featured"><span class="agenda-time">3.45 petang</span><div class="agenda-desc"><strong>Wacana 4</strong><p class="speaker">Ts. Khairul Amri bin Yunus</p><p class="org">Kometsoft</p><p class="topic">Realisasi AI KDN dan Pandangan Masa Hadapan</p></div></div>
+          <div class="agenda-entry"><span class="agenda-time">4.30 petang</span><div class="agenda-desc"><strong>Bersurai</strong></div></div>
+        </div>
       </article>
     </div>
     <div id="agendaList" hidden aria-hidden="true"></div>
@@ -2076,8 +2179,8 @@ html{scroll-padding-top:90px}
             "id": "a4",
             "sort": 4,
             "time": "9.30 – 10.30 pagi",
-            "title": "Wacana Perkongsian Ilmu 1",
-            "description": "Prof. Ts. Dr. Nor Badrul Anuar bin Juma’at (Universiti Malaya, Pengarah CSNET). Tajuk: Pemikiran Strategik Era AI Agentik: Delegasi Bertanggungjawab dan Keselamatan Data. Sesi dua hala bersama Q&A."
+            "title": "Wacana 1",
+            "description": "Prof. Ts. Dr. Nor Badrul Anuar bin Juma’at (Universiti Malaya). Tajuk: Pemikiran Strategik Era AI Agentik: Delegasi Bertanggungjawab dan Keselamatan Data. Sesi dua hala bersama Q&A."
       },
       {
             "id": "a5",
@@ -2090,8 +2193,8 @@ html{scroll-padding-top:90px}
             "id": "a6",
             "sort": 6,
             "time": "10.45 – 11.45 pagi",
-            "title": "Wacana Perkongsian Ilmu 2",
-            "description": "Encik Nik Feizal Haidi bin Hanafi (Ketua Pegawai Eksekutif, VUCA Warrior Sdn. Bhd.). Tajuk: Beyond Agility: Reinventing Work, Teams and Leadership in the Age of Intelligence. Sesi dua hala bersama Q&A."
+            "title": "Wacana 2",
+            "description": "Encik Nik Feizal Haidi bin Hanafi (VUCA Warrior Sdn. Bhd.). Tajuk: Beyond Agility: Reinventing Work, Teams and Leadership in the Age of Intelligence. Sesi dua hala bersama Q&A."
       },
       {
             "id": "a7",
@@ -2104,22 +2207,22 @@ html{scroll-padding-top:90px}
             "id": "a8",
             "sort": 8,
             "time": "2.45 – 3.45 petang",
-            "title": "Wacana Perkongsian Ilmu 3",
-            "description": "Prof. Madya Ts. Dr. Nor Zairah binti Ab. Rahim (Fakulti Kecerdasan Buatan, Universiti Teknologi Malaysia). Tajuk: Activate Your Brain: Staying Ahead in the Age of Intelligence. Sesi dua hala bersama Q&A."
+            "title": "Wacana 3",
+            "description": "Prof. Madya Ts. Dr. Nor Zairah binti Ab. Rahim (Universiti Teknologi Malaysia (UTM)). Tajuk: Activate Your Brain: Staying Ahead in the Age of Intelligence. Sesi dua hala bersama Q&A."
       },
       {
             "id": "a9",
             "sort": 9,
             "time": "3.45 petang",
-            "title": "Sesi Demo Penggunaan AI Tools dan Latihan Dalam Kumpulan",
-            "description": "Demonstrasi alatan kecerdasan buatan dan latihan berkumpulan."
+            "title": "Wacana 4",
+            "description": "Ts. Khairul Amri bin Yunus — Kometsoft. Tajuk: Realisasi AI KDN dan Pandangan Masa Hadapan."
       },
       {
             "id": "a10",
             "sort": 10,
             "time": "4.30 petang",
-            "title": "Penutup",
-            "description": "Penutup program."
+            "title": "Bersurai",
+            "description": "Tamat program dan bersurai."
       }
 ];
       // Seragamkan istilah Wacana untuk 3 perkongsian ilmu tanpa mengubah fail JS lain.
@@ -2171,17 +2274,17 @@ window.PORTAL_DATA = {
     },
     {
       "id": "o2",
-      "text": "Mengukuhkan pembuatan keputusan strategik berasaskan data yang berkualiti dan berintegriti.",
+      "text": "Memperkukuh pembuatan keputusan strategik berasaskan data.",
       "sort": "2"
     },
     {
       "id": "o3",
-      "text": "Memantapkan kefahaman tadbir urus, etika serta keselamatan pengurusan data sensitif.",
+      "text": "Memantapkan kefahaman tadbir urus, etika serta keselamatan pengurusan data.",
       "sort": "3"
     },
     {
       "id": "o4",
-      "text": "Mengenali risiko AI generatif dan agentik termasuk kebocoran data dan ancaman siber.",
+      "text": "Mempertingkat adaptasi AI dalam ekosistem penyampaian perkhidmatan KDN.",
       "sort": "4"
     },
     {
@@ -2422,7 +2525,7 @@ window.PORTAL_DATA = {
 
   function renderObjectives(objectives) {
     const root=$('#objectivesList'), list=order(objectives);
-    $('.minor-head span').textContent=String(list.length).padStart(2,'0')+' FOKUS UTAMA';
+    // The numbered list still shows all objectives; the small focus counter was intentionally removed.
     root.innerHTML=list.length?list.map((item,index)=>`<div class="objective"><span class="objective-num">${String(index+1).padStart(2,'0')}</span><p>${html(item.text)}</p></div>`).join(''):'<p class="loading-row">Objektif akan dikemas kini.</p>';
   }
 
