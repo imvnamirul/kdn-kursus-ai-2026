@@ -708,6 +708,139 @@
 }
   </style>
 
+  <style id="kdn-aturcara-executive-timeline">
+  /* ATUR CARA — Frosted Blue / Executive Timeline | sahaja untuk #aturcara */
+  .section.section-agenda {
+    position:relative;isolation:isolate;overflow:hidden;
+    background: #eaf3f8;color:#0d2d49;
+    padding:clamp(76px,7vw,114px) 0 clamp(88px,8vw,130px);
+  }
+  .section.section-agenda::before {
+    content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+    background:
+      radial-gradient(ellipse at 9% 13%,rgba(46,196,226,.15),transparent 35%),
+      radial-gradient(ellipse at 90% 75%,rgba(69,128,180,.14),transparent 38%),
+      repeating-linear-gradient(0deg,transparent 0 89px,rgba(57,117,153,.065) 90px),
+      repeating-linear-gradient(90deg,transparent 0 89px,rgba(57,117,153,.06) 90px),
+      linear-gradient(135deg,#e9f3f9 0%,#eff7fa 58%,#e5f0f8 100%);
+  }
+  .section-agenda .shell{width:min(1430px,calc(100% - 94px));}
+  .section-agenda .section-header{margin-bottom:37px}
+  .section-agenda .section-kicker{color:#38869e;font-size:13px;letter-spacing:.17em;font-weight:900}
+  .section-agenda .section-nr{color:#6d93ab;font-size:12px}
+  .section-agenda .kicker-line{height:3px;width:30px;background:#16b9d9}
+  .section-agenda .heading-row{display:block}
+  .section-agenda h2{
+    margin:16px 0 0;color:#092c4b;
+    font-family:'Inter','Plus Jakarta Sans',sans-serif;
+    font-size:clamp(47px,4.7vw,73px);letter-spacing:-.055em;line-height:1.12;font-weight:900;
+  }
+  .section-agenda h2 em{color:#04a9c6;font-style:normal}
+  .section-agenda .agenda-panel{
+    border:1px solid rgba(42,141,185,.35);border-radius:22px;overflow:hidden;
+    background:linear-gradient(155deg,#07294d,#081d39 70%);
+    box-shadow:0 26px 75px rgba(10,51,89,.18);
+  }
+  .section-agenda .agenda-panel-top{
+    padding:32px clamp(26px,3vw,49px);border-bottom:1px solid rgba(148,219,247,.17);
+    background:linear-gradient(105deg,#123d65,#0a2b4d 63%,#092949);
+    display:flex;justify-content:space-between;align-items:center;gap:22px;
+    border-top:4px solid #2cdef4;
+  }
+  .section-agenda .agenda-overline{
+    font-size:14px;font-weight:900;letter-spacing:.13em;color:#7feaf6;
+  }
+  .section-agenda .agenda-panel-top h3{
+    font-family:'Inter','Plus Jakarta Sans',sans-serif;
+    color:#fff;font-size:clamp(23px,2vw,32px);font-weight:800;
+    margin:10px 0 0;letter-spacing:-.03em;
+  }
+  .section-agenda .agenda-panel-top h3 span{color:#f0cf91}
+  .section-agenda .soft-pill{
+    background:rgba(43,222,244,.10);color:#b2f6ff;
+    border:1px solid rgba(92,237,250,.32);border-radius:100px;
+    font-size:13px;font-weight:900;letter-spacing:.06em;padding:12px 18px;white-space:nowrap;
+  }
+  .section-agenda .agenda-list{padding:10px clamp(18px,3vw,44px) 12px}
+  .section-agenda .agenda-row{
+    position:relative;display:grid;grid-template-columns:48px minmax(138px,195px) minmax(0,1fr);
+    gap:clamp(16px,2vw,32px);padding:25px 9px;align-items:start;
+    min-height:101px;border-bottom:1px solid rgba(193,232,248,.16);
+    background:transparent;
+  }
+  .section-agenda .agenda-row:last-child{border-bottom:0}
+  .section-agenda .agenda-index{
+    font-family:'Inter',sans-serif;font-size:22px;line-height:1.25;
+    font-weight:900;letter-spacing:-.03em;color:#3fe4f4;
+    grid-column:1;grid-row:1;
+  }
+  .section-agenda .agenda-where{
+    grid-column:2;grid-row:1;align-items:flex-start;text-align:left;padding-top:3px;
+  }
+  .section-agenda .agenda-where b{
+    color:#d6ecfa;font-family:'Inter',sans-serif;
+    font-size:clamp(17px,1.2vw,19px);line-height:1.5;font-weight:800;
+    white-space:normal;
+  }
+  .section-agenda .agenda-where span{display:none}
+  .section-agenda .agenda-info{grid-column:3;grid-row:1;min-width:0}
+  .section-agenda .agenda-info h4{
+    color:#fff;font-family:'Inter','Plus Jakarta Sans',sans-serif;
+    font-size:clamp(20px,1.5vw,24px);font-weight:800;line-height:1.4;
+    margin:0 0 8px;letter-spacing:-.01em;
+  }
+  .section-agenda .agenda-info p{
+    color:#b9d5e6;font-size:clamp(17px,1.15vw,19px);line-height:1.75;margin:0;
+  }
+  .section-agenda .agenda-row:nth-child(4),
+  .section-agenda .agenda-row:nth-child(6),
+  .section-agenda .agenda-row:nth-child(8){
+    margin:6px -10px;padding:25px 19px;
+    background:linear-gradient(90deg,rgba(22,131,170,.17),rgba(6,35,67,.02));
+    border-left:3px solid #28d9ec;
+  }
+  .section-agenda .agenda-row:nth-child(4) .agenda-info h4,
+  .section-agenda .agenda-row:nth-child(6) .agenda-info h4,
+  .section-agenda .agenda-row:nth-child(8) .agenda-info h4{color:#8cf5ff}
+  .section-agenda .agenda-row:nth-child(5) .agenda-index,
+  .section-agenda .agenda-row:nth-child(7) .agenda-index{color:#e8c88f}
+  .section-agenda .agenda-row:nth-child(5) .agenda-info h4,
+  .section-agenda .agenda-row:nth-child(7) .agenda-info h4{color:#f3d69e}
+  .section-agenda .agenda-note{
+    background:rgba(255,255,255,.035);border-top:1px solid rgba(164,228,248,.16);
+    padding:22px clamp(26px,3vw,49px);color:#afc8d9;
+    font-size:14px;line-height:1.65;
+  }
+  @media (max-width:900px){
+    .section-agenda .shell{width:calc(100% - 50px)}
+    .section-agenda .agenda-row{grid-template-columns:36px minmax(114px,154px) minmax(0,1fr);gap:14px}
+    .section-agenda .agenda-list{padding:7px 20px 10px}
+  }
+  @media (max-width:650px){
+    .section.section-agenda{padding:68px 0 82px}
+    .section-agenda .shell{width:calc(100% - 30px)}
+    .section-agenda h2{font-size:clamp(40px,9vw,55px)}
+    .section-agenda .section-kicker{font-size:10px}
+    .section-agenda .agenda-panel{border-radius:14px}
+    .section-agenda .agenda-panel-top{padding:22px 18px;align-items:flex-start;flex-direction:column;gap:13px}
+    .section-agenda .agenda-overline{font-size:12px}
+    .section-agenda .agenda-panel-top h3{font-size:23px}
+    .section-agenda .soft-pill{font-size:11px;padding:9px 12px}
+    .section-agenda .agenda-list{padding:0 14px}
+    .section-agenda .agenda-row{
+      grid-template-columns:35px minmax(0,1fr);row-gap:8px;column-gap:12px;
+      padding:22px 2px;min-height:0;
+    }
+    .section-agenda .agenda-index{grid-column:1;grid-row:1;font-size:19px}
+    .section-agenda .agenda-where{grid-column:2;grid-row:1;padding-top:0}
+    .section-agenda .agenda-where b{font-size:15px;color:#76e9f6}
+    .section-agenda .agenda-info{grid-column:2;grid-row:2}
+    .section-agenda .agenda-info h4{font-size:17px;margin-bottom:6px}
+    .section-agenda .agenda-info p{font-size:14px;line-height:1.65}
+    .section-agenda .agenda-row:nth-child(4),.section-agenda .agenda-row:nth-child(6),.section-agenda .agenda-row:nth-child(8){margin:4px -6px;padding:22px 8px}
+    .section-agenda .agenda-note{font-size:12px;padding:17px 18px}
+  }
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Langkau ke kandungan</a>
@@ -822,10 +955,20 @@
       </div>
     </section>
 
-    <section class="section section-agenda" id="aturcara">
+    <section class="section section-agenda" id="aturcara" aria-labelledby="agendaHeading">
       <div class="shell">
-        <div class="section-header"><div class="section-kicker"><span class="kicker-line"></span> PERJALANAN PROGRAM <span class="section-nr">02 / 06</span></div><div class="heading-row"><h2>Atur cara <em>kursus.</em></h2><p>Ringkasan pengisian program. Masa terperinci boleh dikemas kini melalui portal ini.</p></div></div>
-        <div class="agenda-panel"><div class="agenda-panel-top"><div><span class="agenda-overline">20 NOVEMBER 2026</span><h3>Jumaat <span>·</span> Cashmere Hall</h3></div><span class="soft-pill">Atur cara program</span></div><div id="agendaList" class="agenda-list"><div class="loading-row">Memuatkan atur cara...</div></div><div class="agenda-note">* Masa dan susunan tertakluk kepada pengesahan urus setia. Rujuk dokumen rasmi apabila diterbitkan.</div></div>
+        <div class="section-header">
+          <div class="section-kicker"><span class="kicker-line"></span> PERJALANAN PROGRAM <span class="section-nr">02 / 06</span></div>
+          <div class="heading-row"><h2 id="agendaHeading">Atur Cara <em>Kursus.</em></h2></div>
+        </div>
+        <div class="agenda-panel">
+          <div class="agenda-panel-top">
+            <div><span class="agenda-overline">JUMAAT, 20 NOVEMBER 2026</span><h3>Pengisian <span>sepanjang hari</span></h3></div>
+            <span class="soft-pill">10 AKTIVITI</span>
+          </div>
+          <div id="agendaList" class="agenda-list" aria-label="Senarai atur cara berdasarkan tentatif rasmi"><div class="loading-row">Memuatkan atur cara...</div></div>
+          <div class="agenda-note">* Berdasarkan tentatif program yang dikongsikan. Masa dan pengisian tertakluk kepada perubahan pihak urus setia.</div>
+        </div>
       </div>
     </section>
 
@@ -872,6 +1015,85 @@
     <div class="modal-backdrop" data-close="true"></div>
     <div class="modal-panel" tabindex="-1"><button class="modal-close" type="button" id="modalClose" aria-label="Tutup profil penceramah">×</button><div id="modalBody"></div></div>
   </div>
+  <!-- Agenda rasmi daripada tentatif bergambar: ditetapkan dalam HTML supaya hanya index.html perlu diubah. -->
+  <script id="kdn-agenda-override">
+  document.addEventListener('DOMContentLoaded', function () {
+    if (window.PORTAL_DATA) {
+      window.PORTAL_DATA.agenda = [
+      {
+            "id": "a1",
+            "sort": 1,
+            "time": "8.30 – 9.00 pagi",
+            "title": "Pendaftaran Peserta dan Sarapan",
+            "description": "Ketibaan dan pendaftaran peserta."
+      },
+      {
+            "id": "a2",
+            "sort": 2,
+            "time": "9.00 pagi",
+            "title": "Sesi Fotografi",
+            "description": "Sesi fotografi rasmi."
+      },
+      {
+            "id": "a3",
+            "sort": 3,
+            "time": "9.15 pagi",
+            "title": "Ucapan Perasmian",
+            "description": "YBhg. Datuk Dr. Awang Alik bin Jeman — Ketua Setiausaha Kementerian Dalam Negeri."
+      },
+      {
+            "id": "a4",
+            "sort": 4,
+            "time": "9.30 – 10.30 pagi",
+            "title": "Sesi Perkongsian Ilmu 1",
+            "description": "Prof. Ts. Dr. Nor Badrul Anuar bin Juma’at (Universiti Malaya, Pengarah CSNET). Tajuk: Pemikiran Strategik Era AI Agentik: Delegasi Bertanggungjawab dan Keselamatan Data. Sesi dua hala bersama Q&A."
+      },
+      {
+            "id": "a5",
+            "sort": 5,
+            "time": "10.30 – 10.45 pagi",
+            "title": "Minum Pagi",
+            "description": "Rehat ringan."
+      },
+      {
+            "id": "a6",
+            "sort": 6,
+            "time": "10.45 – 11.45 pagi",
+            "title": "Sesi Perkongsian Ilmu 2",
+            "description": "Encik Nik Feizal Haidi bin Hanafi (Ketua Pegawai Eksekutif, VUCA Warrior Sdn. Bhd.). Tajuk: Beyond Agility: Reinventing Work, Teams and Leadership in the Age of Intelligence. Sesi dua hala bersama Q&A."
+      },
+      {
+            "id": "a7",
+            "sort": 7,
+            "time": "12.00 tengah hari",
+            "title": "Makan Tengah Hari & Solat Jumaat",
+            "description": "Rehat dan menunaikan solat Jumaat."
+      },
+      {
+            "id": "a8",
+            "sort": 8,
+            "time": "2.45 – 3.45 petang",
+            "title": "Sesi Perkongsian Ilmu 3",
+            "description": "Prof. Madya Ts. Dr. Nor Zairah binti Ab. Rahim (Fakulti Kecerdasan Buatan, Universiti Teknologi Malaysia). Tajuk: Activate Your Brain: Staying Ahead in the Age of Intelligence. Sesi dua hala bersama Q&A."
+      },
+      {
+            "id": "a9",
+            "sort": 9,
+            "time": "3.45 petang",
+            "title": "Sesi Demo Penggunaan AI Tools dan Latihan Dalam Kumpulan",
+            "description": "Demonstrasi alatan kecerdasan buatan dan latihan berkumpulan."
+      },
+      {
+            "id": "a10",
+            "sort": 10,
+            "time": "4.30 petang",
+            "title": "Penutup",
+            "description": "Penutup program."
+      }
+];
+    }
+  });
+  </script>
   <script src="./content.js" defer></script>
   <script src="./app.js" defer></script>
   <script>
