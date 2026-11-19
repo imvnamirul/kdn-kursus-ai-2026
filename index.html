@@ -747,11 +747,11 @@
 .section-agenda .agenda-count{font-size:14px;font-weight:800;letter-spacing:.12em;color:#b2ecf5;white-space:nowrap}
 .section-agenda .afternoon .agenda-count{color:#f0d59f}
 .section-agenda .agenda-items{padding:5px 24px 12px;flex:none}
-.section-agenda .agenda-entry{display:grid;grid-template-columns:124px minmax(0,1fr);gap:18px;padding:16px 0;border-bottom:1px solid rgba(166,221,242,.15);align-items:start}
+.section-agenda .agenda-entry{display:grid;grid-template-columns:184px minmax(0,1fr);gap:16px;padding:16px 0;border-bottom:1px solid rgba(166,221,242,.15);align-items:start}
 .section-agenda .agenda-entry:last-child{border-bottom:0}
 .section-agenda .afternoon .agenda-items{display:block}
 .section-agenda .afternoon .agenda-entry{width:100%;padding:19px 0}
-.section-agenda .agenda-time{display:block;font-size:18px;font-weight:850;line-height:1.42;color:#64ecfa;letter-spacing:-.01em;padding-top:2px}
+.section-agenda .agenda-time{display:block;white-space:nowrap;font-size:18px;font-weight:850;line-height:1.42;color:#64ecfa;letter-spacing:-.01em;padding-top:2px}
 .section-agenda .afternoon .agenda-time{color:#efce93}
 .section-agenda .agenda-desc{min-width:0}
 .section-agenda .agenda-desc strong{display:block;font-size:clamp(21px,1.35vw,24px);font-weight:800;line-height:1.3;color:#fff;letter-spacing:-.012em}
@@ -775,7 +775,7 @@
  .section-agenda>.shell{width:calc(100% - 60px)}
  .section-agenda .agenda-split{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:15px}
  .section-agenda .agenda-items{padding:4px 16px 7px}
- .section-agenda .agenda-entry{grid-template-columns:110px minmax(0,1fr);gap:13px;padding:15px 0}
+ .section-agenda .agenda-entry{grid-template-columns:169px minmax(0,1fr);gap:12px;padding:15px 0}
  .section-agenda .agenda-time{font-size:16px}
  .section-agenda .agenda-desc strong{font-size:20px}
  .section-agenda .agenda-desc p{font-size:17px}
@@ -784,7 +784,7 @@
  .section.section-agenda{min-height:0;padding:65px 0 75px}
  .section-agenda .agenda-headrow{align-items:start;flex-direction:column;gap:19px}
  .section-agenda .agenda-split{grid-template-columns:1fr;gap:18px}
- .section-agenda .agenda-entry{grid-template-columns:135px 1fr;gap:18px;padding:16px 0}
+ .section-agenda .agenda-entry{grid-template-columns:184px minmax(0,1fr);gap:17px;padding:16px 0}
  .section-agenda .afternoon .agenda-entry{padding:18px 0}
  .section-agenda .agenda-time{font-size:17px}
  .section-agenda .agenda-desc strong{font-size:21px}
@@ -798,7 +798,7 @@
  .section-agenda .agenda-board-title{padding:17px}
  .section-agenda .agenda-board-title .period{font-size:27px}
  .section-agenda .agenda-items{padding:5px 16px 10px}
- .section-agenda .agenda-entry{grid-template-columns:100px minmax(0,1fr);gap:11px;padding:15px 0}
+ .section-agenda .agenda-entry{grid-template-columns:156px minmax(0,1fr);gap:11px;padding:15px 0}
  .section-agenda .agenda-time{font-size:16px}
  .section-agenda .agenda-desc strong{font-size:18px}
  .section-agenda .agenda-desc p{font-size:16px}
@@ -807,6 +807,10 @@
  .section-agenda .agenda-board-title .period{font-size:29px}
  .section-agenda .agenda-time{font-size:15px}
  .section-agenda .agenda-count{font-size:12px;letter-spacing:.05em}
+}
+@media(max-width:405px){
+ .section-agenda .agenda-entry{grid-template-columns:minmax(0,1fr);gap:5px}
+ .section-agenda .agenda-time{font-size:15px;white-space:nowrap}
 }
 </style>
 </head>
