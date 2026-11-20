@@ -2157,10 +2157,10 @@ footer.kdn-clean-footer .kdn-backtotop-arrow{
   </style>
 
 <style id="kdn-fix-mobile-tablet-nav-modal-20261120">
-/* Phone + tablet, incl. iPad Pro landscape: use compact, non-sticky navigation. */
+/* Phone + tablet, incl. iPad Pro landscape: persistent compact header, tap to reveal navigation. */
 @media screen and (max-width:1366px){
   .site-header{
-    position:relative!important;top:auto!important;
+    position:sticky!important;top:0!important;
     z-index:30!important;box-shadow:0 3px 13px rgba(5,30,52,.08);
   }
   .site-header .shell.header-row{
@@ -2200,8 +2200,8 @@ footer.kdn-clean-footer .kdn-backtotop-arrow{
     font-size:14px!important;letter-spacing:0!important;
   }
   .site-header .nav-links .nav-link.active::after{display:none!important}
-  html{scroll-padding-top:16px!important}
-  :target,.section{scroll-margin-top:16px!important}
+  html{scroll-padding-top:86px!important}
+  :target,.section{scroll-margin-top:86px!important}
 }
 @media screen and (max-width:650px){
   .site-header .shell.header-row{width:calc(100% - 20px)!important;gap:6px}
