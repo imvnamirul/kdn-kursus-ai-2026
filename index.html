@@ -2232,6 +2232,31 @@ footer.kdn-clean-footer .kdn-backtotop-arrow{
 }
 </style>
 
+
+<style id="kdn-speaker-native-dialog-top-layer-20261120">
+/* Native modal top-layer means even high z-index sticky headers cannot obscure the profile. */
+#speakerModal.modal{
+  position:fixed!important;
+  inset:0!important;
+  width:100vw!important;
+  max-width:none!important;
+  height:100dvh!important;
+  max-height:none!important;
+  box-sizing:border-box!important;
+  margin:0!important;
+  padding:clamp(10px,2vw,20px)!important;
+  border:0!important;
+  background:transparent!important;
+  color:inherit!important;
+  overflow:hidden!important;
+  z-index:2147483647!important;
+}
+#speakerModal.modal:not([open]){display:none!important}
+#speakerModal::backdrop{background:rgba(5,21,37,.80);backdrop-filter:blur(2px)}
+#speakerModal .modal-backdrop{background:transparent}
+#speakerModal .modal-panel{margin:auto;max-width:100%;}
+</style>
+
 </head>
 <body>
   <a class="skip-link" href="#main">Langkau ke kandungan</a>
@@ -2623,10 +2648,10 @@ footer.kdn-clean-footer .kdn-backtotop-arrow{
   </footer>
 
   <div id="toast" role="status" aria-live="polite" class="toast" hidden></div>
-  <div id="speakerModal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalName" hidden>
+  <dialog id="speakerModal" class="modal" aria-hidden="true" aria-modal="true" aria-labelledby="modalName">
     <div class="modal-backdrop" data-close="true"></div>
     <div class="modal-panel" tabindex="-1"><button class="modal-close" type="button" id="modalClose" aria-label="Tutup profil penceramah">×</button><div id="modalBody"></div></div>
-  </div>
+  </dialog>
 
   <!-- In-portal PDF preview: Wacana 1–3, with download/new-tab fallbacks. -->
   <dialog id="kdnPdfDialog" aria-labelledby="kdnPdfTitle">
@@ -3118,10 +3143,10 @@ window.PORTAL_DATA = {
       ? '<p class="modal-copy">Profil terperinci penceramah akan dikemas kini oleh urus setia.</p>'
       : `<h4>FOKUS WACANA</h4><p class="modal-copy">${html(speaker.abstract||'Maklumat sesi akan dikemas kini.')}</p><h4>PROFIL PENCERAMAH</h4><p class="modal-copy">${html(speaker.bio||'Profil akan dikemas kini.')}</p>`;
     $('#modalBody').innerHTML=`<div class="modal-cover"><div class="modal-avatar">${speakerVisual(speaker,'modal-initial')}</div><div class="modal-meta"><span class="modal-tag">${html(speaker.session.replace(/^(?:Sesi|Wacana)\s+Perkongsian\s+Ilmu\s*/i,'Wacana '))}</span><h3 id="modalName">${html(speaker.name)}</h3><p class="modal-affiliation">${html(speakerAffiliation(speaker.id,speaker.organisation||''))}</p></div></div><div class="modal-content"><h4>TAJUK WACANA</h4><p class="modal-topic">${html(speaker.title)}</p>${details}</div>`;
-    modal.hidden=false;modal.setAttribute('aria-hidden','false');document.body.classList.add('modal-open');$('#modalClose').focus();
+    if(!modal.open) modal.showModal();modal.setAttribute('aria-hidden','false');document.body.classList.add('modal-open');$('#modalClose').focus();
   }
   function closeSpeaker() {
-    const modal=$('#speakerModal');modal.hidden=true;modal.setAttribute('aria-hidden','true');document.body.classList.remove('modal-open');
+    const modal=$('#speakerModal');if(modal.open) modal.close();modal.setAttribute('aria-hidden','true');document.body.classList.remove('modal-open');
     if(state.lastFocus&&state.lastFocus.focus)state.lastFocus.focus();
   }
 
@@ -3140,10 +3165,11 @@ window.PORTAL_DATA = {
       if(button)openSpeaker(button.dataset.agendaSpeaker);
     });
     $('#modalClose').addEventListener('click',closeSpeaker);
+    $('#speakerModal').addEventListener('close',()=>{document.body.classList.remove('modal-open');$('#speakerModal').setAttribute('aria-hidden','true');});
     $('#speakerModal').addEventListener('click',event=>{if(event.target.matches('[data-close]'))closeSpeaker();});
     document.addEventListener('keydown',event=>{
-      if(event.key==='Escape'&&!$('#speakerModal').hidden)closeSpeaker();
-      if(event.key==='Tab'&&!$('#speakerModal').hidden){
+      if(event.key==='Escape'&&$('#speakerModal').open){event.preventDefault();closeSpeaker();}
+      if(event.key==='Tab'&&$('#speakerModal').open){
         const focusable=$$('#speakerModal button, #speakerModal a[href]').filter(e=>!e.disabled);
         if(focusable.length){const first=focusable[0],last=focusable[focusable.length-1];if(event.shiftKey&&document.activeElement===first){event.preventDefault();last.focus();}else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus();}}
       }
